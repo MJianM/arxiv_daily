@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "updated": "2026-02-13",
+    "max_papers_per_category": 500
+  },
+  "categories": {
+    "Manipulation": [
+      {
+        "paper_id": "2602.12155",
+        "title": "FAIL: Flow Matching Adversarial Imitation Learning for Image Generation",
+        "abstract": "Post-training of flow matching models-aligning the output distribution with a high-quality target-is mathematically equivalent to imitation learning. While Supervised Fine-Tuning mimics expert demonstrations effectively, it cannot correct policy drift in unseen states. Preference optimization methods address this but require costly preference pairs or reward modeling. We propose Flow Matching Adversarial Imitation Learning (FAIL), which minimizes policy-expert divergence through adversarial training without explicit rewards or pairwise comparisons. We derive two algorithms: FAIL-PD exploits differentiable ODE solvers for low-variance pathwise gradients, while FAIL-PG provides a black-box alternative for discrete or computationally constrained settings. Fine-tuning FLUX with only 13,000 demonstrations from Nano Banana pro, FAIL achieves competitive performance on prompt following and aesthetic benchmarks. Furthermore, the framework generalizes effectively to discrete image and video generation, and functions as a robust regularizer to mitigate reward hacking in reward-based optimization. Code and data are available at https://github.com/HansPolo113/FAIL.",
+        "authors_display": "Weidi Xie Team",
+        "pdf_url": "http://arxiv.org/abs/2602.12155",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.CV",
+        "chinese_summary": "现有流匹配模型的训练后对齐与模仿学习等价，但监督微调无法有效纠正策略漂移，偏好优化成本高昂。为此，本文提出了流匹配对抗模仿学习（FAIL），通过对抗训练最小化策略与专家之间的差异，无需显式奖励或配对比较。研究者们开发了两种算法：FAIL-PD利用可微ODE求解器提供低方差梯度，而FAIL-PG则是一个黑盒替代方案。实验结果表明，仅使用1.3万个演示数据，FAIL在FLUX模型微调后，在提示跟随和美学基准上达到了有竞争力的性能，并能有效泛化到离散图像和视频生成任务，同时作为正则化器缓解奖励欺骗问题。"
+      },
+      {
+        "paper_id": "2602.12099",
+        "title": "GigaBrain-0.5M*: a VLA That Learns From World Model-Based Reinforcement Learning",
+        "abstract": "Vision-language-action (VLA) models that directly predict multi-step action chunks from current observations face inherent limitations due to constrained scene understanding and weak future anticipation capabilities. In contrast, video world models pre-trained on web-scale video corpora exhibit robust spatiotemporal reasoning and accurate future prediction, making them a natural foundation for enhancing VLA learning. Therefore, we propose \\textit{GigaBrain-0.5M*}, a VLA model trained via world model-based reinforcement learning. Built upon \\textit{GigaBrain-0.5}, which is pre-trained on over 10,000 hours of robotic manipulation data, whose intermediate version currently ranks first on the international RoboChallenge benchmark. \\textit{GigaBrain-0.5M*} further integrates world model-based reinforcement learning via \\textit{RAMP} (Reinforcement leArning via world Model-conditioned Policy) to enable robust cross-task adaptation. Empirical results demonstrate that \\textit{RAMP} achieves substantial performance gains over the RECAP baseline, yielding improvements of approximately 30\\% on challenging tasks including \\texttt{Laundry Folding}, \\texttt{Box Packing}, and \\texttt{Espresso Preparation}. Critically, \\textit{GigaBrain-0.5M$^*$} exhibits reliable long-horizon execution, consistently accomplishing complex manipulation tasks without failure as validated by real-world deployment videos on our \\href{https://gigabrain05m.github.io}{project page}.",
+        "authors_display": "Zheng Zhu Team",
+        "pdf_url": "http://arxiv.org/abs/2602.12099",
+        "code_url": "https://gigabrain05m.github.io/",
+        "date": "2026-02-12",
+        "primary_category": "cs.CV",
+        "chinese_summary": "当前视觉-语言-动作（VLA）模型在直接预测多步动作时，受限于场景理解和未来预判能力。针对此问题，本文提出GigaBrain-0.5M*，该VLA模型通过基于世界模型的强化学习进行训练，利用了视频世界模型强大的时空推理和准确预测能力。该模型构建在已在超过10,000小时机器人操作数据上预训练的GigaBrain-0.5之上，并整合了RAMP（通过世界模型条件策略的强化学习）以实现鲁棒的跨任务适应性。实验结果显示，RAMP在RECAP基线上实现了约30%的显著性能提升，尤其在洗衣折叠、箱子打包和浓缩咖啡制作等复杂任务上，并展示了可靠的长周期执行能力。"
+      },
+      {
+        "paper_id": "2602.12065",
+        "title": "Affordance-Graphed Task Worlds: Self-Evolving Task Generation for Scalable Embodied Learning",
+        "abstract": "Training robotic policies directly in the real world is expensive and unscalable. Although generative simulation enables large-scale data synthesis, current approaches often fail to generate logically coherent long-horizon tasks and struggle with dynamic physical uncertainties due to open-loop execution. To address these challenges, we propose Affordance-Graphed Task Worlds (AGT-World), a unified framework that autonomously constructs interactive simulated environments and corresponding robot task policies based on real-world observations. Unlike methods relying on random proposals or static replication, AGT-World formalizes the task space as a structured graph, enabling the precise, hierarchical decomposition of complex goals into theoretically grounded atomic primitives. Furthermore, we introduce a Self-Evolution mechanism with hybrid feedback to autonomously refine policies, combining Vision-Language Model reasoning and geometric verification. Extensive experiments demonstrate that our method significantly outperforms in success rates and generalization, achieving a self-improving cycle of proposal, execution, and correction for scalable robot learning.",
+        "authors_display": "Changshui Zhang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.12065",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "在现实世界中训练机器人策略成本高昂且难以扩展，而现有生成式模拟方法难以生成逻辑连贯的长周期任务，且开环执行无法应对动态物理不确定性。为解决这些挑战，本文提出了Affordance-Graphed Task Worlds (AGT-World) 框架，该框架能根据真实世界观察自主构建交互式模拟环境及相应的机器人任务策略。AGT-World将任务空间形式化为结构化图，实现复杂目标的精确分层分解，并引入了带有混合反馈的自进化机制（结合VLM推理和几何验证）来自主优化策略。广泛实验表明，该方法在成功率和泛化能力上显著优于现有方法，实现了提案、执行和修正的自改进循环，从而促进可扩展的机器人学习。"
+      },
+      {
+        "paper_id": "2602.12062",
+        "title": "HoloBrain-0 Technical Report",
+        "abstract": "In this work, we introduce HoloBrain-0, a comprehensive Vision-Language-Action (VLA) framework that bridges the gap between foundation model research and reliable real-world robot deployment. The core of our system is a novel VLA architecture that explicitly incorporates robot embodiment priors, including multi-view camera parameters and kinematic descriptions (URDF), to enhance 3D spatial reasoning and support diverse embodiments. We validate this design through a scalable ``pre-train then post-train\" paradigm, achieving state-of-the-art results on simulation benchmarks such as RoboTwin 2.0, LIBERO, and GenieSim, as well as strong results on challenging long-horizon real-world manipulation tasks. Notably, our efficient 0.2B-parameter variant rivals significantly larger baselines, enabling low-latency on-device deployment. To further accelerate research and practical adoption, we fully open-source the entire HoloBrain ecosystem, which includes: (1) powerful pre-trained VLA foundations; (2) post-trained checkpoints for multiple simulation suites and real-world tasks; and (3) RoboOrchard, a full-stack VLA infrastructure for data curation, model training and deployment. Together with standardized data collection protocols, this release provides the community with a complete, reproducible path toward high-performance robotic manipulation.",
+        "authors_display": "Zhizhong Su Team",
+        "pdf_url": "http://arxiv.org/abs/2602.12062",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "为弥合基础模型研究与可靠的真实世界机器人部署之间的差距，本文提出了HoloBrain-0，这是一个全面的视觉-语言-动作（VLA）框架。其核心是一个新颖的VLA架构，显式整合了机器人本体先验信息（如多视角相机参数和运动学描述URDF），以增强3D空间推理并支持多样化的机器人本体。通过“预训练-后训练”范式，HoloBrain-0在RoboTwin 2.0、LIBERO和GenieSim等仿真基准上，以及具有挑战性的长周期真实世界操作任务中取得了最先进的成果。值得一提的是，其0.2B参数的高效变体能与大得多的基线模型媲美，并支持低延迟的设备部署。为加速研究和实际应用，研究者们全面开源了HoloBrain生态系统。"
+      },
+      {
+        "paper_id": "2602.12032",
+        "title": "When would Vision-Proprioception Policies Fail in Robotic Manipulation?",
+        "abstract": "Proprioceptive information is critical for precise servo control by providing real-time robotic states. Its collaboration with vision is highly expected to enhance performances of the manipulation policy in complex tasks. However, recent studies have reported inconsistent observations on the generalization of vision-proprioception policies. In this work, we investigate this by conducting temporally controlled experiments. We found that during task sub-phases that robot's motion transitions, which require target localization, the vision modality of the vision-proprioception policy plays a limited role. Further analysis reveals that the policy naturally gravitates toward concise proprioceptive signals that offer faster loss reduction when training, thereby dominating the optimization and suppressing the learning of the visual modality during motion-transition phases. To alleviate this, we propose the Gradient Adjustment with Phase-guidance (GAP) algorithm that adaptively modulates the optimization of proprioception, enabling dynamic collaboration within the vision-proprioception policy. Specifically, we leverage proprioception to capture robotic states and estimate the probability of each timestep in the trajectory belonging to motion-transition phases. During policy learning, we apply fine-grained adjustment that reduces the magnitude of proprioception's gradient based on estimated probabilities, leading to robust and generalizable vision-proprioception policies. The comprehensive experiments demonstrate GAP is applicable in both simulated and real-world environments, across one-arm and dual-arm setups, and compatible with both conventional and Vision-Language-Action models. We believe this work can offer valuable insights into the development of vision-proprioception policies in robotic manipulation.",
+        "authors_display": "Di Hu Team",
+        "pdf_url": "http://arxiv.org/abs/2602.12032",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "本体信息对机器人精确伺服控制至关重要，但现有研究发现，在机器人运动转换阶段，视觉-本体策略中的视觉模态作用有限，策略倾向于更快地减少损失的本体信号，从而抑制了视觉模态的学习。为解决此问题，本文提出了基于阶段引导的梯度调整（GAP）算法。该算法利用本体信息估计轨迹中每个时间步属于运动转换阶段的概率，并据此自适应地调整本体梯度的幅度，以实现视觉-本体策略内的动态协作。广泛实验证明，GAP在仿真和真实世界、单臂和双臂设置以及与多种模型兼容性方面均适用，并能有效生成鲁棒且可泛化的视觉-本体策略。"
+      },
+      {
+        "paper_id": "2602.11978",
+        "title": "Accelerating Robotic Reinforcement Learning with Agent Guidance",
+        "abstract": "Reinforcement Learning (RL) offers a powerful paradigm for autonomous robots to master generalist manipulation skills through trial-and-error. However, its real-world application is stifled by severe sample inefficiency. Recent Human-in-the-Loop (HIL) methods accelerate training by using human corrections, yet this approach faces a scalability barrier. Reliance on human supervisors imposes a 1:1 supervision ratio that limits fleet expansion, suffers from operator fatigue over extended sessions, and introduces high variance due to inconsistent human proficiency. We present Agent-guided Policy Search (AGPS), a framework that automates the training pipeline by replacing human supervisors with a multimodal agent. Our key insight is that the agent can be viewed as a semantic world model, injecting intrinsic value priors to structure physical exploration. By using executable tools, the agent provides precise guidance via corrective waypoints and spatial constraints for exploration pruning. We validate our approach on two tasks, ranging from precision insertion to deformable object manipulation. Results demonstrate that AGPS outperforms HIL methods in sample efficiency. This automates the supervision pipeline, unlocking the path to labor-free and scalable robot learning. Project website: https://agps-rl.github.io/agps.",
+        "authors_display": "Yaodong Yang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11978",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "强化学习在机器人泛化操作技能学习中潜力巨大，但其在现实世界的应用受限于严重的样本效率问题。现有的人机协作（HIL）方法通过人类纠正加速训练，却面临可扩展性瓶颈和高方差。针对此，本文提出了Agent-guided Policy Search (AGPS) 框架，通过引入多模态智能体取代人类监督者，实现训练流程的自动化。AGPS的核心思想是将智能体视为语义世界模型，注入内在价值先验来构造物理探索，并通过可执行工具提供精确的校正路点和空间约束以剪枝探索。实验结果表明，AGPS在精度插入和可变形物体操作等任务上均优于HIL方法，显著提高了样本效率，为无需人力的可扩展机器人学习铺平了道路。"
+      },
+      {
+        "paper_id": "2602.11934",
+        "title": "Robot-DIFT: Distilling Diffusion Features for Geometrically Consistent Visuomotor Control",
+        "abstract": "We hypothesize that a key bottleneck in generalizable robot manipulation is not solely data scale or policy capacity, but a structural mismatch between current visual backbones and the physical requirements of closed-loop control. While state-of-the-art vision encoders (including those used in VLAs) optimize for semantic invariance to stabilize classification, manipulation typically demands geometric sensitivity the ability to map millimeter-level pose shifts to predictable feature changes. Their discriminative objective creates a \"blind spot\" for fine-grained control, whereas generative diffusion models inherently encode geometric dependencies within their latent manifolds, encouraging the preservation of dense multi-scale spatial structure. However, directly deploying stochastic diffusion features for control is hindered by stochastic instability, inference latency, and representation drift during fine-tuning. To bridge this gap, we propose Robot-DIFT, a framework that decouples the source of geometric information from the process of inference via Manifold Distillation. By distilling a frozen diffusion teacher into a deterministic Spatial-Semantic Feature Pyramid Network (S2-FPN), we retain the rich geometric priors of the generative model while ensuring temporal stability, real-time execution, and robustness against drift. Pretrained on the large-scale DROID dataset, Robot-DIFT demonstrates superior geometric consistency and control performance compared to leading discriminative baselines, supporting the view that how a model learns to see dictates how well it can learn to act.",
+        "authors_display": "Georgia Chalvatzaki Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11934",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "本文提出，通用机器人操作中的关键瓶颈可能在于当前视觉骨干网络与闭环控制物理需求之间的结构不匹配，因为现有视觉编码器虽然优化语义不变性，却忽视了操作所需的几何敏感性。生成式扩散模型虽能编码几何依赖，但直接部署存在随机不稳定性、推理延迟和表示漂移。为弥合这一差距，研究者们提出了Robot-DIFT框架，通过流形蒸馏将几何信息源与推理过程解耦。该方法将冻结的扩散教师模型蒸馏到确定性的空间-语义特征金字塔网络（S2-FPN），从而保留了生成模型的丰富几何先验，同时确保了时间稳定性、实时执行和抗漂移鲁棒性。实验证明，Robot-DIFT在几何一致性和控制性能上均优于领先的判别性基线模型。"
+      },
+      {
+        "paper_id": "2602.11832",
+        "title": "JEPA-VLA: Video Predictive Embedding is Needed for VLA Models",
+        "abstract": "Recent vision-language-action (VLA) models built upon pretrained vision-language models (VLMs) have achieved significant improvements in robotic manipulation. However, current VLAs still suffer from low sample efficiency and limited generalization. This paper argues that these limitations are closely tied to an overlooked component, pretrained visual representation, which offers insufficient knowledge on both aspects of environment understanding and policy prior. Through an in-depth analysis, we find that commonly used visual representations in VLAs, whether pretrained via language-image contrastive learning or image-based self-supervised learning, remain inadequate at capturing crucial, task-relevant environment information and at inducing effective policy priors, i.e., anticipatory knowledge of how the environment evolves under successful task execution. In contrast, we discover that predictive embeddings pretrained on videos, in particular V-JEPA 2, are adept at flexibly discarding unpredictable environment factors and encoding task-relevant temporal dynamics, thereby effectively compensating for key shortcomings of existing visual representations in VLAs. Building on these observations, we introduce JEPA-VLA, a simple yet effective approach that adaptively integrates predictive embeddings into existing VLAs. Our experiments demonstrate that JEPA-VLA yields substantial performance gains across a range of benchmarks, including LIBERO, LIBERO-plus, RoboTwin2.0, and real-robot tasks.",
+        "authors_display": "Mingsheng Long Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11832",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.CV",
+        "chinese_summary": "尽管基于预训练视觉-语言模型（VLMs）的VLA模型在机器人操作方面取得了进展，但仍存在样本效率低和泛化能力有限的问题，这与被忽视的预训练视觉表示不足有关。研究发现，现有VLA中常用的视觉表示在捕获关键任务相关环境信息和诱导有效策略先验方面均不足。相比之下，在视频上预训练的预测嵌入，特别是V-JEPA 2，能够灵活地舍弃不可预测的环境因素并编码任务相关的时态动态，从而有效弥补现有视觉表示的不足。基于这些观察，本文提出了JEPA-VLA，一种简单而有效的方法，将预测嵌入自适应地集成到现有VLA中。实验结果表明，JEPA-VLA在LIBERO、LIBERO-plus、RoboTwin2.0和真实机器人任务等一系列基准上带来了显著的性能提升。"
+      },
+      {
+        "paper_id": "2602.11660",
+        "title": "Clutt3R-Seg: Sparse-view 3D Instance Segmentation for Language-grounded Grasping in Cluttered Scenes",
+        "abstract": "Reliable 3D instance segmentation is fundamental to language-grounded robotic manipulation. Its critical application lies in cluttered environments, where occlusions, limited viewpoints, and noisy masks degrade perception. To address these challenges, we present Clutt3R-Seg, a zero-shot pipeline for robust 3D instance segmentation for language-grounded grasping in cluttered scenes. Our key idea is to introduce a hierarchical instance tree of semantic cues. Unlike prior approaches that attempt to refine noisy masks, our method leverages them as informative cues: through cross-view grouping and conditional substitution, the tree suppresses over- and under-segmentation, yielding view-consistent masks and robust 3D instances. Each instance is enriched with open-vocabulary semantic embeddings, enabling accurate target selection from natural language instructions. To handle scene changes during multi-stage tasks, we further introduce a consistency-aware update that preserves instance correspondences from only a single post-interaction image, allowing efficient adaptation without rescanning. Clutt3R-Seg is evaluated on both synthetic and real-world datasets, and validated on a real robot. Across all settings, it consistently outperforms state-of-the-art baselines in cluttered and sparse-view scenarios. Even on the most challenging heavy-clutter sequences, Clutt3R-Seg achieves an AP@25 of 61.66, over 2.2x higher than baselines, and with only four input views it surpasses MaskClustering with eight views by more than 2x. The code is available at: https://github.com/jeonghonoh/clutt3r-seg.",
+        "authors_display": "Ayoung Kim Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11660",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.CV",
+        "chinese_summary": "在杂乱环境中，遮挡、有限视角和噪声掩码会严重影响3D实例分割性能，从而阻碍语言引导机器人抓取。为解决这些挑战，本文提出了Clutt3R-Seg，一个用于杂乱场景中语言引导抓取的零样本鲁棒3D实例分割流水线。其核心思想是引入语义线索的分层实例树，通过跨视图分组和条件替换，利用噪声掩码作为信息线索，抑制过分割和欠分割，从而产生视图一致的掩码和鲁棒的3D实例。为处理多阶段任务中的场景变化，该方法还引入了一致性感知更新机制。Clutt3R-Seg在合成和真实世界数据集上，以及真实机器人上的评估均表明，它在杂乱和稀疏视图场景中持续优于最先进的基线，即使在重度杂乱序列中也表现出色。"
+      },
+      {
+        "paper_id": "2602.11643",
+        "title": "ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning",
+        "abstract": "Tactile information plays a crucial role in human manipulation tasks and has recently garnered increasing attention in robotic manipulation. However, existing approaches mostly focus on the alignment of visual and tactile features and the integration mechanism tends to be direct concatenation. Consequently, they struggle to effectively cope with occluded scenarios due to neglecting the inherent complementary nature of both modalities and the alignment may not be exploited enough, limiting the potential of their real-world deployment. In this paper, we present ViTaS, a simple yet effective framework that incorporates both visual and tactile information to guide the behavior of an agent. We introduce Soft Fusion Contrastive Learning, an advanced version of conventional contrastive learning method and a CVAE module to utilize the alignment and complementarity within visuo-tactile representations. We demonstrate the effectiveness of our method in 12 simulated and 3 real-world environments, and our experiments show that ViTaS significantly outperforms existing baselines. Project page: https://skyrainwind.github.io/ViTaS/index.html.",
+        "authors_display": "Huazhe Xu Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11643",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "触觉信息在机器人操作中日益受到关注，但现有方法主要关注视觉和触觉特征的直接拼接对齐，导致在遮挡场景中效果不佳，且忽视了两种模态固有的互补性。为解决此问题，本文提出了ViTaS框架，一个结合视觉和触觉信息来引导智能体行为的简单而有效的方法。研究者们引入了Soft Fusion对比学习（一种改进的对比学习方法）和CVAE模块，以充分利用视觉-触觉表示中的对齐和互补性。实验结果表明，ViTaS在12个仿真和3个真实世界环境中均验证了其有效性，并显著优于现有基线方法。"
+      },
+      {
+        "paper_id": "2602.11464",
+        "title": "EasyMimic: A Low-Cost Framework for Robot Imitation Learning from Human Videos",
+        "abstract": "Robot imitation learning is often hindered by the high cost of collecting large-scale, real-world data. This challenge is especially significant for low-cost robots designed for home use, as they must be both user-friendly and affordable. To address this, we propose the EasyMimic framework, a low-cost and replicable solution that enables robots to quickly learn manipulation policies from human video demonstrations captured with standard RGB cameras. Our method first extracts 3D hand trajectories from the videos. An action alignment module then maps these trajectories to the gripper control space of a low-cost robot. To bridge the human-to-robot domain gap, we introduce a simple and user-friendly hand visual augmentation strategy. We then use a co-training method, fine-tuning a model on both the processed human data and a small amount of robot data, enabling rapid adaptation to new tasks. Experiments on the low-cost LeRobot platform demonstrate that EasyMimic achieves high performance across various manipulation tasks. It significantly reduces the reliance on expensive robot data collection, offering a practical path for bringing intelligent robots into homes. Project website: https://zt375356.github.io/EasyMimic-Project/.",
+        "authors_display": "Qin Jin Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11464",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对机器人模仿学习中真实世界数据收集成本高昂的问题，尤其对低成本家用机器人而言，本研究提出了EasyMimic框架。该方法通过标准RGB相机捕获人类视频演示，提取3D手部轨迹，并利用动作对齐模块将其映射到机器人控制空间。为弥合人机领域差距，引入了手部视觉增强策略，并通过协同训练在处理过的人类数据和少量机器人数据上快速适应新任务。实验表明，EasyMimic在LeRobot平台上实现了高效的操作任务学习，显著降低了对昂贵机器人数据的依赖。"
+      },
+      {
+        "paper_id": "2602.10983",
+        "title": "Scaling World Model for Hierarchical Manipulation Policies",
+        "abstract": "Vision-Language-Action (VLA) models are promising for generalist robot manipulation but remain brittle in out-of-distribution (OOD) settings, especially with limited real-robot data. To resolve the generalization bottleneck, we introduce a hierarchical Vision-Language-Action framework \\our{} that leverages the generalization of large-scale pre-trained world model for robust and generalizable VIsual Subgoal TAsk decomposition VISTA. Our hierarchical framework \\our{} consists of a world model as the high-level planner and a VLA as the low-level executor. The high-level world model first divides manipulation tasks into subtask sequences with goal images, and the low-level policy follows the textual and visual guidance to generate action sequences. Compared to raw textual goal specification, these synthesized goal images provide visually and physically grounded details for low-level policies, making it feasible to generalize across unseen objects and novel scenarios. We validate both visual goal synthesis and our hierarchical VLA policies in massive out-of-distribution scenarios, and the performance of the same-structured VLA in novel scenarios could boost from 14% to 69% with the guidance generated by the world model. Results demonstrate that our method outperforms previous baselines with a clear margin, particularly in out-of-distribution scenarios. Project page: \\href{https://vista-wm.github.io/}{https://vista-wm.github.io}",
+        "authors_display": "Xinghang Li Team",
+        "pdf_url": "http://arxiv.org/abs/2602.10983",
+        "code_url": null,
+        "date": "2026-02-12",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对视觉-语言-动作（VLA）模型在分布外（OOD）场景中泛化能力不足的挑战，本研究提出了分层视觉-语言-动作框架VISTA。该框架利用大规模预训练世界模型作为高级规划器，进行鲁棒且可泛化的视觉子目标任务分解，并将任务划分为带有目标图像的子任务序列。低级VLA策略则依据文本和视觉指导生成动作。实验结果表明，与原始文本目标相比，世界模型合成的目标图像为低级策略提供了更具视觉和物理基础的细节，使VLA在OOD场景中的性能显著提升，从14%增至69%，明显优于现有基线。"
+      },
+      {
+        "paper_id": "2602.11393",
+        "title": "Human Preference Modeling Using Visual Motion Prediction Improves Robot Skill Learning from Egocentric Human Video",
+        "abstract": "We present an approach to robot learning from egocentric human videos by modeling human preferences in a reward function and optimizing robot behavior to maximize this reward. Prior work on reward learning from human videos attempts to measure the long-term value of a visual state as the temporal distance between it and the terminal state in a demonstration video. These approaches make assumptions that limit performance when learning from video. They must also transfer the learned value function across the embodiment and environment gap. Our method models human preferences by learning to predict the motion of tracked points between subsequent images and defines a reward function as the agreement between predicted and observed object motion in a robot's behavior at each step. We then use a modified Soft Actor Critic (SAC) algorithm initialized with 10 on-robot demonstrations to estimate a value function from this reward and optimize a policy that maximizes this value function, all on the robot. Our approach is capable of learning on a real robot, and we show that policies learned with our reward model match or outperform prior work across multiple tasks in both simulation and on the real robot.",
+        "authors_display": "Christopher G. Atkeson Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11393",
+        "code_url": null,
+        "date": "2026-02-11",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对传统从以自我为中心的人类视频中学习机器人行为时，奖励函数构建和跨领域迁移的局限性，本研究提出了一种通过建模人类偏好来学习机器人行为的方法。该方法通过学习预测后续图像中跟踪点的运动来定义奖励函数，其依据是机器人行为中预测与观察到的物体运动的一致性。随后，利用改进的Soft Actor Critic算法，并结合少量机器人演示，在真实机器人上优化策略。实验结果表明，该奖励模型学习到的策略在模拟和真实机器人的多项任务中均达到或超越了现有方法。"
+      },
+      {
+        "paper_id": "2602.11337",
+        "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+        "abstract": "Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets and tooling, we provide a foundation for scalable data generation, policy training, and benchmark creation for robot learning research.",
+        "authors_display": "Ranjay Krishna Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11337",
+        "code_url": null,
+        "date": "2026-02-11",
+        "primary_category": "cs.RO",
+        "chinese_summary": "鉴于机器人大规模部署对环境多样性和鲁棒性的高要求，而现有基准测试缺乏足够的多样性且物理评估成本高昂，本研究推出了MolmoSpaces生态系统。该系统包含超过23万个多样化的室内环境和13万个丰富标注的物体，兼容多种模拟器，支持静态/移动操作、导航等具身任务。MolmoSpaces-Bench基准套件包含8个任务，用于评估机器人在复杂场景中的交互能力。实验结果显示，该基准测试具有良好的模拟到真实相关性，并成功验证了新型零样本策略的性能提升。"
+      },
+      {
+        "paper_id": "2602.11150",
+        "title": "YOR: Your Own Mobile Manipulator for Generalizable Robotics",
+        "abstract": "Recent advances in robot learning have generated significant interest in capable platforms that may eventually approach human-level competence. This interest, combined with the commoditization of actuators, has propelled growth in low-cost robotic platforms. However, the optimal form factor for mobile manipulation, especially on a budget, remains an open question. We introduce YOR, an open-source, low-cost mobile manipulator that integrates an omnidirectional base, a telescopic vertical lift, and two arms with grippers to achieve whole-body mobility and manipulation. Our design emphasizes modularity, ease of assembly using off-the-shelf components, and affordability, with a bill-of-materials cost under 10,000 USD. We demonstrate YOR's capability by completing tasks that require coordinated whole-body control, bimanual manipulation, and autonomous navigation. Overall, YOR offers competitive functionality for mobile manipulation research at a fraction of the cost of existing platforms. Project website: https://www.yourownrobot.ai/",
+        "authors_display": "Zichen Jeff Cui Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11150",
+        "code_url": null,
+        "date": "2026-02-11",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对低成本移动操作机器人平台的最优形态问题，本研究提出并设计了YOR，一个开源、低成本的移动操纵器。YOR集成了全向基座、伸缩式垂直升降机构和两个带抓手的机械臂，实现了全身移动和操作能力。其设计强调模块化、易于组装和经济性，物料清单成本低于10,000美元。实验证明，YOR能够完成需要协调全身控制、双手操作和自主导航的复杂任务，以远低于现有平台的成本提供了具有竞争力的移动操作功能。"
+      },
+      {
+        "paper_id": "2602.11236",
+        "title": "ABot-M0: VLA Foundation Model for Robotic Manipulation with Action Manifold Learning",
+        "abstract": "Building general-purpose embodied agents across diverse hardware remains a central challenge in robotics, often framed as the ''one-brain, many-forms'' paradigm. Progress is hindered by fragmented data, inconsistent representations, and misaligned training objectives. We present ABot-M0, a framework that builds a systematic data curation pipeline while jointly optimizing model architecture and training strategies, enabling end-to-end transformation of heterogeneous raw data into unified, efficient representations. From six public datasets, we clean, standardize, and balance samples to construct UniACT-dataset, a large-scale dataset with over 6 million trajectories and 9,500 hours of data, covering diverse robot morphologies and task scenarios. Unified pre-training improves knowledge transfer and generalization across platforms and tasks, supporting general-purpose embodied intelligence. To improve action prediction efficiency and stability, we propose the Action Manifold Hypothesis: effective robot actions lie not in the full high-dimensional space but on a low-dimensional, smooth manifold governed by physical laws and task constraints. Based on this, we introduce Action Manifold Learning (AML), which uses a DiT backbone to predict clean, continuous action sequences directly. This shifts learning from denoising to projection onto feasible manifolds, improving decoding speed and policy stability. ABot-M0 supports modular perception via a dual-stream mechanism that integrates VLM semantics with geometric priors and multi-view inputs from plug-and-play 3D modules such as VGGT and Qwen-Image-Edit, enhancing spatial understanding without modifying the backbone and mitigating standard VLM limitations in 3D reasoning. Experiments show components operate independently with additive benefits. We will release all code and pipelines for reproducibility and future research.",
+        "authors_display": "Mu Xu Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11236",
+        "code_url": "https://amap-cvlab.github.io/ABot-Manipulation/",
+        "date": "2026-02-11",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对跨多样硬件构建通用具身智能体时数据碎片化、表示不一致等挑战，本研究提出了ABot-M0框架。该框架通过系统的数据整理流程构建了包含600多万条轨迹的UniACT-dataset，并联合优化模型架构和训练策略，实现异构数据的统一高效表示。基于“动作流形假设”，引入动作流形学习（AML）直接预测干净连续的动作序列，提升效率和稳定性。此外，通过双流机制整合VLM语义和多视图输入实现模块化感知。实验证实了各组件的独立效益和累加效果，提升了跨平台泛化能力。"
+      },
+      {
+        "paper_id": "2602.11018",
+        "title": "OSIL: Learning Offline Safe Imitation Policies with Safety Inferred from Non-preferred Trajectories",
+        "abstract": "This work addresses the problem of offline safe imitation learning (IL), where the goal is to learn safe and reward-maximizing policies from demonstrations that do not have per-timestep safety cost or reward information. In many real-world domains, online learning in the environment can be risky, and specifying accurate safety costs can be difficult. However, it is often feasible to collect trajectories that reflect undesirable or unsafe behavior, implicitly conveying what the agent should avoid. We refer to these as non-preferred trajectories. We propose a novel offline safe IL algorithm, OSIL, that infers safety from non-preferred demonstrations. We formulate safe policy learning as a Constrained Markov Decision Process (CMDP). Instead of relying on explicit safety cost and reward annotations, OSIL reformulates the CMDP problem by deriving a lower bound on reward maximizing objective and learning a cost model that estimates the likelihood of non-preferred behavior. Our approach allows agents to learn safe and reward-maximizing behavior entirely from offline demonstrations. We empirically demonstrate that our approach can learn safer policies that satisfy cost constraints without degrading the reward performance, thus outperforming several baselines.",
+        "authors_display": "Balaraman Ravindran Team",
+        "pdf_url": "http://arxiv.org/abs/2602.11018",
+        "code_url": null,
+        "date": "2026-02-11",
+        "primary_category": "cs.LG",
+        "chinese_summary": "针对离线安全模仿学习（IL）中缺乏每时间步安全成本或奖励信息的问题，同时考虑到在线学习的风险和安全成本指定的难度，本研究提出了一种新型离线安全IL算法OSIL。该算法通过从“非偏好轨迹”中推断安全性，将安全策略学习重构为约束马尔可夫决策过程（CMDP），并通过学习一个估计非偏好行为可能性的成本模型来解决。实验结果表明，OSIL能够完全从离线演示中学习到更安全且不影响奖励性能的策略，优于多种基线方法。"
+      },
+      {
+        "paper_id": "2602.10943",
+        "title": "Towards Learning a Generalizable 3D Scene Representation from 2D Observations",
+        "abstract": "We introduce a Generalizable Neural Radiance Field approach for predicting 3D workspace occupancy from egocentric robot observations. Unlike prior methods operating in camera-centric coordinates, our model constructs occupancy representations in a global workspace frame, making it directly applicable to robotic manipulation. The model integrates flexible source views and generalizes to unseen object arrangements without scene-specific finetuning. We demonstrate the approach on a humanoid robot and evaluate predicted geometry against 3D sensor ground truth. Trained on 40 real scenes, our model achieves 26mm reconstruction error, including occluded regions, validating its ability to infer complete 3D occupancy beyond traditional stereo vision methods.",
+        "authors_display": "Stefan Wermter Team",
+        "pdf_url": "http://arxiv.org/abs/2602.10943",
+        "code_url": null,
+        "date": "2026-02-11",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对现有3D占用预测方法多在相机坐标系中操作，难以直接应用于机器人操纵的问题，本研究提出了一种可泛化的神经辐射场方法。该模型能够从以机器人自我为中心的观察中预测3D工作空间占用，并在全局工作空间框架中构建表示。它能集成灵活的源视图，并无需场景特定微调即可泛化到未见物体排列。在类人机器人上的实验表明，模型在40个真实场景上训练后，实现了26毫米的重建误差（包括遮挡区域），验证了其超越传统立体视觉方法，推断完整3D占用信息的能力。"
+      },
+      {
+        "paper_id": "2602.10793",
+        "title": "Semi-Supervised Cross-Domain Imitation Learning",
+        "abstract": "Cross-domain imitation learning (CDIL) accelerates policy learning by transferring expert knowledge across domains, which is valuable in applications where the collection of expert data is costly. Existing methods are either supervised, relying on proxy tasks and explicit alignment, or unsupervised, aligning distributions without paired data, but often unstable. We introduce the Semi-Supervised CDIL (SS-CDIL) setting and propose the first algorithm for SS-CDIL with theoretical justification. Our method uses only offline data, including a small number of target expert demonstrations and some unlabeled imperfect trajectories. To handle domain discrepancy, we propose a novel cross-domain loss function for learning inter-domain state-action mappings and design an adaptive weight function to balance the source and target knowledge. Experiments on MuJoCo and Robosuite show consistent gains over the baselines, demonstrating that our approach achieves stable and data-efficient policy learning with minimal supervision. Our code is available at~ https://github.com/NYCU-RL-Bandits-Lab/CDIL.",
+        "authors_display": "Ping-Chun Hsieh Team",
+        "pdf_url": "http://arxiv.org/abs/2602.10793",
+        "code_url": null,
+        "date": "2026-02-11",
+        "primary_category": "cs.LG",
+        "chinese_summary": "鉴于跨域模仿学习（CDIL）在专家数据收集成本高昂时的价值，但现有监督或无监督方法存在依赖显式对齐或稳定性差的问题，本研究引入了半监督CDIL（SS-CDIL）设置。本研究提出首个具有理论依据的SS-CDIL算法，该方法仅使用少量目标专家演示和未标记的不完善轨迹。为解决领域差异，引入了新颖的跨域损失函数学习域间状态-动作映射，并设计了自适应权重函数来平衡源域和目标域知识。实验证明，该方法在最小监督下实现了稳定且数据高效的策略学习，性能优于基线。"
+      },
+      {
+        "paper_id": "2602.10717",
+        "title": "Say, Dream, and Act: Learning Video World Models for Instruction-Driven Robot Manipulation",
+        "abstract": "Robotic manipulation requires anticipating how the environment evolves in response to actions, yet most existing systems lack this predictive capability, often resulting in errors and inefficiency. While Vision-Language Models (VLMs) provide high-level guidance, they cannot explicitly forecast future states, and existing world models either predict only short horizons or produce spatially inconsistent frames. To address these challenges, we propose a framework for fast and predictive video-conditioned action. Our approach first selects and adapts a robust video generation model to ensure reliable future predictions, then applies adversarial distillation for fast, few-step video generation, and finally trains an action model that leverages both generated videos and real observations to correct spatial errors. Extensive experiments show that our method produces temporally coherent, spatially accurate video predictions that directly support precise manipulation, achieving significant improvements in embodiment consistency, spatial referring ability, and task completion over existing baselines. Codes & Models will be released.",
+        "authors_display": "Yanwei Fu Team",
+        "pdf_url": "http://arxiv.org/abs/2602.10717",
+        "code_url": null,
+        "date": "2026-02-11",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对机器人操作中缺乏对环境演化预测能力导致的错误和低效，以及现有视觉-语言模型（VLM）和世界模型在预测未来状态或生成空间一致帧上的局限性，本研究提出了一个用于快速、预测性视频条件动作的框架。该方法首先选择并调整鲁棒的视频生成模型以确保可靠预测，然后采用对抗蒸馏进行快速视频生成，最后训练一个动作模型，利用生成的视频和真实观察纠正空间错误。实验表明，该方法生成的视频预测在时间连贯性和空间准确性上表现出色，显著提升了具身一致性、空间指代能力和任务完成率。"
+      }
+    ]
+  }
+}

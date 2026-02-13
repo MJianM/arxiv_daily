@@ -1,0 +1,40 @@
+# TODO: add papers by configuration file
+user_name: "MJianM"
+repo_name: "robotics-arxiv-daily"
+show_authors: True
+show_links: True
+# 每个分类单次最大查询个数
+max_results: 20
+# 每分类最多保留论文数（固定长度队列，满后淘汰最旧）
+max_papers_per_category: 500
+
+publish_readme: True
+publish_gitpage: True
+
+# gemini api key（建议通过环境变量 GEMINI_API_KEY 提供；这里留空或填占位）
+gemini_api_key: ''
+gemini_model_id: 'gemini-2.5-flash'
+batch_size: 10
+
+# file paths
+# 数据存储位置
+json_data_path: './docs/arxiv-daily.json'
+# 渲染markdown文件位置
+md_readme_path: 'README.md'
+md_gitpage_path: './docs/index.md'
+
+# keywords to search
+keywords:
+    # --------- My Keywords ---------
+    "World Model":
+        filters: ["World Model", "World Models", "Robot Learning", "Foundation Model"]
+    "Manipulation":
+        filters: ["Robot Manipulation", "Robotic Manipulation", "Robot Learning", "Imitation Learning"]
+    "VLM":
+        filters: ["Vision Language Model", "Vision Language Models", "Vision-Language Model", "Vision-Language Models"]
+    "VLA":
+        filters: ["Vision Language Action","Vision-Language-Action"]
+    "Humanoid":
+        filters: ["Humanoid Robot", "Humanoid"]
+    # "Dexterous":
+    #     filters: ["Dexterous Manipulation", "Dexterous hand", "Dexterity", "Dexterous"]
