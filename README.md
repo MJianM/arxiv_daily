@@ -1,14 +1,12 @@
 ## Updated on 2026.02.13
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href=#manipulation>Manipulation</a></li>
-    <li><a href=#world-model>World Model</a></li>
-    <li><a href=#vlm>VLM</a></li>
-    <li><a href=#vla>VLA</a></li>
-    <li><a href=#humanoid>Humanoid</a></li>
-  </ol>
-</details>
+
+## Categories
+
+- [Manipulation](#manipulation)
+- [World Model](#world-model)
+- [VLM](#vlm)
+- [VLA](#vla)
+- [Humanoid](#humanoid)
 
 ## Manipulation
 

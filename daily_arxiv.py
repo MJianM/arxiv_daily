@@ -274,6 +274,66 @@ class MarkdownRenderer:
             return f"|**{d}**|**{title}**|{chinese_summary}|{authors}|[{pid}]({pdf})|**[link]({code})**|"
         return f"|**{d}**|**{title}**|{chinese_summary}|{authors}|[{pid}]({pdf})|null|"
 
+    # @classmethod
+    # def render(
+    #     cls,
+    #     data: Dict[str, Any],
+    #     to_web: bool = False,
+    #     use_tc: bool = True,
+    #     use_b2t: bool = True,
+    # ) -> str:
+    #     """
+    #     将 PaperStorage 的 data 渲染成完整 Markdown 字符串。
+    #     :param data: PaperStorage.load / merge_and_trim 后的数据
+    #     :param to_web: 是否为 GitHub Pages（写 Jekyll layout、表格对齐）
+    #     :param use_tc: 是否生成可折叠目录
+    #     :param show_badge: 是否写 badge 链接
+    #     :param use_b2t: 是否在每个分类后写 back to top
+    #     """
+    #     lines = []
+    #     meta = data.get(PaperStorage.META_KEY, {})
+    #     categories = data.get(PaperStorage.CATEGORIES_KEY, {})
+    #     date_str = datetime.date.today().isoformat().replace('-', '.')
+
+    #     if to_web:
+    #         lines.append("---\nlayout: default\n---\n")
+
+
+    #     lines.append("## Updated on " + date_str)
+    #     # lines.append("> Usage instructions: [here](./docs/README.md#usage)\n")
+
+    #     if use_tc and categories:
+    #         lines.append("<details>")
+    #         lines.append("  <summary>Table of Contents</summary>")
+    #         lines.append("  <ol>")
+    #         for kw in categories:
+    #             if categories[kw]:
+    #                 anchor = kw.replace(' ', '-').lower()
+    #                 lines.append(f"    <li><a href=#{anchor}>{kw}</a></li>")
+    #         lines.append("  </ol>")
+    #         lines.append("</details>\n")
+
+    #     for topic, papers in categories.items():
+    #         if not papers:
+    #             continue
+    #         lines.append(f"## {topic}\n")
+    #         if to_web:
+    #             lines.append("| Publish Date | Title | Chinese Summary | Authors | PDF | Code |")
+    #             lines.append("|:---------|:-----------------------|:------------------------|:---------|:------|:------|")
+    #         else:
+    #             lines.append("|Publish Date|Title|Chinese Summary|Authors|PDF|Code|")
+    #             lines.append("|---|---|---|---|---|---|")
+    #         # 已按日期降序存储，直接顺序输出
+    #         for p in papers:
+    #             lines.append(cls._pretty_math(cls._paper_to_table_row(p)))
+    #         lines.append("")
+    #         if use_b2t:
+    #             top = "#updated-on-" + date_str.replace('.', '').replace(' ', '-').lower()
+    #             lines.append(f"<p align=right>(<a href={top}>back to top</a>)</p>\n")
+
+
+    #     return "\n".join(lines)
+
     @classmethod
     def render(
         cls,
@@ -284,67 +344,63 @@ class MarkdownRenderer:
     ) -> str:
         """
         将 PaperStorage 的 data 渲染成完整 Markdown 字符串。
-        :param data: PaperStorage.load / merge_and_trim 后的数据
-        :param to_web: 是否为 GitHub Pages（写 Jekyll layout、表格对齐）
-        :param use_tc: 是否生成可折叠目录
-        :param show_badge: 是否写 badge 链接
-        :param use_b2t: 是否在每个分类后写 back to top
         """
         lines = []
         meta = data.get(PaperStorage.META_KEY, {})
         categories = data.get(PaperStorage.CATEGORIES_KEY, {})
         date_str = datetime.date.today().isoformat().replace('-', '.')
 
+        # 1. 如果是 Web 模式，添加 Jekyll Front Matter
         if to_web:
             lines.append("---\nlayout: default\n---\n")
 
-        # if show_badge:
-        #     lines.append("[![Contributors][contributors-shield]][contributors-url]")
-        #     lines.append("[![Forks][forks-shield]][forks-url]")
-        #     lines.append("[![Stargazers][stars-shield]][stars-url]")
-        #     lines.append("[![Issues][issues-shield]][issues-url]\n")
-
+        # 2. 添加主标题/日期
         lines.append("## Updated on " + date_str)
-        # lines.append("> Usage instructions: [here](./docs/README.md#usage)\n")
-
+        
+        # =========================================================
+        # 修改开始：将折叠目录改为平铺的 Markdown 列表目录
+        # =========================================================
         if use_tc and categories:
-            lines.append("<details>")
-            lines.append("  <summary>Table of Contents</summary>")
-            lines.append("  <ol>")
+            lines.append("") # 空行
+            lines.append("## Categories") # 或者写 "## 目录"
+            lines.append("") # 空行
+            
             for kw in categories:
                 if categories[kw]:
-                    anchor = kw.replace(' ', '-').lower()
-                    lines.append(f"    <li><a href=#{anchor}>{kw}</a></li>")
-            lines.append("  </ol>")
-            lines.append("</details>\n")
+                    # 生成锚点 ID：通常是全小写，空格变横杠
+                    anchor = kw.strip().replace(' ', '-').lower()
+                    # 使用 Markdown 列表语法
+                    lines.append(f"- [{kw}](#{anchor})")
+            
+            lines.append("") # 目录结束后加空行
+        # =========================================================
+        # 修改结束
+        # =========================================================
 
+        # 3. 渲染具体的分类内容
         for topic, papers in categories.items():
             if not papers:
                 continue
+            
+            # 这里的标题会自动生成 ID，例如 "## Manipulation" -> id="manipulation"
             lines.append(f"## {topic}\n")
+            
             if to_web:
                 lines.append("| Publish Date | Title | Chinese Summary | Authors | PDF | Code |")
                 lines.append("|:---------|:-----------------------|:------------------------|:---------|:------|:------|")
             else:
                 lines.append("|Publish Date|Title|Chinese Summary|Authors|PDF|Code|")
                 lines.append("|---|---|---|---|---|---|")
-            # 已按日期降序存储，直接顺序输出
+            
             for p in papers:
                 lines.append(cls._pretty_math(cls._paper_to_table_row(p)))
             lines.append("")
+            
             if use_b2t:
+                # 如果你想让 Back to top 回到目录，可以改为 "#categories" (取决于上面的标题)
+                # 这里保持原样，回到日期标题
                 top = "#updated-on-" + date_str.replace('.', '').replace(' ', '-').lower()
                 lines.append(f"<p align=right>(<a href={top}>back to top</a>)</p>\n")
-
-        # if show_badge:
-        #     lines.append("[contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge")
-        #     lines.append("[contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors")
-        #     lines.append("[forks-shield]: https://img.shields.io/github/forks/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge")
-        #     lines.append("[forks-url]: https://github.com/Vincentqyw/cv-arxiv-daily/network/members")
-        #     lines.append("[stars-shield]: https://img.shields.io/github/stars/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge")
-        #     lines.append("[stars-url]: https://github.com/Vincentqyw/cv-arxiv-daily/stargazers")
-        #     lines.append("[issues-shield]: https://img.shields.io/github/issues/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge")
-        #     lines.append("[issues-url]: https://github.com/Vincentqyw/cv-arxiv-daily/issues\n")
 
         return "\n".join(lines)
 
