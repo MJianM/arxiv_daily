@@ -420,7 +420,7 @@ class ArxivDailyApp:
 
         if self.config.get('publish_gitpage', True):
             md_web = MarkdownRenderer.render(
-                data, to_web=True, use_tc=False, use_b2t=False
+                data, to_web=True, use_tc=True, use_b2t=True
             )
             Path(md_gitpage_path).write_text(md_web, encoding='utf-8')
             logging.info("Update GitPage finished")

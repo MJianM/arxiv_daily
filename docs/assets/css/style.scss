@@ -1,0 +1,49 @@
+
+
+@import "{{ site.theme }}";
+
+/* 1. 扩大页面整体宽度，适应宽表格 */
+.main-content {
+  max-width: 80rem; /* 将默认的宽度从 42rem 增加到 80rem (约1280px) */
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 2. 表格样式优化 */
+table {
+  display: table; /* 覆盖部分主题默认的 block 显示，确保表格占满宽度 */
+  width: 100%;
+  table-layout: auto; /* 允许列宽根据内容调整，但结合下面的 min-width 使用 */
+  font-size: 0.9rem; /* 稍微减小字号以便显示更多内容 */
+}
+
+/* 3. 针对“中文摘要”列（通常是第3列）进行特别加宽 */
+th:nth-child(3),
+td:nth-child(3) {
+  min-width: 400px; /* 强制给中文摘要留出至少 400px 的宽度 */
+  text-align: justify; /* 两端对齐，让大段中文看起来更整齐 */
+  line-height: 1.6;    /* 增加行高，提升阅读体验 */
+}
+
+/* 4. 针对“标题”列（通常是第2列）稍微加宽 */
+th:nth-child(2),
+td:nth-child(2) {
+  min-width: 200px;
+  font-weight: bold;
+}
+
+/* 5. 目录 (Table of Contents) 样式优化 
+   (如果您的 Python 脚本在 Markdown 中生成了 TOC) 
+*/
+#markdown-toc {
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem 1rem 1rem 2rem;
+  list-style-type: disc;
+  margin-bottom: 2rem;
+}
+
+#markdown-toc li {
+  margin-bottom: 0.5rem;
+}
