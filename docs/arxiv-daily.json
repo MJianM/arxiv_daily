@@ -1,10 +1,109 @@
 {
   "meta": {
-    "updated": "2026-02-26",
+    "updated": "2026-02-27",
     "max_papers_per_category": 500
   },
   "categories": {
     "Manipulation": [
+      {
+        "paper_id": "2602.23287",
+        "title": "Interface-Aware Trajectory Reconstruction of Limited Demonstrations for Robot Learning",
+        "abstract": "Assistive robots offer agency to humans with severe motor impairments. Often, these users control high-DoF robots through low-dimensional interfaces, such as using a 1-D sip-and-puff interface to operate a 6-DoF robotic arm. This mismatch results in having access to only a subset of control dimensions at a given time, imposing unintended and artificial constraints on robot motion. As a result, interface-limited demonstrations embed suboptimal motions that reflect interface restrictions rather than user intent. To address this, we present a trajectory reconstruction algorithm that reasons about task, environment, and interface constraints to lift demonstrations into the robot's full control space. We evaluate our approach using real-world demonstrations of ADL-inspired tasks performed via a 2-D joystick and 1-D sip-and-puff control interface, teleoperating two distinct 7-DoF robotic arms. Analyses of the reconstructed demonstrations and derived control policies show that lifted trajectories are faster and more efficient than their interface-constrained counterparts while respecting user preferences.",
+        "authors_display": "Brenna D. Argall Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23287",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对运动障碍患者通过低维接口控制高自由度机器人时，由于控制维度不匹配导致生成次优轨迹的问题，本文提出了一种轨迹重建算法。该算法通过考虑任务、环境和接口约束，将受限的演示轨迹提升至机器人的全控制空间。实验结果表明，重建后的轨迹比受接口限制的轨迹更快、更高效，同时能更好地反映用户意图。"
+      },
+      {
+        "paper_id": "2602.23259",
+        "title": "Risk-Aware World Model Predictive Control for Generalizable End-to-End Autonomous Driving",
+        "abstract": "With advances in imitation learning (IL) and large-scale driving datasets, end-to-end autonomous driving (E2E-AD) has made great progress recently. Currently, IL-based methods have become a mainstream paradigm: models rely on standard driving behaviors given by experts, and learn to minimize the discrepancy between their actions and expert actions. However, this objective of \"only driving like the expert\" suffers from limited generalization: when encountering rare or unseen long-tail scenarios outside the distribution of expert demonstrations, models tend to produce unsafe decisions in the absence of prior experience. This raises a fundamental question: Can an E2E-AD system make reliable decisions without any expert action supervision? Motivated by this, we propose a unified framework named Risk-aware World Model Predictive Control (RaWMPC) to address this generalization dilemma through robust control, without reliance on expert demonstrations. Practically, RaWMPC leverages a world model to predict the consequences of multiple candidate actions and selects low-risk actions through explicit risk evaluation. To endow the world model with the ability to predict the outcomes of risky driving behaviors, we design a risk-aware interaction strategy that systematically exposes the world model to hazardous behaviors, making catastrophic outcomes predictable and thus avoidable. Furthermore, to generate low-risk candidate actions at test time, we introduce a self-evaluation distillation method to distill riskavoidance capabilities from the well-trained world model into a generative action proposal network without any expert demonstration. Extensive experiments show that RaWMPC outperforms state-of-the-art methods in both in-distribution and out-of-distribution scenarios, while providing superior decision interpretability.",
+        "authors_display": "Nicu Sebe Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23259",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "当前端到端自动驾驶（E2E-AD）中的模仿学习方法在遇到分布外（OOD）场景时泛化能力有限，可能导致不安全决策。为解决这一问题，本文提出了一个不依赖专家演示的风险感知世界模型预测控制（RaWMPC）统一框架。该方法通过世界模型预测动作后果，利用风险感知交互策略训练世界模型预测危险行为，并引入自评估蒸馏将避险能力蒸馏到动作提议网络。实验证明RaWMPC在分布内和OOD场景中均优于现有方法，并提供更好的决策可解释性。"
+      },
+      {
+        "paper_id": "2602.22952",
+        "title": "Automated Robotic Needle Puncture for Percutaneous Dilatational Tracheostomy",
+        "abstract": "Percutaneous dilatational tracheostomy (PDT) is frequently performed on patients in intensive care units for prolonged mechanical ventilation. The needle puncture, as the most critical step of PDT, could lead to adverse consequences such as major bleeding and posterior tracheal wall perforation if performed inaccurately. Current practices of PDT puncture are all performed manually with no navigation assistance, which leads to large position and angular errors (5 mm and 30 degree). To improve the accuracy and reduce the difficulty of the PDT procedure, we propose a system that automates the needle insertion using a velocity-controlled robotic manipulator. Guided using pose data from two electromagnetic sensors, one at the needle tip and the other inside the trachea, the robotic system uses an adaptive constrained controller to adapt the uncertain kinematic parameters online and avoid collisions with the patient's body and tissues near the target. Simulations were performed to validate the controller's implementation, and then four hundred PDT punctures were performed on a mannequin to evaluate the position and angular accuracy. The absolute median puncture position error was 1.7 mm (IQR: 1.9 mm) and midline deviation was 4.13 degree (IQR: 4.55 degree), measured by the sensor inside the trachea. The small deviations from the nominal puncture in a simulated experimental setup and formal guarantees of collision-free insertions suggest the feasibility of the robotic PDT puncture.",
+        "authors_display": "Andrew Weightman Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22952",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "经皮扩张气管切开术（PDT）中针头穿刺若不精确可能导致严重并发症，而当前手动操作存在较大误差。本文提出了一种利用速度控制机械臂实现PDT针头自动插入的系统。该系统通过电磁传感器进行位姿引导，并采用自适应受限控制器在线调整参数，避免碰撞。仿真与人体模型实验结果显示，该系统实现了较低的穿刺位置（1.7毫米）和角度误差（4.13度），验证了机器人辅助PDT穿刺的可行性。"
+      },
+      {
+        "paper_id": "2602.22896",
+        "title": "DySL-VLA: Efficient Vision-Language-Action Model Inference via Dynamic-Static Layer-Skipping for Robot Manipulation",
+        "abstract": "Vision-Language-Action (VLA) models have shown remarkable success in robotic tasks like manipulation by fusing a language model's reasoning with a vision model's 3D understanding. However, their high computational cost remains a major obstacle for real-world applications that require real-time performance. We observe that the actions within a task have varying levels of importance: critical steps demand high precision, while less important ones can tolerate more variance. Leveraging this insight, we propose DySL-VLA, a novel framework that addresses computational cost by dynamically skipping VLA layers based on each action's importance. DySL-VLA categorizes its layers into two types: informative layers, which are consistently executed, and incremental layers, which can be selectively skipped. To intelligently skip layers without sacrificing accuracy, we invent a prior-post skipping guidance mechanism to determine when to initiate layer-skipping. We also propose a skip-aware two-stage knowledge distillation algorithm to efficiently train a standard VLA into a DySL-VLA. Our experiments indicate that DySL-VLA achieves 2.1% improvement in success length over Deer-VLA on the Calvin dataset, while simultaneously reducing trainable parameters by a factor of 85.7 and providing a 3.75x speedup relative to the RoboFlamingo baseline at iso-accuracy. Our code is available on https://github.com/PKU-SEC-Lab/DYSL_VLA.",
+        "authors_display": "Meng Li Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22896",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "视觉-语言-动作（VLA）模型在机器人任务中表现出色，但高计算成本限制了实时应用。本文基于任务中动作重要性不同的洞察，提出了DySL-VLA框架，通过动态跳过VLA层来降低计算成本。该框架引入了先验-后验跳过指导机制和跳过感知两阶段知识蒸馏算法。实验结果表明，DySL-VLA在提高成功率的同时，显著减少了可训练参数并实现了计算加速。"
+      },
+      {
+        "paper_id": "2602.22862",
+        "title": "GraspLDP: Towards Generalizable Grasping Policy via Latent Diffusion",
+        "abstract": "This paper focuses on enhancing the grasping precision and generalization of manipulation policies learned via imitation learning. Diffusion-based policy learning methods have recently become the mainstream approach for robotic manipulation tasks. As grasping is a critical subtask in manipulation, the ability of imitation-learned policies to execute precise and generalizable grasps merits particular attention. Existing imitation learning techniques for grasping often suffer from imprecise grasp executions, limited spatial generalization, and poor object generalization. To address these challenges, we incorporate grasp prior knowledge into the diffusion policy framework. In particular, we employ a latent diffusion policy to guide action chunk decoding with grasp pose prior, ensuring that generated motion trajectories adhere closely to feasible grasp configurations. Furthermore, we introduce a self-supervised reconstruction objective during diffusion to embed the graspness prior: at each reverse diffusion step, we reconstruct wrist-camera images back-projected the graspness from the intermediate representations. Both simulation and real robot experiments demonstrate that our approach significantly outperforms baseline methods and exhibits strong dynamic grasping capabilities.",
+        "authors_display": "Di Huang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22862",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "现有的模仿学习抓取策略常面临抓取执行不精确、泛化能力差的问题。为提升模仿学习策略的抓取精度和泛化性，本文将抓取先验知识融入扩散策略框架。具体方法是利用潜在扩散策略，通过抓取姿态先验引导动作块解码，并在扩散过程中引入自监督重建目标以嵌入抓取性先验。仿真和真实机器人实验证明，该方法显著优于基线，展现出强大的动态抓取能力。"
+      },
+      {
+        "paper_id": "2602.22818",
+        "title": "LeRobot: An Open-Source Library for End-to-End Robot Learning",
+        "abstract": "Robotics is undergoing a significant transformation powered by advances in high-level control techniques based on machine learning, giving rise to the field of robot learning. Recent progress in robot learning has been accelerated by the increasing availability of affordable teleoperation systems, large-scale openly available datasets, and scalable learning-based methods. However, development in the field of robot learning is often slowed by fragmented, closed-source tools designed to only address specific sub-components within the robotics stack. In this paper, we present \\texttt{lerobot}, an open-source library that integrates across the entire robot learning stack, from low-level middleware communication for motor controls to large-scale dataset collection, storage and streaming. The library is designed with a strong focus on real-world robotics, supporting accessible hardware platforms while remaining extensible to new embodiments. It also supports efficient implementations for various state-of-the-art robot learning algorithms from multiple prominent paradigms, as well as a generalized asynchronous inference stack. Unlike traditional pipelines which heavily rely on hand-crafted techniques, \\texttt{lerobot} emphasizes scalable learning approaches that improve directly with more data and compute. Designed for accessibility, scalability, and openness, \\texttt{lerobot} lowers the barrier to entry for researchers and practitioners to robotics while providing a platform for reproducible, state-of-the-art robot learning.",
+        "authors_display": "Thomas Wolf Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22818",
+        "code_url": "https://github.com/huggingface/lerobot",
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "机器人学习领域的发展常受限于碎片化、闭源的专用工具。为解决此问题，本文提出了开源库`lerobot`，旨在整合从底层电机控制到大规模数据集收集、存储和流式传输的整个机器人学习堆栈。该库专注于真实世界的机器人应用，支持可访问硬件平台，并可扩展到新实体，同时高效实现多种最先进的机器人学习算法。`lerobot`通过其可访问性、可扩展性和开放性，降低了机器人学习的门槛，并为可复现的SOTA机器人学习提供平台。"
+      },
+      {
+        "paper_id": "2602.22810",
+        "title": "Multi-agent imitation learning with function approximation: Linear Markov games and beyond",
+        "abstract": "In this work, we present the first theoretical analysis of multi-agent imitation learning (MAIL) in linear Markov games where both the transition dynamics and each agent's reward function are linear in some given features. We demonstrate that by leveraging this structure, it is possible to replace the state-action level \"all policy deviation concentrability coefficient\" (Freihaut et al., arXiv:2510.09325) with a concentrability coefficient defined at the feature level which can be much smaller than the state-action analog when the features are informative about states' similarity. Furthermore, to circumvent the need for any concentrability coefficient, we turn to the interactive setting. We provide the first, computationally efficient, interactive MAIL algorithm for linear Markov games and show that its sample complexity depends only on the dimension of the feature map $d$. Building on these theoretical findings, we propose a deep MAIL interactive algorithm which clearly outperforms BC on games such as Tic-Tac-Toe and Connect4.",
+        "authors_display": "Giorgia Ramponi Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22810",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.LG",
+        "chinese_summary": "多智能体模仿学习（MAIL）在线性马尔可夫博弈中的理论分析相对缺乏。本文首次在线性马尔可夫博弈中对MAIL进行理论分析，证明了通过利用线性结构，可以将状态-动作级别的集中系数替换为更小的特征级别集中系数。为避免对集中系数的依赖，本文提出了一种计算高效的交互式MAIL算法，其样本复杂度仅取决于特征图维度。在此基础上，提出了一种深度MAIL交互算法，实验结果表明其在多个游戏中明显优于行为克隆算法。"
+      },
+      {
+        "paper_id": "2602.22666",
+        "title": "ArtPro: Self-Supervised Articulated Object Reconstruction with Adaptive Integration of Mobility Proposals",
+        "abstract": "Reconstructing articulated objects into high-fidelity digital twins is crucial for applications such as robotic manipulation and interactive simulation. Recent self-supervised methods using differentiable rendering frameworks like 3D Gaussian Splatting remain highly sensitive to the initial part segmentation. Their reliance on heuristic clustering or pre-trained models often causes optimization to converge to local minima, especially for complex multi-part objects. To address these limitations, we propose ArtPro, a novel self-supervised framework that introduces adaptive integration of mobility proposals. Our approach begins with an over-segmentation initialization guided by geometry features and motion priors, generating part proposals with plausible motion hypotheses. During optimization, we dynamically merge these proposals by analyzing motion consistency among spatial neighbors, while a collision-aware motion pruning mechanism prevents erroneous kinematic estimation. Extensive experiments on both synthetic and real-world objects demonstrate that ArtPro achieves robust reconstruction of complex multi-part objects, significantly outperforming existing methods in accuracy and stability.",
+        "authors_display": "Changhe Tu Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22666",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "将关节式物体重建为高保真数字孪生对于机器人操作至关重要，但现有自监督方法对初始部件分割敏感且易陷入局部最优。本文提出了一种名为ArtPro的新型自监督框架，通过自适应集成运动提议来解决这些限制。该方法通过几何特征和运动先验进行过分割初始化，并在优化过程中根据运动一致性动态合并提议，同时利用碰撞感知运动剪枝。大量实验表明，ArtPro在准确性和稳定性上显著优于现有方法，能鲁棒地重建复杂多部件物体。"
+      },
+      {
+        "paper_id": "2602.22514",
+        "title": "SignVLA: A Gloss-Free Vision-Language-Action Framework for Real-Time Sign Language-Guided Robotic Manipulation",
+        "abstract": "We present, to our knowledge, the first sign language-driven Vision-Language-Action (VLA) framework for intuitive and inclusive human-robot interaction. Unlike conventional approaches that rely on gloss annotations as intermediate supervision, the proposed system adopts a gloss-free paradigm and directly maps visual sign gestures to semantic instructions. This design reduces annotation cost and avoids the information loss introduced by gloss representations, enabling more natural and scalable multimodal interaction.   In this work, we focus on a real-time alphabet-level finger-spelling interface that provides a robust and low-latency communication channel for robotic control. Compared with large-scale continuous sign language recognition, alphabet-level interaction offers improved reliability, interpretability, and deployment feasibility in safety-critical embodied environments. The proposed pipeline transforms continuous gesture streams into coherent language commands through geometric normalization, temporal smoothing, and lexical refinement, ensuring stable and consistent interaction.   Furthermore, the framework is designed to support future integration of transformer-based gloss-free sign language models, enabling scalable word-level and sentence-level semantic understanding. Experimental results demonstrate the effectiveness of the proposed system in grounding sign-derived instructions into precise robotic actions under diverse interaction scenarios. These results highlight the potential of the framework to advance accessible, scalable, and multimodal embodied intelligence.",
+        "authors_display": "Zezhi Tang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22514",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "传统的手语驱动机器人交互依赖于词条注释，导致注释成本高且信息损失。本文提出了一种首次实现手语驱动视觉-语言-动作（VLA）框架，采用无词条范式，直接将视觉手势映射到语义指令。该系统专注于实时字母级手指拼写界面，通过几何归一化、时间平滑和词汇细化将手势流转换为语言命令。实验结果证明，该框架能有效地将手语指令转化为精确的机器人动作，推动了可访问、可扩展的多模态具身智能发展。"
+      },
       {
         "paper_id": "2602.22056",
         "title": "FlowCorrect: Efficient Interactive Correction of Generative Flow Policies for Robotic Manipulation",
@@ -14,7 +113,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "在机器人部署过程中，生成式操作策略常因分布偏移而失败，但许多失败仅是“险些成功”，通过微小修正即可成功。为此，本文提出了FlowCorrect框架，在部署时通过轻量级VR界面接收人类稀疏姿态微调，局部适应策略以纠正近乎失败的动作，而无需进行完全的模型再训练。实验结果表明，在真实机器人上的三项桌面任务中，FlowCorrect在低校正预算下使困难案例的成功率提高了85%，并能有效保持对已学习场景的性能，展现了快速且样本高效的人机协作策略修正能力。"
+        "chinese_summary": "针对生成式操作策略在部署时因分布偏移导致的“险些成功”失败，本研究提出了FlowCorrect框架。该框架利用稀疏的人工VR姿态修正，在不完全重训练策略骨干的情况下，实现部署时的局部策略适应和动作改进。实验结果表明，在低修正预算下，FlowCorrect使困难案例的成功率提高了85%，同时保持了在已解决场景中的性能，证明了其在真实世界机器人中快速、样本高效的人机协作修正能力。"
       },
       {
         "paper_id": "2602.21811",
@@ -25,7 +124,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "机器人灵巧操作面临高自由度和复杂接触的挑战，现有深度强化学习方法多侧重于提高高维动作空间的样本效率，却常忽视表示在复杂手-物体交互中实现策略泛化作用。本文提出了DexRep，一种新颖的手-物体交互表示，旨在捕捉物体表面特征及手与物体间的空间关系，以学习灵巧操作技能。实验结果显示，基于DexRep学习的抓取策略在仿真中仅用40个物体训练，对5000多个未见物体实现87.9%的成功率，显著超越现有方法；手内重定向和交接任务的策略也将现有表示的成功率提升了20%到40%，并在真实世界中展现了较小的模拟到现实差距。"
+        "chinese_summary": "针对机器人灵巧操作中现有深度强化学习方法忽视手-物体交互表示对泛化的作用这一问题，本文提出了DexRep，一种新颖的手-物体交互表示方法，旨在捕捉物体表面特征及手与物体的空间关系。基于DexRep，研究者学习了抓取、手内重定向和双手交接等任务的策略。仿真实验表明，DexRep在抓取任务中用少量训练物体实现了对大量未见物体的出色泛化能力（87.9%），并在其他任务中显著提升了性能；真实世界部署也显示出较小的仿真到现实差距。"
       },
       {
         "paper_id": "2602.21736",
@@ -36,7 +135,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "视觉-语言-动作（VLA）模型受限于大规模多样化机器人数据的稀缺性，而人类操作视频虽然丰富，却存在精确标注数据集规模小或野外视频手部追踪标签不可靠的问题。为此，本文提出了JALA预训练框架，通过学习与逆动力学和真实动作对齐的预测性动作嵌入，绕过完整的视觉动态重建，从而创建一个过渡感知、以行为为中心的潜在空间，以便从异构人类数据中学习。结合750万视频的UniHand-Mix语料库进行扩展，实验表明JALA在受控和无约束场景中都能生成更真实的手部动作，显著提高了仿真和真实世界任务中的机器人下游操作性能，证实了联合对齐潜在动作为人脸预训练提供了可扩展的途径。"
+        "chinese_summary": "鉴于视觉-语言-动作（VLA）模型受限于大规模多样化机器人数据的稀缺性，且现有方法难以有效利用海量人类视频数据，本文提出了JALA（Jointly-Aligned Latent Actions）预训练框架。JALA通过学习与逆动力学及真实动作对齐的预测性动作嵌入，构建了一个以行为为中心、感知转换的潜在空间，以有效利用包含实验室及野外750万视频的UniHand-Mix数据集进行学习。实验证明，JALA在受控和非受限场景中均能生成更真实的手部动作，显著提升了模拟和真实世界机器人操作任务的性能，为VLA模型从人类数据进行可扩展预训练提供了新途径。"
       },
       {
         "paper_id": "2602.21684",
@@ -47,7 +146,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "机器人操作动作序列中的多模态分布对模仿学习构成挑战，现有方法（离散令牌或连续潜在变量）各有局限，前者丢失细节，后者易导致模式不稳定。本文提出了PF-DAG（Primary-Fine Decoupling for Action Generation）双阶段框架，将粗粒度动作一致性与细粒度变化解耦。第一阶段通过轻量级策略选择离散粗模式以避免模式跳变，第二阶段则学习一个模式条件下的MeanFlow策略生成高保真连续动作。理论上证明PF-DAG实现了更低的MSE下限，实验上在多项基准任务中表现优于现有方法，并成功推广至真实世界触觉灵巧操作，证实了显式模式级解耦在多模态建模和闭环控制中的鲁棒性。"
+        "chinese_summary": "针对机器人操作动作序列多模态分布给模仿学习带来的挑战，以及现有方法（离散化或单阶段连续生成）的局限性，本文提出了Primary-Fine Decoupling for Action Generation (PF-DAG) 框架。该框架采用两阶段解耦设计：首先将动作块压缩为离散模式以实现粗粒度一致性，然后学习模式条件下的MeanFlow策略生成高保真连续动作。理论分析证明PF-DAG能实现更低的MSE下界，实验结果显示其在多个基准测试的56项任务中超越了现有先进方法，并成功泛化至真实世界的触觉灵巧操作任务，验证了显式模式级解耦在多模态建模和闭环控制中的有效性。"
       },
       {
         "paper_id": "2602.21666",
@@ -58,7 +157,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "由于生物和机械结构的基本差异，腿足机器人实现类人步态仍具挑战，简单模仿关节角度轨迹无法捕捉人类运动的底层原理。本文提出了Gait Divergence Analysis Framework (GDAF)，一个统一的生物力学评估框架，系统量化人类和双足机器人在运动学和动力学上的差异。通过在28种行走速度下比较人类和类人机器人步态，并发布了连续速度的类人机器人步态数据集及GDAF开源实现。结果显示，尽管现代类人机器人控制器生成了视觉上类人的运动，但在不同速度下仍存在显著的生物力学差异，体现在步态对称性、能量分布和关节协调等方面的系统性偏差，表明在提高类人机器人步态的生物力学保真度和能效方面仍有广阔改进空间。"
+        "chinese_summary": "鉴于腿式机器人实现类人步态仍面临生物与机械结构差异的挑战，且模仿学习未能完全捕捉人类运动的底层原理，本研究提出了步态差异分析框架（GDAF）。GDAF是一个统一的生物力学评估工具，用于系统量化人类与双足机器人在28种步行速度下的运动学和动力学差异。通过对最先进人形控制器生成的数据进行分析，并提供开源GDAF实现，结果表明尽管现代人形机器人运动在视觉上类似人类，但在步态对称性、能量分布和关节协调性方面仍存在显著的生物力学偏差，为未来提升人形机器人步态的生物力学保真度和能效提供了量化基准和工具。"
       },
       {
         "paper_id": "2602.21633",
@@ -69,7 +168,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "标准的视觉-语言-动作（VLA）模型依赖拟合统计数据先验，限制了对底层物理动力学的鲁棒理解，而强化学习虽通过探索增强物理基础，但奖励信号常与智能体内部状态隔离，且现有世界动作模型缺乏显式自我改进机制。为解决这些问题，本文提出了Self-Correcting VLA (SC-VLA)模型，通过稀疏想象内在地指导动作细化实现自我改进。该模型通过集成辅助预测头部以预测任务进度和未来轨迹趋势实现稀疏世界想象，并引入在线动作细化模块，根据预测的稀疏未来状态调整轨迹方向，重塑依赖进度的密集奖励。在仿真和真实世界机器人操作任务中的评估显示，SC-VLA达到了最先进的性能，以更少步骤实现更高任务吞吐量和成功率，并在真实世界实验中获得显著提升。"
+        "chinese_summary": "针对标准视觉-语言-动作（VLA）模型对物理动态理解不足及世界动作模型缺乏明确自我改进机制的问题，本文提出了自校正VLA（SC-VLA）。SC-VLA通过集成辅助预测头来预测任务进度和未来轨迹趋势，设计稀疏世界想象以约束策略编码短期物理演化，并通过在线动作细化模块根据稀疏未来状态调整轨迹方向，从而实现自我改进。在模拟和真实世界的机器人操作任务中，SC-VLA取得了最先进的性能，以更少的步骤和更高的成功率完成了任务，并在真实世界实验中获得显著提升。"
       },
       {
         "paper_id": "2602.21625",
@@ -80,7 +179,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "基于视觉的触觉传感器对灵巧机器人操作至关重要，但触觉模拟到现实的差距是主要瓶颈，现有模拟方法（简化的几何投影或高计算成本的FEM）均存在局限性。本文提出了Tacmap，一个基于体积穿透深度的高保真、计算高效的触觉模拟框架，其核心思想是通过共享的变形图（deform map）表示来统一模拟和现实世界。在模拟中计算3D交身体积作为深度图，在现实世界中则通过自动化数据收集学习从原始触觉图像到真实深度图的映射。通过这种统一的几何空间对齐，Tacmap最小化了域偏移并保持了物理一致性。定量评估显示其变形图与真实世界测量高度吻合，且在模拟中训练的策略可零样本迁移到物理机器人上完成手内旋转任务。"
+        "chinese_summary": "针对视觉触觉传感器（VBTS）在机器人灵巧操作中的重要性与触觉仿真到现实鸿沟的瓶颈，本文提出了Tacmap，一个高保真、计算高效的触觉仿真框架。该框架以体积穿透深度为基础，通过共享的变形图表示统一仿真和现实领域，弥合了sim-to-real gap：仿真中计算3D交集体积生成深度图，现实世界中通过自动化装置学习原始触觉图像到真实深度图的映射。实验结果表明Tacmap的变形图与真实世界测量高度吻合，且在手内旋转任务中实现了仿真训练策略到物理机器人的零样本迁移。"
       },
       {
         "paper_id": "2602.21622",
@@ -91,7 +190,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "多智能体机器人操作因协调、抓取稳定性和共享工作空间碰撞避免等需求而充满挑战。本文提出了自适应动态模态扩散策略（ADM-DP）框架，该框架整合了视觉、触觉和基于图（多智能体姿态）的模态以实现协调控制。ADM-DP引入了四项关键创新：增强型视觉编码器、触觉引导抓取策略、基于图的碰撞编码器以及自适应模态注意力机制，并采用解耦训练范式以实现可伸缩性和模块化。在七项多智能体任务中，ADM-DP相较于现有基线实现了12-25%的性能提升，消融研究证实其自适应融合策略在多样操作场景中的鲁棒性。"
+        "chinese_summary": "鉴于多智能体机器人操作在协调、抓取稳定性和避碰方面的挑战，本文提出了自适应动态模态扩散策略（ADM-DP）。该框架整合了视觉、触觉和基于图的多智能体姿态模态，并引入四项创新：增强视觉编码器、触觉引导抓取策略、基于图的碰撞编码器以及自适应模态注意力机制（AMAM）。通过解耦训练范式，ADM-DP在七项多智能体任务中实现了12-25%的性能提升，消融研究验证了其自适应融合策略在多样化操作场景中的鲁棒性。"
       },
       {
         "paper_id": "2602.21450",
@@ -102,7 +201,18 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "在连通矩阵李群上控制完全驱动系统，并确保系统收敛且沿给定曲线遍历，是机器人控制中的重要问题。本文提出了一种新颖的矢量场策略，用于实现这一目标，该方法推广了作者团队之前的研究，并通过利用李群性质使得控制输入非冗余，维度与李群匹配，从而在特定场景下提供更实用的控制输入。值得注意的是，该策略可应用于SE(3)上的系统控制，其非冗余输入对应于物体的机械扭曲，非常适用于全向无人机等自由移动和旋转的物体。本文还提供了计算矢量场的有效算法，并通过机械臂实验验证了所提出方法的有效性。"
+        "chinese_summary": "针对在连通矩阵李群上控制全驱动系统时，难以同时确保收敛到一个曲线上并沿着该曲线运动的问题，本文提出了一种新颖的矢量场策略。该方法推广了作者之前的工作，并通过利用李群特性，使得控制输入是非冗余的，与李群维度匹配，从而在特定场景下更具实用性。一个显著应用是控制SE(3)上的系统，其非冗余输入对应于物体的机械扭曲，尤其适用于全向无人机。实验结果通过机器人机械手验证了所提方法的有效性。"
+      },
+      {
+        "paper_id": "2602.22344",
+        "title": "Spatiotemporal modulation of surface texture for information encoding and object manipulation",
+        "abstract": "Dynamically tunable surface textures offer a powerful route to spatiotemporally regulate surface and interfacial properties, enabling emerging applications ranging from adaptive optics to soft robotic manipulation. However, achieving programmable, reversible, and spatiotemporal modulation of surface texture remains a fundamental challenge. Here, we present a photothermal-actuated liquid crystal elastomer bilayer that enables reversible, on-demand spatiotemporal modulation of surface textures through dynamically emerging and propagating wrinkles. Using direct laser writing or projected light fields, programmable and self-erasable wrinkle patterns are generated for dynamic information encoding. This spatiotemporal wrinkling enables object manipulation across diverse geometries, including uphill transport and navigation along predesigned paths. By coupling wrinkle-driven motion with thermally reversible dynamic bonding, the bilayer further enables assembly and disassembly of dynamic polymers, as well as cargo transportation. This work demonstrates spatiotemporally programmable wrinkling as a powerful mechanism for dynamic modulation of surface textures, establishing a versatile platform for multifunctional and reconfigurable smart surfaces.",
+        "authors_display": "Ruike Renee Zhao Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22344",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "physics.app-ph",
+        "chinese_summary": "动态可调表面纹理在适应性光学和软机器人操作等领域具有广阔前景，但实现可编程、可逆和时空调制仍是挑战。本文介绍了一种光热驱动的液晶弹性体双层结构，通过动态产生和传播褶皱实现表面纹理的可逆、按需时空调制。利用激光或投影光场可生成可编程且自擦除的褶皱图案，实现动态信息编码和对物体的操纵。该工作展示了时空可编程褶皱作为动态调制表面纹理的强大机制，为多功能和可重构智能表面提供了通用平台。"
       },
       {
         "paper_id": "2602.21161",
@@ -179,7 +289,7 @@
         "code_url": "https://hatchetproject.github.io/autohorizon/",
         "date": "2026-02-24",
         "primary_category": "cs.RO",
-        "chinese_summary": "动作分块已成为基于流的视觉-语言-动作（VLA）模型的标准实践，但执行周期（从每个预测块中执行的动作数量）的影响和选择尚未充分探索。本文首先揭示了执行周期变化会导致性能显著波动，并通过分析基于流的VLA模型中的注意力权重，发现块内动作对视觉-语言令牌的注意力不变性限制了适应性，且初始和终端动作令牌充当稳定锚点。受此启发，本文将动作自注意力权重解释为模型预测极限的代理，提出了AutoHorizon，一种在测试时动态估计每个预测动作块的执行周期以适应感知条件变化的方法。实验证明，AutoHorizon在模拟和真实世界的机器人操作任务中表现出色，计算开销可忽略不计，并能泛化到多种任务和基于流的模型。"
+        "chinese_summary": "针对基于流的视觉-语言-动作（VLA）模型中动作分块的执行范围选择及其影响未被充分探索的问题，本研究发现执行范围的改变会导致显著的性能波动。通过分析注意力权重，揭示了块内动作对视觉-语言令牌的注意力不变性以及初始/终止动作令牌作为稳定锚点的现象。受此启发，本文提出了AutoHorizon，一种在测试时动态估计每个预测动作块执行范围的方法，以适应不断变化的感知条件。实验证明，AutoHorizon在模拟和真实世界的机器人操作任务中表现出色，计算开销可忽略不计，并能泛化到不同的任务和基于流的模型。"
       },
       {
         "paper_id": "2602.21429",
@@ -1070,9 +1180,174 @@
         "authors_display": "Saining Xie Team",
         "pdf_url": "http://arxiv.org/abs/2602.22208",
         "code_url": "https://solaris-wm.github.io/",
-        "date": "2026-02-25",
+        "date": "2026-02-26",
         "primary_category": "cs.CV",
-        "chinese_summary": "现有视频世界模型受限于单智能体视角，难以捕捉真实世界的多智能体交互。为此，本文提出了Solaris，一个多玩家视频世界模型，并通过一个专为Minecraft等游戏设计的系统收集了1264万帧多玩家数据。该模型采用分阶段训练管线，结合双向、因果和自强制训练，并引入Checkpointed Self Forcing。实验结果表明，Solaris的架构和训练设计优于现有基线，为多智能体世界模型的研究奠定了基础。"
+        "chinese_summary": "现有动作条件视频生成模型局限于单智能体视角，无法模拟真实世界中的多智能体交互。本文介绍了Solaris，一个多玩家视频世界模型，能够模拟一致的多视角观察。为支持此模型，我们开发了一个专为Minecraft等游戏设计的鲁棒、连续、自动的多玩家数据收集系统，并收集了1264万多玩家帧数据。Solaris采用分阶段训练管道，结合双向、因果和Self Forcing训练，并在最后阶段引入Checkpointed Self Forcing。实验结果表明，该架构和训练设计优于现有基线模型，有望为新一代多智能体世界模型奠定基础。"
+      },
+      {
+        "paper_id": "2602.23287",
+        "title": "Interface-Aware Trajectory Reconstruction of Limited Demonstrations for Robot Learning",
+        "abstract": "Assistive robots offer agency to humans with severe motor impairments. Often, these users control high-DoF robots through low-dimensional interfaces, such as using a 1-D sip-and-puff interface to operate a 6-DoF robotic arm. This mismatch results in having access to only a subset of control dimensions at a given time, imposing unintended and artificial constraints on robot motion. As a result, interface-limited demonstrations embed suboptimal motions that reflect interface restrictions rather than user intent. To address this, we present a trajectory reconstruction algorithm that reasons about task, environment, and interface constraints to lift demonstrations into the robot's full control space. We evaluate our approach using real-world demonstrations of ADL-inspired tasks performed via a 2-D joystick and 1-D sip-and-puff control interface, teleoperating two distinct 7-DoF robotic arms. Analyses of the reconstructed demonstrations and derived control policies show that lifted trajectories are faster and more efficient than their interface-constrained counterparts while respecting user preferences.",
+        "authors_display": "Brenna D. Argall Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23287",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对运动障碍患者通过低维接口控制高自由度机器人时，因维度不匹配导致动作受限、非最优的问题，本研究提出了一种轨迹重建算法。该算法通过考虑任务、环境和接口约束，将受限演示动作提升到机器人完整的控制空间。实验结果表明，在真实世界类ADL任务中，重建后的轨迹比原始受限轨迹更快、更高效，并且能更好地反映用户意图。"
+      },
+      {
+        "paper_id": "2602.23259",
+        "title": "Risk-Aware World Model Predictive Control for Generalizable End-to-End Autonomous Driving",
+        "abstract": "With advances in imitation learning (IL) and large-scale driving datasets, end-to-end autonomous driving (E2E-AD) has made great progress recently. Currently, IL-based methods have become a mainstream paradigm: models rely on standard driving behaviors given by experts, and learn to minimize the discrepancy between their actions and expert actions. However, this objective of \"only driving like the expert\" suffers from limited generalization: when encountering rare or unseen long-tail scenarios outside the distribution of expert demonstrations, models tend to produce unsafe decisions in the absence of prior experience. This raises a fundamental question: Can an E2E-AD system make reliable decisions without any expert action supervision? Motivated by this, we propose a unified framework named Risk-aware World Model Predictive Control (RaWMPC) to address this generalization dilemma through robust control, without reliance on expert demonstrations. Practically, RaWMPC leverages a world model to predict the consequences of multiple candidate actions and selects low-risk actions through explicit risk evaluation. To endow the world model with the ability to predict the outcomes of risky driving behaviors, we design a risk-aware interaction strategy that systematically exposes the world model to hazardous behaviors, making catastrophic outcomes predictable and thus avoidable. Furthermore, to generate low-risk candidate actions at test time, we introduce a self-evaluation distillation method to distill riskavoidance capabilities from the well-trained world model into a generative action proposal network without any expert demonstration. Extensive experiments show that RaWMPC outperforms state-of-the-art methods in both in-distribution and out-of-distribution scenarios, while providing superior decision interpretability.",
+        "authors_display": "Nicu Sebe Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23259",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "鉴于模仿学习驱动的端到端自动驾驶在长尾或未见场景中泛化能力有限、可能导致不安全决策的问题，本文提出了一个名为Risk-aware World Model Predictive Control (RaWMPC) 的统一框架。该框架不依赖专家演示，利用世界模型预测多种候选动作的后果，并通过显式风险评估选择低风险动作。此外，设计了风险感知交互策略以训练世界模型预测危险结果，并引入自评估蒸馏方法将避险能力传递给动作生成网络。广泛实验证明，RaWMPC在分布内外科场景中均优于现有方法，并提供了卓越的决策可解释性。"
+      },
+      {
+        "paper_id": "2602.23199",
+        "title": "SC-Arena: A Natural Language Benchmark for Single-Cell Reasoning with Knowledge-Augmented Evaluation",
+        "abstract": "Large language models (LLMs) are increasingly applied in scientific research, offering new capabilities for knowledge discovery and reasoning. In single-cell biology, however, evaluation practices for both general and specialized LLMs remain inadequate: existing benchmarks are fragmented across tasks, adopt formats such as multiple-choice classification that diverge from real-world usage, and rely on metrics lacking interpretability and biological grounding. We present SC-ARENA, a natural language evaluation framework tailored to single-cell foundation models. SC-ARENA formalizes a virtual cell abstraction that unifies evaluation targets by representing both intrinsic attributes and gene-level interactions. Within this paradigm, we define five natural language tasks (cell type annotation, captioning, generation, perturbation prediction, and scientific QA) that probe core reasoning capabilities in cellular biology. To overcome the limitations of brittle string-matching metrics, we introduce knowledge-augmented evaluation, which incorporates external ontologies, marker databases, and scientific literature to support biologically faithful and interpretable judgments. Experiments and analysis across both general-purpose and domain-specialized LLMs demonstrate that (i) under the Virtual Cell unified evaluation paradigm, current models achieve uneven performance on biologically complex tasks, particularly those demanding mechanistic or causal understanding; and (ii) our knowledge-augmented evaluation framework ensures biological correctness, provides interpretable, evidence-grounded rationales, and achieves high discriminative capacity, overcoming the brittleness and opacity of conventional metrics. SC-Arena thus provides a unified and interpretable framework for assessing LLMs in single-cell biology, pointing toward the development of biology-aligned, generalizable foundation models.",
+        "authors_display": "Min Yang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23199",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.AI",
+        "chinese_summary": "针对单细胞生物学领域大型语言模型(LLMs)评估基准碎片化、格式不符实际且指标缺乏可解释性的现状，本文提出了SC-ARENA，一个专为单细胞基础模型设计的自然语言评估框架。该框架通过虚拟细胞抽象统一评估目标，定义了五项核心自然语言任务，并引入了结合外部知识（如本体、标记数据库和科学文献）的知识增强评估方法。实验结果显示，当前模型在生物学复杂任务上表现不均衡，而SC-ARENA框架能够提供生物学上正确、可解释且具有高判别能力的评估结果，克服了传统指标的局限性。"
+      },
+      {
+        "paper_id": "2602.23164",
+        "title": "MetaOthello: A Controlled Study of Multiple World Models in Transformers",
+        "abstract": "Foundation models must handle multiple generative processes, yet mechanistic interpretability largely studies capabilities in isolation; it remains unclear how a single transformer organizes multiple, potentially conflicting \"world models\". Previous experiments on Othello playing neural-networks test world-model learning but focus on a single game with a single set of rules. We introduce MetaOthello, a controlled suite of Othello variants with shared syntax but different rules or tokenizations, and train small GPTs on mixed-variant data to study how multiple world models are organized in a shared representation space. We find that transformers trained on mixed-game data do not partition their capacity into isolated sub-models; instead, they converge on a mostly shared board-state representation that transfers causally across variants. Linear probes trained on one variant can intervene on another's internal state with effectiveness approaching that of matched probes. For isomorphic games with token remapping, representations are equivalent up to a single orthogonal rotation that generalizes across layers. When rules partially overlap, early layers maintain game-agnostic representations while a middle layer identifies game identity, and later layers specialize. MetaOthello offers a path toward understanding not just whether transformers learn world models, but how they organize many at once.",
+        "authors_display": "Juniper Lovato Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23164",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.LG",
+        "chinese_summary": "为理解Transformer如何组织多个潜在冲突的“世界模型”，本文引入了MetaOthello，一个包含共享语法但规则或标记化不同的奥赛罗变体套件。研究通过训练小型GPT模型处理混合变体数据，来探究多世界模型在共享表示空间中的组织方式。结果表明，训练后的Transformer收敛于一个大部分共享的棋盘状态表示，该表示在不同变体之间具有因果可迁移性。线性探针在一个变体上训练后，能有效干预另一个变体的内部状态。对于同构游戏，表示在单个正交旋转下是等价的；而当规则部分重叠时，模型早期层维持游戏无关表示，中间层识别游戏身份，后期层则进行专门化。"
+      },
+      {
+        "paper_id": "2602.23152",
+        "title": "The Trinity of Consistency as a Defining Principle for General World Models",
+        "abstract": "The construction of World Models capable of learning, simulating, and reasoning about objective physical laws constitutes a foundational challenge in the pursuit of Artificial General Intelligence. Recent advancements represented by video generation models like Sora have demonstrated the potential of data-driven scaling laws to approximate physical dynamics, while the emerging Unified Multimodal Model (UMM) offers a promising architectural paradigm for integrating perception, language, and reasoning. Despite these advances, the field still lacks a principled theoretical framework that defines the essential properties requisite for a General World Model. In this paper, we propose that a World Model must be grounded in the Trinity of Consistency: Modal Consistency as the semantic interface, Spatial Consistency as the geometric basis, and Temporal Consistency as the causal engine. Through this tripartite lens, we systematically review the evolution of multimodal learning, revealing a trajectory from loosely coupled specialized modules toward unified architectures that enable the synergistic emergence of internal world simulators. To complement this conceptual framework, we introduce CoW-Bench, a benchmark centered on multi-frame reasoning and generation scenarios. CoW-Bench evaluates both video generation models and UMMs under a unified evaluation protocol. Our work establishes a principled pathway toward general world models, clarifying both the limitations of current systems and the architectural requirements for future progress.",
+        "authors_display": "Cheng Tan Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23152",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.AI",
+        "chinese_summary": "针对通用世界模型缺乏理论框架的问题，本文提出了“一致性三位一体”原则，即模态一致性、空间一致性和时间一致性，作为世界模型必须具备的核心属性。研究系统回顾了多模态学习的演进，并引入了CoW-Bench基准，用于在统一协议下评估视频生成模型和统一多模态模型的多帧推理和生成能力。本文为通用世界模型构建了原则性路径，明确了现有系统的局限性以及未来进展所需的架构要求。"
+      },
+      {
+        "paper_id": "2602.23148",
+        "title": "On Sample-Efficient Generalized Planning via Learned Transition Models",
+        "abstract": "Generalized planning studies the construction of solution strategies that generalize across families of planning problems sharing a common domain model, formally defined by a transition function $γ: S \\times A \\rightarrow S$. Classical approaches achieve such generalization through symbolic abstractions and explicit reasoning over $γ$. In contrast, recent Transformer-based planners, such as PlanGPT and Plansformer, largely cast generalized planning as direct action-sequence prediction, bypassing explicit transition modeling. While effective on in-distribution instances, these approaches typically require large datasets and model sizes, and often suffer from state drift in long-horizon settings due to the absence of explicit world-state evolution. In this work, we formulate generalized planning as a transition-model learning problem, in which a neural model explicitly approximates the successor-state function $\\hatγ \\approx γ$ and generates plans by rolling out symbolic state trajectories. Instead of predicting actions directly, the model autoregressively predicts intermediate world states, thereby learning the domain dynamics as an implicit world model. To study size-invariant generalization and sample efficiency, we systematically evaluate multiple state representations and neural architectures, including relational graph encodings. Our results show that learning explicit transition models yields higher out-of-distribution satisficing-plan success than direct action-sequence prediction in multiple domains, while achieving these gains with significantly fewer training instances and smaller models. This is an extended version of a short paper accepted at ICAPS 2026 under the same title.",
+        "authors_display": "Biplav Srivastava Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23148",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.AI",
+        "chinese_summary": "针对广义规划中，基于Transformer的直接动作序列预测方法在长时程任务中因缺乏显式世界状态演化而导致状态漂移的问题，本研究将广义规划重新定义为转换模型学习问题。研究中，神经模型显式近似后继状态函数并通过自回归预测中间世界状态来学习域动力学，从而构建隐式世界模型。通过系统评估多种状态表示和神经网络架构，实验结果表明，学习显式转换模型在多个领域中比直接动作序列预测取得了更高的分布外计划成功率，且显著减少了训练实例和模型尺寸。"
+      },
+      {
+        "paper_id": "2602.23088",
+        "title": "Cytoarchitecture in Words: Weakly Supervised Vision-Language Modeling for Human Brain Microscopy",
+        "abstract": "Foundation models increasingly offer potential to support interactive, agentic workflows that assist researchers during analysis and interpretation of image data. Such workflows often require coupling vision to language to provide a natural-language interface. However, paired image-text data needed to learn this coupling are scarce and difficult to obtain in many research and clinical settings. One such setting is microscopic analysis of cell-body-stained histological human brain sections, which enables the study of cytoarchitecture: cell density and morphology and their laminar and areal organization. Here, we propose a label-mediated method that generates meaningful captions from images by linking images and text only through a label, without requiring curated paired image-text data. Given the label, we automatically mine area descriptions from related literature and use them as synthetic captions reflecting canonical cytoarchitectonic attributes. An existing cytoarchitectonic vision foundation model (CytoNet) is then coupled to a large language model via an image-to-text training objective, enabling microscopy regions to be described in natural language. Across 57 brain areas, the resulting method produces plausible area-level descriptions and supports open-set use through explicit rejection of unseen areas. It matches the cytoarchitectonic reference label for in-scope patches with 90.6% accuracy and, with the area label masked, its descriptions remain discriminative enough to recover the area in an 8-way test with 68.6% accuracy. These results suggest that weak, label-mediated pairing can suffice to connect existing biomedical vision foundation models to language, providing a practical recipe for integrating natural-language in domains where fine-grained paired annotations are scarce.",
+        "authors_display": "Christian Schiffer Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23088",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "面对生物医学领域（如人脑组织学显微分析）配对图像-文本数据稀缺的问题，本研究提出了一种标签介导的方法，旨在将视觉基础模型与语言模型耦合，实现显微图像的自然语言描述。该方法通过将图像与现有细胞结构视觉基础模型（CytoNet）结合，并利用标签自动从文献中挖掘区域描述作为合成标题进行训练。实验结果表明，该方法在57个脑区上能产生合理的区域级描述，并能以90.6%的准确率匹配细胞结构参考标签，在区域标签被遮蔽的情况下仍能保持较高的判别力，为缺乏细粒度配对注释的领域提供了实用的连接视觉与语言的方案。"
+      },
+      {
+        "paper_id": "2602.23058",
+        "title": "GeoWorld: Geometric World Models",
+        "abstract": "Energy-based predictive world models provide a powerful approach for multi-step visual planning by reasoning over latent energy landscapes rather than generating pixels. However, existing approaches face two major challenges: (i) their latent representations are typically learned in Euclidean space, neglecting the underlying geometric and hierarchical structure among states, and (ii) they struggle with long-horizon prediction, which leads to rapid degradation across extended rollouts. To address these challenges, we introduce GeoWorld, a geometric world model that preserves geometric structure and hierarchical relations through a Hyperbolic JEPA, which maps latent representations from Euclidean space onto hyperbolic manifolds. We further introduce Geometric Reinforcement Learning for energy-based optimization, enabling stable multi-step planning in hyperbolic latent space. Extensive experiments on CrossTask and COIN demonstrate around 3% SR improvement in 3-step planning and 2% SR improvement in 4-step planning compared to the state-of-the-art V-JEPA 2. Project website: https://steve-zeyu-zhang.github.io/GeoWorld.",
+        "authors_display": "Richard Hartley Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23058",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对现有基于能量的预测性世界模型在欧几里德空间中学习潜在表示以及长时程预测性能退化的问题，本研究引入了GeoWorld，一个几何世界模型。该模型通过双曲JEPA将潜在表示从欧几里德空间映射到双曲流形，从而保留几何结构和层次关系。同时，引入了几何强化学习用于能量优化，实现了双曲潜在空间中的稳定多步规划。在CrossTask和COIN数据集上的广泛实验表明，GeoWorld在3步和4步规划中相比最先进方法V-JEPA 2实现了显著的成功率提升。"
+      },
+      {
+        "paper_id": "2602.23013",
+        "title": "SubspaceAD: Training-Free Few-Shot Anomaly Detection via Subspace Modeling",
+        "abstract": "Detecting visual anomalies in industrial inspection often requires training with only a few normal images per category. Recent few-shot methods achieve strong results employing foundation-model features, but typically rely on memory banks, auxiliary datasets, or multi-modal tuning of vision-language models. We therefore question whether such complexity is necessary given the feature representations of vision foundation models. To answer this question, we introduce SubspaceAD, a training-free method, that operates in two simple stages. First, patch-level features are extracted from a small set of normal images by a frozen DINOv2 backbone. Second, a Principal Component Analysis (PCA) model is fit to these features to estimate the low-dimensional subspace of normal variations. At inference, anomalies are detected via the reconstruction residual with respect to this subspace, producing interpretable and statistically grounded anomaly scores. Despite its simplicity, SubspaceAD achieves state-of-the-art performance across one-shot and few-shot settings without training, prompt tuning, or memory banks. In the one-shot anomaly detection setting, SubspaceAD achieves image-level and pixel-level AUROC of 98.0% and 97.6% on the MVTec-AD dataset, and 93.3% and 98.3% on the VisA dataset, respectively, surpassing prior state-of-the-art results. Code and demo are available at https://github.com/CLendering/SubspaceAD.",
+        "authors_display": "Egor Bondarev Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23013",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对工业检测中视觉异常检测方法通常依赖内存库或辅助数据集、导致复杂性高的问题，本文提出了SubspaceAD，一种无需训练的异常检测方法。该方法首先通过冻结的DINOv2骨干网络从少量正常图像中提取补丁级特征，然后使用主成分分析(PCA)拟合这些特征以估计正常变化的低维子空间。在推理时，通过计算相对于该子空间的重建残差来检测异常。实验结果表明，SubspaceAD在单样本和少样本设置下，无需训练、提示调整或内存库，即在MVTec-AD和VisA数据集上实现了超越现有先进方法的性能，提供了可解释且基于统计的异常分数。"
+      },
+      {
+        "paper_id": "2602.22960",
+        "title": "UCM: Unifying Camera Control and Memory with Time-aware Positional Encoding Warping for World Models",
+        "abstract": "World models based on video generation demonstrate remarkable potential for simulating interactive environments but face persistent difficulties in two key areas: maintaining long-term content consistency when scenes are revisited and enabling precise camera control from user-provided inputs. Existing methods based on explicit 3D reconstruction often compromise flexibility in unbounded scenarios and fine-grained structures. Alternative methods rely directly on previously generated frames without establishing explicit spatial correspondence, thereby constraining controllability and consistency. To address these limitations, we present UCM, a novel framework that unifies long-term memory and precise camera control via a time-aware positional encoding warping mechanism. To reduce computational overhead, we design an efficient dual-stream diffusion transformer for high-fidelity generation. Moreover, we introduce a scalable data curation strategy utilizing point-cloud-based rendering to simulate scene revisiting, facilitating training on over 500K monocular videos. Extensive experiments on real-world and synthetic benchmarks demonstrate that UCM significantly outperforms state-of-the-art methods in long-term scene consistency, while also achieving precise camera controllability in high-fidelity video generation.",
+        "authors_display": "Song-Hai Zhang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22960",
+        "code_url": "https://humanaigc.github.io/ucm-webpage/",
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对基于视频生成的世界模型在场景重复访问时难以保持长期内容一致性及难以实现精确摄像机控制的挑战，本文提出了UCM框架。该框架通过时间感知的位置编码扭曲机制，统一了长期记忆和精确摄像机控制。为提高效率，设计了双流扩散Transformer进行高保真生成，并引入了利用点云渲染模拟场景重复访问的可扩展数据整理策略。广泛实验表明，UCM在长期场景一致性方面显著优于现有最先进方法，同时在高质量视频生成中实现了精确的相机可控性。"
+      },
+      {
+        "paper_id": "2602.22843",
+        "title": "A data- and compute-efficient chest X-ray foundation model beyond aggressive scaling",
+        "abstract": "Foundation models for medical imaging are typically pretrained on increasingly large datasets, following a \"scale-at-all-costs\" paradigm. However, this strategy faces two critical challenges: large-scale medical datasets often contain substantial redundancy and severe class imbalance that bias representation learning toward over-represented patterns, and indiscriminate training regardless of heterogeneity in data quality incurs considerable computational inefficiency. Here we demonstrate that active, principled data curation during pretraining can serve as a viable, cost-effective alternative to brute-force dataset enlargement. We introduce CheXficient, a chest X-ray (CXR) foundation model that selectively prioritizes informative training samples. CheXficient is pretrained on only 22.7% of 1,235,004 paired CXR images and reports while consuming under 27.3% of the total compute budget, yet achieving comparable or superior performance to its full-data counterpart and other large-scale pretrained models. We assess CheXficient across 20 individual benchmarks spanning 5 task types, including non-adapted off-the-shelf evaluations (zero-shot findings classification and crossmodal retrieval) and adapted downstream tasks (disease prediction, semantic segmentation, and radiology report generation). Further analyses show that CheXficient systematically prioritizes under-represented training samples, improving generalizability on long-tailed or rare conditions. Overall, our work offers practical insights into the data and computation demands for efficient pretraining and downstream adaptation of medical vision-language foundation models.",
+        "authors_display": "Curtis P. Langlotz Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22843",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对医疗影像基础模型在预训练中面临的数据冗余、类别不平衡及计算效率低下问题，本文提出CheXficient模型，通过主动、有原则的数据筛选，仅利用22.7%的胸部X射线数据和不足27.3%的计算预算进行预训练。实验结果表明，CheXficient在20个基准测试中性能与全数据模型相当或更优，并能系统性地优先处理代表性不足的样本，从而提高了对长尾或罕见病症的泛化能力，为高效的医疗视觉-语言基础模型预训练提供了实践见解。"
+      },
+      {
+        "paper_id": "2602.22818",
+        "title": "LeRobot: An Open-Source Library for End-to-End Robot Learning",
+        "abstract": "Robotics is undergoing a significant transformation powered by advances in high-level control techniques based on machine learning, giving rise to the field of robot learning. Recent progress in robot learning has been accelerated by the increasing availability of affordable teleoperation systems, large-scale openly available datasets, and scalable learning-based methods. However, development in the field of robot learning is often slowed by fragmented, closed-source tools designed to only address specific sub-components within the robotics stack. In this paper, we present \\texttt{lerobot}, an open-source library that integrates across the entire robot learning stack, from low-level middleware communication for motor controls to large-scale dataset collection, storage and streaming. The library is designed with a strong focus on real-world robotics, supporting accessible hardware platforms while remaining extensible to new embodiments. It also supports efficient implementations for various state-of-the-art robot learning algorithms from multiple prominent paradigms, as well as a generalized asynchronous inference stack. Unlike traditional pipelines which heavily rely on hand-crafted techniques, \\texttt{lerobot} emphasizes scalable learning approaches that improve directly with more data and compute. Designed for accessibility, scalability, and openness, \\texttt{lerobot} lowers the barrier to entry for researchers and practitioners to robotics while providing a platform for reproducible, state-of-the-art robot learning.",
+        "authors_display": "Thomas Wolf Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22818",
+        "code_url": "https://github.com/huggingface/lerobot",
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "当前机器人学习领域发展受限于碎片化、闭源的工具，难以整合整个机器人栈。为此，本文推出了开源库`lerobot`，旨在提供一个从低级电机控制到大规模数据集收集、存储和流式传输的端到端集成解决方案。该库专注于真实世界的机器人应用，支持可访问的硬件平台和可扩展性，并能高效实现多种最先进的机器人学习算法。`lerobot`通过强调可扩展的学习方法，降低了研究人员和实践者进入机器人学习的门槛，并为可重现的、最先进的机器人学习提供了平台。"
+      },
+      {
+        "paper_id": "2602.22613",
+        "title": "Spectrally Distilled Representations Aligned with Instruction-Augmented LLMs for Satellite Imagery",
+        "abstract": "Vision-language foundation models (VLFMs) promise zero-shot and retrieval understanding for Earth observation. While operational satellite systems often lack full multi-spectral coverage, making RGB-only inference highly desirable for scalable deployment, the adoption of VLFMs for satellite imagery remains hindered by two factors: (1) multi-spectral inputs are informative but difficult to exploit consistently due to band redundancy and misalignment; and (2) CLIP-style text encoders limit semantic expressiveness and weaken fine-grained alignment. We present SATtxt, a spectrum-aware VLFM that operates with RGB inputs only at inference while retaining spectral cues learned during training. Our framework comprises two stages. First, Spectral Representation Distillation transfers spectral priors from a frozen multi-spectral teacher to an RGB student via a lightweight projector. Second, Spectrally Grounded Alignment with Instruction-Augmented LLMs bridges the distilled visual space and an expressive LLM embedding space. Across EuroSAT, BigEarthNet, and ForestNet, SATtxt improves zero-shot classification on average by 4.2%, retrieval by 5.9%, and linear probing by 2.7% over baselines, showing an efficient path toward spectrum-aware vision-language learning for Earth observation. Project page: https://ikhado.github.io/sattxt/",
+        "authors_display": "Ramana Rao Kompella Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22613",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "为解决地球观测领域视觉-语言基础模型（VLFMs）在处理多光谱数据时面临的波段冗余、错位及文本编码器语义表达受限等问题，本文提出了SATtxt，一个光谱感知VLFM，它在推理时仅使用RGB输入，但保留了训练期间学习到的光谱线索。该框架分两阶段：首先通过轻量级投影器将多光谱教师模型的光谱先验蒸馏到RGB学生模型；其次通过指令增强型LLM进行光谱接地对齐。实验结果显示，SATtxt在EuroSAT、BigEarthNet和ForestNet数据集上显著提高了零样本分类、检索和线性探测性能，为地球观测领域光谱感知视觉-语言学习提供了一条高效途径。"
+      },
+      {
+        "paper_id": "2602.22596",
+        "title": "BetterScene: 3D Scene Synthesis with Representation-Aligned Generative Model",
+        "abstract": "We present BetterScene, an approach to enhance novel view synthesis (NVS) quality for diverse real-world scenes using extremely sparse, unconstrained photos. BetterScene leverages the production-ready Stable Video Diffusion (SVD) model pretrained on billions of frames as a strong backbone, aiming to mitigate artifacts and recover view-consistent details at inference time. Conventional methods have developed similar diffusion-based solutions to address these challenges of novel view synthesis. Despite significant improvements, these methods typically rely on off-the-shelf pretrained diffusion priors and fine-tune only the UNet module while keeping other components frozen, which still leads to inconsistent details and artifacts even when incorporating geometry-aware regularizations like depth or semantic conditions. To address this, we investigate the latent space of the diffusion model and introduce two components: (1) temporal equivariance regularization and (2) vision foundation model-aligned representation, both applied to the variational autoencoder (VAE) module within the SVD pipeline. BetterScene integrates a feed-forward 3D Gaussian Splatting (3DGS) model to render features as inputs for the SVD enhancer and generate continuous, artifact-free, consistent novel views. We evaluate on the challenging DL3DV-10K dataset and demonstrate superior performance compared to state-of-the-art methods.",
+        "authors_display": "Alper Yilmaz Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22596",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对现有新颖视图合成（NVS）方法在处理稀疏、无约束照片时存在的伪影和细节不一致问题，本文提出BetterScene，该方法利用预训练的Stable Video Diffusion (SVD) 模型作为骨干，旨在减少伪影并恢复视图一致的细节。BetterScene通过深入研究扩散模型的潜在空间，引入了时间等变正则化和视觉基础模型对齐表示，并将其应用于SVD的VAE模块。结合3D Gaussian Splatting模型渲染特征，BetterScene在DL3DV-10K数据集上表现出优于现有最先进方法的性能，能生成连续、无伪影、一致的新颖视图。"
+      },
+      {
+        "paper_id": "2602.22586",
+        "title": "TabDLM: Free-Form Tabular Data Generation via Joint Numerical-Language Diffusion",
+        "abstract": "Synthetic tabular data generation has attracted growing attention due to its importance for data augmentation, foundation models, and privacy. However, real-world tabular datasets increasingly contain free-form text fields (e.g., reviews or clinical notes) alongside structured numerical and categorical attributes. Generating such heterogeneous tables with joint modeling of different modalities remains challenging. Existing approaches broadly fall into two categories: diffusion-based methods and LLM-based methods. Diffusion models can capture complex dependencies over numerical and categorical features in continuous or discrete spaces, but extending them to open-ended text is nontrivial and often leads to degraded text quality. In contrast, LLM-based generators naturally produce fluent text, yet their discrete tokenization can distort precise or wide-range numerical values, hindering accurate modeling of both numbers and language. In this work, we propose TabDLM, a unified framework for free-form tabular data generation via a joint numerical--language diffusion model built on masked diffusion language models (MDLMs). TabDLM models textual and categorical features through masked diffusion, while modeling numerical features with a continuous diffusion process through learned specialized numeric tokens embedding; bidirectional attention then captures cross-modality interactions within a single model. Extensive experiments on diverse benchmarks demonstrate the effectiveness of TabDLM compared to strong diffusion- and LLM-based baselines.",
+        "authors_display": "Muhan Zhang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22586",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.LG",
+        "chinese_summary": "合成表格数据生成在处理包含自由文本字段和结构化属性的异构表格时面临挑战，现有扩散模型和LLM方法各有局限。为此，本文提出了TabDLM，一个统一的自由形式表格数据生成框架。TabDLM基于掩蔽扩散语言模型，通过掩蔽扩散对文本和分类特征建模，并结合学习到的专业数值token嵌入和连续扩散过程对数值特征建模，同时利用双向注意力捕获跨模态交互。广泛的实验表明，TabDLM在多样化的基准测试上比现有扩散和LLM基线模型更有效。"
       },
       {
         "paper_id": "2602.22176",
@@ -1083,7 +1358,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.CV",
-        "chinese_summary": "当前计算病理学工作流在处理全玻片图像时，主要依赖20倍放大率的瓦片，忽略了多分辨率特征和减少表示数量的需求。针对此问题，本文提出了一种区域级混合编码器，通过掩码嵌入建模预训练，共同融合不同放大率的图像瓦片表示，以更准确地捕获多分辨率特征。在生物标志物预测任务上的实验结果表明，该方法在不同癌症类型中显著提升了预测性能，强调了空间上下文理解的重要性。"
+        "chinese_summary": "计算病理学中，全切片图像通常被裁剪成20倍放大率的瓦片进行基础模型训练，但这导致了对多分辨率特征捕获的不足，并产生大量巨像素瓦片。为解决此问题，本文提出了一种区域级混合编码器，通过掩蔽嵌入建模预训练步骤，联合融合了混合放大率基础模型的图像瓦片表示，以更准确地捕获多分辨率特征并减少每张切片的表示数量。在多种癌症类型生物标志物预测任务上的评估结果表明，该方法在预测性能上有所改进，强调了空间上下文和理解的重要性。"
       },
       {
         "paper_id": "2602.22091",
@@ -1216,6 +1491,39 @@
         "date": "2026-02-25",
         "primary_category": "cs.LG",
         "chinese_summary": "理解神经系统如何学习捕捉世界动态的表示是人工智能和神经科学的关键挑战，现有世界模型常采用非结构化神经网络，限制了可解释性和泛化能力。为此，研究提出了一种基于向量符号架构（VSA）作为几何先验的可泛化世界模型。该方法利用可学习的傅里叶全息降维表示（FHRR）编码器将状态和动作映射到高维复向量空间，并利用逐元素复数乘法建模转换，其群论基础能实现强大的多步组合和泛化。实验结果显示，该模型在离散网格世界中对未见状态-动作对实现了高零样本准确率，显著提高了多步预测的准确性，并对噪声具有更强的鲁棒性。"
+      },
+      {
+        "paper_id": "2602.22452",
+        "title": "CWM: Contrastive World Models for Action Feasibility Learning in Embodied Agent Pipelines",
+        "abstract": "A reliable action feasibility scorer is a critical bottleneck in embodied agent pipelines: before any planning or reasoning occurs, the agent must identify which candidate actions are physically executable in the current state. Existing approaches use supervised fine-tuning (SFT) to train action scorers, but SFT treats each candidate independently and does not explicitly teach the model to discriminate between actions that are physically correct and those that are subtly wrong. We propose the Contrastive World Model (CWM), which fine-tunes a large language model (LLM) as an action scorer using an InfoNCE contrastive objective with hard-mined negative examples. The key idea is to push valid actions away from invalid ones in scoring space, with special emphasis on hard negatives: semantically similar but physically incompatible candidates. We evaluate CWM on the ScienceWorld benchmark through two studies. First, an intrinsic affordance evaluation on 605 hard-negative test pairs shows that CWM outperforms SFT by +6.76 percentage points on Precision@1 for minimal-edit negatives -- cases where a single word changes the physical outcome -- and achieves a higher AUC-ROC (0.929 vs. 0.906). Second, a live filter characterisation study measures how well CWM ranks gold-path actions against all valid environment actions during task execution. Under out-of-distribution stress conditions, CWM maintains a significantly better safety margin (-2.39) than SFT (-3.96), indicating that the gold action is ranked closer to the top. These results support the hypothesis that contrastive training induces representations that capture physical feasibility more faithfully than SFT alone.",
+        "authors_display": "Chayan Banerjee Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22452",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.AI",
+        "chinese_summary": "具身智能体管道中的动作可行性评估器是一个关键瓶颈，现有监督微调（SFT）方法未能有效区分物理上正确和微妙错误的动作。本文提出了对比世界模型（CWM），通过使用InfoNCE对比目标和硬负样本挖掘来微调大型语言模型（LLM）作为动作评估器，其核心思想是在评分空间中将有效动作与语义相似但物理不兼容的硬负样本推开。在ScienceWorld基准上的实验表明，CWM在关键指标上显著优于SFT，特别是在最小编辑负样本和分布外压力条件下，验证了对比训练能更忠实地捕捉物理可行性。"
+      },
+      {
+        "paper_id": "2602.22430",
+        "title": "TopoEdit: Fast Post-Optimization Editing of Topology Optimized Structures",
+        "abstract": "Despite topology optimization producing high-performance structures, late-stage localized revisions remain brittle: direct density-space edits (e.g., warping pixels, inserting holes, swapping infill) can sever load paths and sharply degrade compliance, while re-running optimization is slow and may drift toward a qualitatively different design. We present TopoEdit, a fast post-optimization editor that demonstrates how structured latent embeddings from a pre-trained topology foundation model (OAT) can be repurposed as an interface for physics-aware engineering edits. Given an optimized topology, TopoEdit encodes it into OAT's spatial latent, applies partial noising to preserve instance identity while increasing editability, and injects user intent through an edit-then-denoise diffusion pipeline. We instantiate three edit operators: drag-based topology warping with boundary-condition-consistent conditioning updates, shell-infill lattice replacement using a lattice-anchored reference latent with updated volume-fraction conditioning, and late-stage no-design region enforcement via masked latent overwrite followed by diffusion-based recovery. A consistency-preserving guided DDIM procedure localizes changes while allowing global structural adaptation; multiple candidates can be sampled and selected using a compliance-aware criterion, with optional short SIMP refinement for warps. Across diverse case studies and large edit sweeps, TopoEdit produces intention-aligned modifications that better preserve mechanical performance and avoid catastrophic failure modes compared to direct density-space edits, while generating edited candidates in sub-second diffusion time per sample.",
+        "authors_display": "Faez Ahmed Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22430",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.GR",
+        "chinese_summary": "拓扑优化结构后期局部修改面临性能急剧下降和设计漂移问题。本文提出了TopoEdit，一个快速的后优化编辑器，通过将预训练拓扑基础模型（OAT）的结构化潜在嵌入重新用作物理感知工程修改的接口。TopoEdit将优化拓扑编码到OAT的潜在空间，应用局部噪声并注入用户意图，实例化了拖拽式扭曲、晶格替换和无设计区域强制执行等编辑操作。实验结果表明，TopoEdit生成的修改与用户意图一致，且相比直接密度空间编辑，能更好地保留机械性能并避免灾难性失效，同时在亚秒级时间内生成修改方案。"
+      },
+      {
+        "paper_id": "2602.22347",
+        "title": "Enabling clinical use of foundation models in histopathology",
+        "abstract": "Foundation models in histopathology are expected to facilitate the development of high-performing and generalisable deep learning systems. However, current models capture not only biologically relevant features, but also pre-analytic and scanner-specific variation that bias the predictions of task-specific models trained from the foundation model features. Here we show that introducing novel robustness losses during training of downstream task-specific models reduces sensitivity to technical variability. A purpose-designed comprehensive experimentation setup with 27,042 WSIs from 6155 patients is used to train thousands of models from the features of eight popular foundation models for computational pathology. In addition to a substantial improvement in robustness, we observe that prediction accuracy improves by focusing on biologically relevant features. Our approach successfully mitigates robustness issues of foundation models for computational pathology without retraining the foundation models themselves, enabling development of robust computational pathology models applicable to real-world data in routine clinical practice.",
+        "authors_display": "Andreas Kleppe Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22347",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.CV",
+        "chinese_summary": "组织病理学中的基础模型在捕获生物学特征的同时，也容易引入预分析和扫描仪特有的技术变异，从而影响下游任务模型的预测鲁棒性。本文提出在下游任务特定模型训练期间引入新颖的鲁棒性损失，以降低对这些技术变异的敏感性。通过对来自6155名患者的27,042张全切片图像进行大量实验，结果显示该方法显著提高了模型的鲁棒性，并通过聚焦生物学相关特征提升了预测准确性，成功在不重新训练基础模型的情况下，使得开发出适用于真实临床数据的鲁棒计算病理学模型成为可能。"
       },
       {
         "paper_id": "2602.19863",
@@ -2738,6 +3046,182 @@
     ],
     "VLM": [
       {
+        "paper_id": "2602.23351",
+        "title": "Scale Can't Overcome Pragmatics: The Impact of Reporting Bias on Vision-Language Reasoning",
+        "abstract": "The lack of reasoning capabilities in Vision-Language Models (VLMs) has remained at the forefront of research discourse. We posit that this behavior stems from a reporting bias in their training data. That is, how people communicate about visual content by default omits tacit information needed to supervise some types of reasoning; e.g., \"at the game today!\" is a more likely caption than \"a photo of 37 people standing behind a field\". We investigate the data underlying the popular VLMs OpenCLIP, LLaVA-1.5 and Molmo through the lens of theories from pragmatics, and find that reporting bias results in insufficient representation of four reasoning skills (spatial, temporal, negation, and counting), despite the corpora being of web-scale, and/or synthetically generated. With a set of curated benchmarks, we demonstrate that: (i) VLMs perform poorly on the aforementioned types of reasoning suppressed in the training data by reporting bias; (ii) contrary to popular belief, scaling data size, model size, and to multiple languages does not result in emergence of these skills by default; but, promisingly, (iii) incorporating annotations specifically collected to obtain tacit information is effective. Our findings highlight the need for more intentional training data curation methods, rather than counting on scale for emergence of reasoning capabilities.",
+        "authors_display": "Ranjay Krishna Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23351",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CL",
+        "chinese_summary": "现有视觉语言模型（VLMs）缺乏推理能力，研究者认为这源于训练数据中的“报告偏差”，即人们描述视觉内容时常省略推理所需的隐含信息。本研究从语用学角度分析了OpenCLIP、LLaVA-1.5和Molmo等VLM的基础数据，发现报告偏差导致空间、时间、否定和计数等四种推理技能的表示不足。通过精选基准测试表明，VLMs在这些被抑制的推理类型上表现不佳，且简单地扩大数据或模型规模并不能自然地引发这些技能，而整合专门收集的隐含信息标注数据则能有效提升性能，强调了数据策展的重要性。"
+      },
+      {
+        "paper_id": "2602.23339",
+        "title": "Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?",
+        "abstract": "Open-vocabulary segmentation (OVS) extends the zero-shot recognition capabilities of vision-language models (VLMs) to pixel-level prediction, enabling segmentation of arbitrary categories specified by text prompts. Despite recent progress, OVS lags behind fully supervised approaches due to two challenges: the coarse image-level supervision used to train VLMs and the semantic ambiguity of natural language. We address these limitations by introducing a few-shot setting that augments textual prompts with a support set of pixel-annotated images. Building on this, we propose a retrieval-augmented test-time adapter that learns a lightweight, per-image classifier by fusing textual and visual support features. Unlike prior methods relying on late, hand-crafted fusion, our approach performs learned, per-query fusion, achieving stronger synergy between modalities. The method supports continually expanding support sets, and applies to fine-grained tasks such as personalized segmentation. Experiments show that we significantly narrow the gap between zero-shot and supervised segmentation while preserving open-vocabulary ability.",
+        "authors_display": "Giorgos Tolias Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23339",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "开放词汇分割（OVS）旨在将视觉语言模型（VLM）的零样本识别能力扩展到像素级预测，但由于VLM训练中粗糙的图像级监督和自然语言的语义模糊性，其性能仍落后于全监督方法。为解决此问题，本文引入了少样本设置，并通过像素标注图像的支持集增强文本提示。在此基础上，提出了一种检索增强的测试时适配器，通过融合文本和视觉支持特征学习轻量级分类器，实现了学习型、每查询的模态融合。实验结果表明，该方法显著缩小了零样本和监督分割之间的差距，同时保留了开放词汇能力，并支持持续扩展支持集和精细粒度任务。"
+      },
+      {
+        "paper_id": "2602.23276",
+        "title": "CXReasonAgent: Evidence-Grounded Diagnostic Reasoning Agent for Chest X-rays",
+        "abstract": "Chest X-ray plays a central role in thoracic diagnosis, and its interpretation inherently requires multi-step, evidence-grounded reasoning. However, large vision-language models (LVLMs) often generate plausible responses that are not faithfully grounded in diagnostic evidence and provide limited visual evidence for verification, while also requiring costly retraining to support new diagnostic tasks, limiting their reliability and adaptability in clinical settings. To address these limitations, we present CXReasonAgent, a diagnostic agent that integrates a large language model (LLM) with clinically grounded diagnostic tools to perform evidence-grounded diagnostic reasoning using image-derived diagnostic and visual evidence. To evaluate these capabilities, we introduce CXReasonDial, a multi-turn dialogue benchmark with 1,946 dialogues across 12 diagnostic tasks, and show that CXReasonAgent produces faithfully grounded responses, enabling more reliable and verifiable diagnostic reasoning than LVLMs. These findings highlight the importance of integrating clinically grounded diagnostic tools, particularly in safety-critical clinical settings.",
+        "authors_display": "Edward Choi Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23276",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.AI",
+        "chinese_summary": "胸部X射线诊断需多步、基于证据的推理，但大型视觉语言模型（LVLMs）常生成缺乏诊断证据支持的合理响应，且视觉证据有限，同时支持新任务需昂贵再训练，限制了其临床可靠性。为解决这些局限，本文提出了CXReasonAgent，一个将大型语言模型（LLM）与临床诊断工具集成的诊断代理，利用图像衍生的诊断和视觉证据进行基于证据的诊断推理。为评估其能力，引入了CXReasonDial多轮对话基准。结果显示，CXReasonAgent能产生忠实可靠的响应，比LVLMs实现更可靠、可验证的诊断推理，突出了在安全关键临床环境中集成临床诊断工具的重要性。"
+      },
+      {
+        "paper_id": "2602.23229",
+        "title": "Large Multimodal Models as General In-Context Classifiers",
+        "abstract": "Which multimodal model should we use for classification? Previous studies suggest that the answer lies in CLIP-like contrastive Vision-Language Models (VLMs), due to their remarkable performance in zero-shot classification. In contrast, Large Multimodal Models (LMM) are more suitable for complex tasks. In this work, we argue that this answer overlooks an important capability of LMMs: in-context learning. We benchmark state-of-the-art LMMs on diverse datasets for closed-world classification and find that, although their zero-shot performance is lower than CLIP's, LMMs with a few in-context examples can match or even surpass contrastive VLMs with cache-based adapters, their \"in-context\" equivalent. We extend this analysis to the open-world setting, where the generative nature of LMMs makes them more suitable for the task. In this challenging scenario, LMMs struggle whenever provided with imperfect context information. To address this issue, we propose CIRCLE, a simple training-free method that assigns pseudo-labels to in-context examples, iteratively refining them with the available context itself. Through extensive experiments, we show that CIRCLE establishes a robust baseline for open-world classification, surpassing VLM counterparts and highlighting the potential of LMMs to serve as unified classifiers, and a flexible alternative to specialized models.",
+        "authors_display": "Elisa Ricci Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23229",
+        "code_url": "https://circle-lmm.github.io/",
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "在分类任务中，CLIP类对比视觉语言模型（VLMs）因其零样本性能而备受推崇，而大型多模态模型（LMMs）通常被认为更适合复杂任务，但其上下文学习能力常被忽视。本研究基准测试了最先进的LMMs在封闭世界分类中的表现，发现尽管零样本性能低于CLIP，但LMMs通过少量上下文示例可匹敌甚至超越使用缓存适配器的对比VLM。针对开放世界分类中LMMs在不完善上下文下的困境，提出了CIRCLE，一种无需训练的方法，通过迭代地使用可用上下文为上下文示例分配伪标签来精炼。实验证明，CIRCLE为开放世界分类建立了稳健基线，超越了VLM，并揭示了LMMs作为统一分类器和专用模型灵活替代的潜力。"
+      },
+      {
+        "paper_id": "2602.23228",
+        "title": "MovieTeller: Tool-augmented Movie Synopsis with ID Consistent Progressive Abstraction",
+        "abstract": "With the explosive growth of digital entertainment, automated video summarization has become indispensable for applications such as content indexing, personalized recommendation, and efficient media archiving. Automatic synopsis generation for long-form videos, such as movies and TV series, presents a significant challenge for existing Vision-Language Models (VLMs). While proficient at single-image captioning, these general-purpose models often exhibit critical failures in long-duration contexts, primarily a lack of ID-consistent character identification and a fractured narrative coherence. To overcome these limitations, we propose MovieTeller, a novel framework for generating movie synopses via tool-augmented progressive abstraction. Our core contribution is a training-free, tool-augmented, fact-grounded generation process. Instead of requiring costly model fine-tuning, our framework directly leverages off-the-shelf models in a plug-and-play manner. We first invoke a specialized face recognition model as an external \"tool\" to establish Factual Groundings--precise character identities and their corresponding bounding boxes. These groundings are then injected into the prompt to steer the VLM's reasoning, ensuring the generated scene descriptions are anchored to verifiable facts. Furthermore, our progressive abstraction pipeline decomposes the summarization of a full-length movie into a multi-stage process, effectively mitigating the context length limitations of current VLMs. Experiments demonstrate that our approach yields significant improvements in factual accuracy, character consistency, and overall narrative coherence compared to end-to-end baselines.",
+        "authors_display": "Gaoang Wang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23228",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对电影、电视剧等长视频的自动化摘要任务，现有通用视觉语言模型（VLMs）在ID一致的角色识别和叙事连贯性方面表现不足。为解决这些限制，本文提出了MovieTeller框架，通过工具增强的渐进式抽象来生成电影剧情梗概。其核心贡献是无需训练、工具增强、事实导向的生成过程，通过调用专门的面部识别模型作为外部“工具”来建立事实依据（角色身份和边界框），并将其注入提示以引导VLM推理。此外，渐进式抽象管道将长电影摘要分解为多阶段过程，以缓解VLM的上下文长度限制。实验证明，MovieTeller在事实准确性、角色一致性和整体叙事连贯性方面显著优于端到端基线。"
+      },
+      {
+        "paper_id": "2602.23088",
+        "title": "Cytoarchitecture in Words: Weakly Supervised Vision-Language Modeling for Human Brain Microscopy",
+        "abstract": "Foundation models increasingly offer potential to support interactive, agentic workflows that assist researchers during analysis and interpretation of image data. Such workflows often require coupling vision to language to provide a natural-language interface. However, paired image-text data needed to learn this coupling are scarce and difficult to obtain in many research and clinical settings. One such setting is microscopic analysis of cell-body-stained histological human brain sections, which enables the study of cytoarchitecture: cell density and morphology and their laminar and areal organization. Here, we propose a label-mediated method that generates meaningful captions from images by linking images and text only through a label, without requiring curated paired image-text data. Given the label, we automatically mine area descriptions from related literature and use them as synthetic captions reflecting canonical cytoarchitectonic attributes. An existing cytoarchitectonic vision foundation model (CytoNet) is then coupled to a large language model via an image-to-text training objective, enabling microscopy regions to be described in natural language. Across 57 brain areas, the resulting method produces plausible area-level descriptions and supports open-set use through explicit rejection of unseen areas. It matches the cytoarchitectonic reference label for in-scope patches with 90.6% accuracy and, with the area label masked, its descriptions remain discriminative enough to recover the area in an 8-way test with 68.6% accuracy. These results suggest that weak, label-mediated pairing can suffice to connect existing biomedical vision foundation models to language, providing a practical recipe for integrating natural-language in domains where fine-grained paired annotations are scarce.",
+        "authors_display": "Christian Schiffer Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23088",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "在许多研究和临床场景中，例如人类大脑切片细胞结构显微分析，学习图像-文本耦合所需的配对数据稀缺。为解决此问题，本文提出了一种标签介导的方法，无需人工整理的配对图像-文本数据即可从图像生成有意义的标题，仅通过标签将图像和文本关联。该方法给定标签后，自动从相关文献中挖掘区域描述作为合成标题，并将其用于将现有的细胞结构视觉基础模型（CytoNet）与大型语言模型进行图像到文本的训练耦合。在57个脑区上的实验表明，该方法能生成合理的区域级描述，支持开放集使用，并在图像块分类和区域恢复任务中展现出高准确性，证明了弱标签介导配对足以连接现有生物医学视觉基础模型和语言。"
+      },
+      {
+        "paper_id": "2602.23013",
+        "title": "SubspaceAD: Training-Free Few-Shot Anomaly Detection via Subspace Modeling",
+        "abstract": "Detecting visual anomalies in industrial inspection often requires training with only a few normal images per category. Recent few-shot methods achieve strong results employing foundation-model features, but typically rely on memory banks, auxiliary datasets, or multi-modal tuning of vision-language models. We therefore question whether such complexity is necessary given the feature representations of vision foundation models. To answer this question, we introduce SubspaceAD, a training-free method, that operates in two simple stages. First, patch-level features are extracted from a small set of normal images by a frozen DINOv2 backbone. Second, a Principal Component Analysis (PCA) model is fit to these features to estimate the low-dimensional subspace of normal variations. At inference, anomalies are detected via the reconstruction residual with respect to this subspace, producing interpretable and statistically grounded anomaly scores. Despite its simplicity, SubspaceAD achieves state-of-the-art performance across one-shot and few-shot settings without training, prompt tuning, or memory banks. In the one-shot anomaly detection setting, SubspaceAD achieves image-level and pixel-level AUROC of 98.0% and 97.6% on the MVTec-AD dataset, and 93.3% and 98.3% on the VisA dataset, respectively, surpassing prior state-of-the-art results. Code and demo are available at https://github.com/CLendering/SubspaceAD.",
+        "authors_display": "Egor Bondarev Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23013",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "工业检测中的视觉异常检测通常仅能利用每个类别少量正常图像进行训练，而现有少样本方法虽性能优异，但常依赖记忆库、辅助数据集或多模态VLM调优，过于复杂。本文提出了SubspaceAD，一个无需训练的异常检测方法，其分为两个简单阶段：首先，使用冻结的DINOv2骨干网络从少量正常图像中提取补丁级特征；其次，对这些特征拟合主成分分析（PCA）模型以估计正常变化的低维子空间。推理时，通过与该子空间的重构残差检测异常。SubspaceAD在单样本和少样本设置下无需训练、提示调整或记忆库，实现了最先进的性能，在MVTec-AD和VisA数据集上均取得了超越以往最佳结果的图像级和像素级AUROC。"
+      },
+      {
+        "paper_id": "2602.22918",
+        "title": "Where Vision Becomes Text: Locating the OCR Routing Bottleneck in Vision-Language Models",
+        "abstract": "Vision-language models (VLMs) can read text from images, but where does this optical character recognition (OCR) information enter the language processing stream? We investigate the OCR routing mechanism across three architecture families (Qwen3-VL, Phi-4, InternVL3.5) using causal interventions. By computing activation differences between original images and text-inpainted versions, we identify architecture-specific OCR bottlenecks whose dominant location depends on the vision-language integration strategy: DeepStack models (Qwen) show peak sensitivity at mid-depth (about 50%) for scene text, while single-stage projection models (Phi-4, InternVL) peak at early layers (6-25%), though the exact layer of maximum effect varies across datasets. The OCR signal is remarkably low-dimensional: PC1 captures 72.9% of variance. Crucially, principal component analysis (PCA) directions learned on one dataset transfer to others, demonstrating shared text-processing pathways. Surprisingly, in models with modular OCR circuits (notably Qwen3-VL-4B), OCR removal can improve counting performance (up to +6.9 percentage points), suggesting OCR interferes with other visual processing in sufficiently modular architectures.",
+        "authors_display": "Oren Gal Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22918",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CL",
+        "chinese_summary": "为探究视觉语言模型（VLMs）中光学字符识别（OCR）信息如何进入语言处理流，本文利用因果干预研究了Qwen3-VL、Phi-4、InternVL3.5三种架构家族中的OCR路由机制。通过计算原始图像和文本修复版本之间的激活差异，识别出特定架构的OCR瓶颈。研究发现，OCR信号的 dominant 位置取决于视觉-语言集成策略，DeepStack模型（Qwen）在中间层敏感性最高，而单阶段投影模型（Phi-4，InternVL）则在早期层。OCR信号维度极低，且在一个数据集上学习到的PCA方向可迁移至其他数据集。令人惊讶的是，在具有模块化OCR电路的模型中，移除OCR反而能提高计数性能，表明OCR有时会干扰其他视觉处理。"
+      },
+      {
+        "paper_id": "2602.22779",
+        "title": "TrajTok: Learning Trajectory Tokens enables better Video Understanding",
+        "abstract": "Tokenization in video models, typically through patchification, generates an excessive and redundant number of tokens. This severely limits video efficiency and scalability. While recent trajectory-based tokenizers offer a promising solution by decoupling video duration from token count, they rely on complex external segmentation and tracking pipelines that are slow and task-agnostic. We propose TrajTok, an end-to-end video tokenizer module that is fully integrated and co-trained with video models for a downstream objective, dynamically adapting its token granularity to semantic complexity, independent of video duration. TrajTok contains a unified segmenter that performs implicit clustering over pixels in both space and time to directly produce object trajectories in a single forward pass. By prioritizing downstream adaptability over pixel-perfect segmentation fidelity, TrajTok is lightweight and efficient, yet empirically improves video understanding performance. With TrajTok, we implement a video CLIP model trained from scratch (TrajViT2). It achieves the best accuracy at scale across both classification and retrieval benchmarks, while maintaining efficiency comparable to the best token-merging methods. TrajTok also proves to be a versatile component beyond its role as a tokenizer. We show that it can be seamlessly integrated as either a probing head for pretrained visual features (TrajAdapter) or an alignment connector in vision-language models (TrajVLM) with especially strong performance in long-video reasoning.",
+        "authors_display": "Ranjay Krishna Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22779",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "视频模型中的传统分块标记化产生过多冗余令牌，限制了效率和可扩展性，而现有基于轨迹的标记化方法虽能解耦视频时长与令牌数量，但依赖复杂且缓慢的外部流程。本文提出了TrajTok，一个端到端、与视频模型共同训练的视频标记器模块，它能根据语义复杂性动态调整令牌粒度，且与视频时长无关。TrajTok包含一个统一的分割器，通过在时空中对像素进行隐式聚类直接生成物体轨迹。TrajTok轻量高效，经验证提高了视频理解性能。基于TrajTok实现的视频CLIP模型（TrajViT2）在分类和检索基准上取得了最佳精度和效率。此外，TrajTok还能作为预训练视觉特征的探测头或视觉语言模型中的对齐连接器，在长视频推理中表现出色。"
+      },
+      {
+        "paper_id": "2602.22727",
+        "title": "HulluEdit: Single-Pass Evidence-Consistent Subspace Editing for Mitigating Hallucinations in Large Vision-Language Models",
+        "abstract": "Object hallucination in Large Vision-Language Models (LVLMs) significantly hinders their reliable deployment. Existing methods struggle to balance efficiency and accuracy: they often require expensive reference models and multiple forward passes, or apply static edits that risk suppressing genuine visual evidence. To address this, we introduce HulluEdit, a single-pass, reference-free intervention framework. Our core innovation is orthogonal subspace editing: we decompose the hidden states of the model into orthogonal subspaces - visual evidence, conflicting priors, and residual uncertainty - enabling selective suppression of hallucinatory patterns without interfering with visual grounding. This approach mathematically guarantees that edits applied to the prior subspace leave the visual component entirely unaffected. Extensive experiments show that HulluEdit achieves state-of-the-art hallucination reduction on benchmarks including POPE and CHAIR across diverse architectures, while preserving general capabilities on MME and maintaining efficient inference. Our method consistently outperforms contrastive decoding and static subspace editing baselines, offering a new pathway toward more trustworthy LVLMs.",
+        "authors_display": "Jitao Sang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22727",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "大型视觉语言模型（LVLMs）中的物体幻觉严重阻碍了其可靠部署，现有方法难以平衡效率和准确性。为解决此问题，本文提出了HulluEdit，一个单次前向传播、无需参考的干预框架。其核心创新在于正交子空间编辑：将模型隐藏状态分解为视觉证据、冲突先验和残差不确定性等正交子空间，从而选择性抑制幻觉模式而不干扰视觉基础。数学上保证了对先验子空间的编辑不会影响视觉组件。广泛实验表明，HulluEdit在POPE和CHAIR等基准测试上实现了最先进的幻觉减少，跨多种架构，同时在MME上保持了通用能力和高效推理，为构建更值得信赖的LVLMs提供了新途径。"
+      },
+      {
+        "paper_id": "2602.22716",
+        "title": "SoPE: Spherical Coordinate-Based Positional Embedding for Enhancing Spatial Perception of 3D LVLMs",
+        "abstract": "3D Large Vision-Language Models (3D LVLMs) built upon Large Language Models (LLMs) have achieved remarkable progress across various multimodal tasks. However, their inherited position-dependent modeling mechanism, Rotary Position Embedding (RoPE), remains suboptimal for 3D multimodal understanding. The vanilla RoPE formulation fails to preserve essential three-dimensional spatial structures when encoding 3D tokens, and its relative distance computation overlooks angular dependencies, hindering the model's ability to capture directional variations in visual representations. To overcome these limitations, we introduce Spherical Coordinate-based Positional Embedding (SoPE). Our method maps point-cloud token indices into a 3D spherical coordinate space, enabling unified modeling of spatial locations and directional angles. This formulation preserves the inherent geometric structure of point-cloud data, enhances spatial awareness, and yields more consistent and expressive geometric representations for multimodal learning. In addition, we introduce a multi-scale frequency mixing strategy to fuse feature information across different frequency domains. Experimental results on multiple 3D scene benchmarks validate the effectiveness of our approach, while real-world deployment experiments further demonstrate its strong generalization capability.",
+        "authors_display": "Ka-Veng Yuen Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22716",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "现有3D大视觉语言模型（3D LVLMs）继承的旋转位置编码（RoPE）在处理3D多模态数据时存在局限，其未能保留三维空间结构且忽略了角度依赖性。为解决此问题，研究提出基于球面坐标的位置编码（SoPE），将点云令牌索引映射到3D球面坐标空间，从而统一建模空间位置和方向角度，并引入多尺度频率混合策略。实验结果表明，该方法在多个3D场景基准测试中有效，并展现出强大的泛化能力。"
+      },
+      {
+        "paper_id": "2602.22703",
+        "title": "Enhancing Geometric Perception in VLMs via Translator-Guided Reinforcement Learning",
+        "abstract": "Vision-language models (VLMs) often struggle with geometric reasoning due to their limited perception of fundamental diagram elements. To tackle this challenge, we introduce GeoPerceive, a benchmark comprising diagram instances paired with domain-specific language (DSL) representations, along with an efficient automatic data generation pipeline. This design enables the isolated evaluation of geometric perception independently from reasoning. To exploit the data provided by GeoPerceive for enhancing the geometric perception capabilities of VLMs, we propose GeoDPO, a translator-guided reinforcement learning (RL) framework. GeoDPO employs an NL-to-DSL translator, which is trained on synthetic pairs generated by the data engine of GeoPerceive, to bridge natural language and DSL. This translator facilitates the computation of fine-grained, DSL-level scores, which serve as reward signals in reinforcement learning. We assess GeoDPO on both in-domain and out-of-domain datasets, spanning tasks in geometric perception as well as downstream reasoning. Experimental results demonstrate that, while supervised fine-tuning (SFT) offers only marginal improvements and may even impair performance in out-of-domain scenarios, GeoDPO achieves substantial gains: $+26.5\\%$ on in-domain data, $+8.0\\%$ on out-of-domain data, and $+39.0\\%$ on downstream reasoning tasks. These findings underscore the superior performance and generalization ability of GeoDPO over SFT. All codes are released at https://github.com/Longin-Yu/GeoPerceive   to ensure reproducibility.",
+        "authors_display": "Chun Yuan Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22703",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.LG",
+        "chinese_summary": "视觉语言模型（VLMs）在几何推理方面表现不佳，原因在于其对基本图表元素的感知能力有限。为此，本研究提出了GeoPerceive基准，包含图表示例和领域特定语言（DSL）表示，以及高效的自动数据生成管线，以独立评估几何感知能力。在此基础上，研究者提出了GeoDPO，一个翻译器引导的强化学习框架，利用在GeoPerceive合成数据上训练的自然语言到DSL翻译器，生成细粒度的DSL级别奖励信号。实验结果显示，GeoDPO在域内数据上提升26.5%，在域外数据上提升8.0%，在下游推理任务上提升39.0%，显著优于监督微调方法。"
+      },
+      {
+        "paper_id": "2602.22689",
+        "title": "No Caption, No Problem: Caption-Free Membership Inference via Model-Fitted Embeddings",
+        "abstract": "Latent diffusion models have achieved remarkable success in high-fidelity text-to-image generation, but their tendency to memorize training data raises critical privacy and intellectual property concerns. Membership inference attacks (MIAs) provide a principled way to audit such memorization by determining whether a given sample was included in training. However, existing approaches assume access to ground-truth captions. This assumption fails in realistic scenarios where only images are available and their textual annotations remain undisclosed, rendering prior methods ineffective when substituted with vision-language model (VLM) captions. In this work, we propose MoFit, a caption-free MIA framework that constructs synthetic conditioning inputs that are explicitly overfitted to the target model's generative manifold. Given a query image, MoFit proceeds in two stages: (i) model-fitted surrogate optimization, where a perturbation applied to the image is optimized to construct a surrogate in regions of the model's unconditional prior learned from member samples, and (ii) surrogate-driven embedding extraction, where a model-fitted embedding is derived from the surrogate and then used as a mismatched condition for the query image. This embedding amplifies conditional loss responses for member samples while leaving hold-outs relatively less affected, thereby enhancing separability in the absence of ground-truth captions. Our comprehensive experiments across multiple datasets and diffusion models demonstrate that MoFit consistently outperforms prior VLM-conditioned baselines and achieves performance competitive with caption-dependent methods.",
+        "authors_display": "Sung-Eui Yoon Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22689",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "潜在扩散模型因记忆训练数据而引发隐私和知识产权担忧，但现有成员推理攻击（MIAs）依赖真实标注，在只有图像而无标注的情况下失效。本研究提出了MoFit，一个无需标注的MIA框架，通过构建显式过拟合目标模型生成流形的合成条件输入来解决此问题。MoFit分两阶段：首先通过模型拟合的替代优化，生成目标模型无条件先验区域的替代物；然后通过替代驱动的嵌入提取，生成模型拟合嵌入作为查询图像的失配条件，从而放大成员样本的条件损失。实验证明，MoFit持续优于现有VLM条件基线，并达到与依赖标注方法相当的性能。"
+      },
+      {
+        "paper_id": "2602.22683",
+        "title": "SUPERGLASSES: Benchmarking Vision Language Models as Intelligent Agents for AI Smart Glasses",
+        "abstract": "The rapid advancement of AI-powered smart glasses, one of the hottest wearable devices, has unlocked new frontiers for multimodal interaction, with Visual Question Answering (VQA) over external knowledge sources emerging as a core application. Existing Vision Language Models (VLMs) adapted to smart glasses are typically trained and evaluated on traditional multimodal datasets; however, these datasets lack the variety and realism needed to reflect smart glasses usage scenarios and diverge from their specific challenges, where accurately identifying the object of interest must precede any external knowledge retrieval. To bridge this gap, we introduce SUPERGLASSES, the first comprehensive VQA benchmark built on real-world data entirely collected by smart glasses devices. SUPERGLASSES comprises 2,422 egocentric image-question pairs spanning 14 image domains and 8 query categories, enriched with full search trajectories and reasoning annotations. We evaluate 26 representative VLMs on this benchmark, revealing significant performance gaps. To address the limitations of existing models, we further propose SUPERLENS, a multimodal smart glasses agent that enables retrieval-augmented answer generation by integrating automatic object detection, query decoupling, and multimodal web search. Our agent achieves state-of-the-art performance, surpassing GPT-4o by 2.19 percent, and highlights the need for task-specific solutions in smart glasses VQA scenarios.",
+        "authors_display": "Qing Li Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22683",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "AI智能眼镜的快速发展使VQA成为核心应用，但现有VLM在传统数据集上训练，难以反映智能眼镜场景中先识别物体再检索知识的独特挑战。为此，研究引入了SUPERGLASSES，首个基于智能眼镜真实数据收集的综合VQA基准。同时，提出了SUPERLENS，一个多模态智能眼镜代理，通过集成自动目标检测、查询解耦和多模态网页搜索，实现检索增强的答案生成。该代理在性能上超越了GPT-4o 2.19%，突显了智能眼镜VQA任务中特定解决方案的必要性。"
+      },
+      {
+        "paper_id": "2602.22678",
+        "title": "ViCLIP-OT: The First Foundation Vision-Language Model for Vietnamese Image-Text Retrieval with Optimal Transport",
+        "abstract": "Image-text retrieval has become a fundamental component in intelligent multimedia systems; however, most existing vision-language models are optimized for highresource languages and remain suboptimal for low-resource settings such as Vietnamese. This work introduces ViCLIP-OT, a foundation vision-language model specifically designed for Vietnamese image-text retrieval. The proposed framework integrates CLIP-style contrastive learning with a Similarity-Graph Regularized Optimal Transport (SIGROT) loss to enhance global cross-modal consistency and mitigate modality gap issues. Extensive experiments on three Vietnamese benchmarks (UITOpenViIC, KTVIC, and Crossmodal-3600) demonstrate that ViCLIP-OT consistently outperforms CLIP and SigLIP baselines in both in-domain and zero-shot settings. On UIT-OpenViIC, the model achieves an average Recall@K of 67.34%, improving upon CLIP by 5.75 percentage points. In zero-shot evaluation on Crossmodal-3600, ViCLIPOT surpasses CLIP by 11.72 percentage points. Embedding-space analysis further confirms improved alignment and reduced modality gap. The results indicate that integrating SIGROT provides an effective and scalable strategy for cross-modal retrieval in low-resource languages, offering practical implications for intelligent multimedia retrieval systems in Vietnamese and other underrepresented linguistic contexts.",
+        "authors_display": "Nguyen-Khang Pham Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22678",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "图像-文本检索系统在低资源语言（如越南语）中表现不佳，因为大多数视觉语言模型针对高资源语言优化。本研究提出了ViCLIP-OT，一个专为越南语图像-文本检索设计的视觉语言基础模型。该框架结合了CLIP风格的对比学习与相似图正则化最优传输（SIGROT）损失，以增强全局跨模态一致性并缓解模态差距问题。在三个越南语基准测试中，ViCLIP-OT在域内和零样本设置下均持续优于CLIP和SigLIP基线，例如在UIT-OpenViIC上平均Recall@K提高5.75个百分点，在Crossmodal-3600零样本评估中超越CLIP 11.72个百分点，证明了其有效性和可扩展性。"
+      },
+      {
+        "paper_id": "2602.22549",
+        "title": "DrivePTS: A Progressive Learning Framework with Textual and Structural Enhancement for Driving Scene Generation",
+        "abstract": "Synthesis of diverse driving scenes serves as a crucial data augmentation technique for validating the robustness and generalizability of autonomous driving systems. Current methods aggregate high-definition (HD) maps and 3D bounding boxes as geometric conditions in diffusion models for conditional scene generation. However, implicit inter-condition dependency causes generation failures when control conditions change independently. Additionally, these methods suffer from insufficient details in both semantic and structural aspects. Specifically, brief and view-invariant captions restrict semantic contexts, resulting in weak background modeling. Meanwhile, the standard denoising loss with uniform spatial weighting neglects foreground structural details, causing visual distortions and blurriness. To address these challenges, we propose DrivePTS, which incorporates three key innovations. Firstly, our framework adopts a progressive learning strategy to mitigate inter-dependency between geometric conditions, reinforced by an explicit mutual information constraint. Secondly, a Vision-Language Model is utilized to generate multi-view hierarchical descriptions across six semantic aspects, providing fine-grained textual guidance. Thirdly, a frequency-guided structure loss is introduced to strengthen the model's sensitivity to high-frequency elements, improving foreground structural fidelity. Extensive experiments demonstrate that our DrivePTS achieves state-of-the-art fidelity and controllability in generating diverse driving scenes. Notably, DrivePTS successfully generates rare scenes where prior methods fail, highlighting its strong generalization ability.",
+        "authors_display": "Cheng Lu Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22549",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "当前用于驾驶场景生成的扩散模型存在几何条件间隐式依赖导致生成失败以及语义和结构细节不足的问题。为解决这些挑战，本研究提出了DrivePTS框架。该框架采用渐进式学习策略以缓解条件间依赖，并利用视觉语言模型生成多视图分层描述提供细粒度语义指导，同时引入频率引导结构损失以增强对高频元素的敏感性。大量实验证明，DrivePTS在生成多样化驾驶场景方面实现了最先进的保真度和可控性，并能成功生成先前方法无法处理的稀有场景，显示出强大的泛化能力。"
+      },
+      {
         "paper_id": "2602.22144",
         "title": "NoLan: Mitigating Object Hallucinations in Large Vision-Language Models via Dynamic Suppression of Language Priors",
         "abstract": "Object hallucination is a critical issue in Large Vision-Language Models (LVLMs), where outputs include objects that do not appear in the input image. A natural question arises from this phenomenon: Which component of the LVLM pipeline primarily contributes to object hallucinations? The vision encoder to perceive visual information, or the language decoder to generate text responses? In this work, we strive to answer this question through designing a systematic experiment to analyze the roles of the vision encoder and the language decoder in hallucination generation. Our observations reveal that object hallucinations are predominantly associated with the strong priors from the language decoder. Based on this finding, we propose a simple and training-free framework, No-Language-Hallucination Decoding, NoLan, which refines the output distribution by dynamically suppressing language priors, modulated based on the output distribution difference between multimodal and text-only inputs. Experimental results demonstrate that NoLan effectively reduces object hallucinations across various LVLMs on different tasks. For instance, NoLan achieves substantial improvements on POPE, enhancing the accuracy of LLaVA-1.5 7B and Qwen-VL 7B by up to 6.45 and 7.21, respectively. The code is publicly available at: https://github.com/lingfengren/NoLan.",
@@ -2912,6 +3396,50 @@
         "date": "2026-02-25",
         "primary_category": "cs.CV",
         "chinese_summary": "大型视觉语言模型（LVLM）在生成链式思维（CoT）推理时，易受视觉幻觉传播影响，而现有基于强化学习的解决方案成本高且通用性差。本研究提出了一种轻量级、免训练、即插即用的迭代框架，用于视觉接地的多模态推理。其核心思想是在测试时利用视觉证据监督每个推理步骤，确保每个解码的token都与视觉线索对应。通过构建文本视觉证据池，并在证据不足时动态提取额外相关视觉证据，模型能实现更可靠的推理。在多个LVLM和基准上的广泛实验表明，该方法显著降低了幻觉率，并提升了推理准确性，无需额外训练。"
+      },
+      {
+        "paper_id": "2602.22474",
+        "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+        "abstract": "Policy steering is an emerging way to adapt robot behaviors at deployment-time: a learned verifier analyzes low-level action samples proposed by a pre-trained policy (e.g., diffusion policy) and selects only those aligned with the task. While Vision-Language Models (VLMs) are promising general-purpose verifiers due to their reasoning capabilities, existing frameworks often assume these models are well-calibrated. In practice, the overconfident judgment from VLM can degrade the steering performance under both high-level semantic uncertainty in task specifications and low-level action uncertainty or incapability of the pre-trained policy. We propose uncertainty-aware policy steering (UPS), a framework that jointly reasons about semantic task uncertainty and low-level action feasibility, and selects an uncertainty resolution strategy: execute a high-confidence action, clarify task ambiguity via natural language queries, or ask for action interventions to correct the low-level policy when it is deemed incapable at the task. We leverage conformal prediction to calibrate the composition of the VLM and the pre-trained base policy, providing statistical assurances that the verifier selects the correct strategy. After collecting interventions during deployment, we employ residual learning to improve the capability of the pre-trained policy, enabling the system to learn continually but with minimal expensive human feedback. We demonstrate our framework through experiments in simulation and on hardware, showing that UPS can disentangle confident, ambiguous, and incapable scenarios and minimizes expensive user interventions compared to uncalibrated baselines and prior human- or robot-gated continual learning approaches. Videos can be found at https://jessie-yuan.github.io/ups/",
+        "authors_display": "Andrea Bajcsy Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22474",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.RO",
+        "chinese_summary": "策略引导是调整机器人行为的新兴方法，但预训练策略和VLM验证器之间的校准不足会导致在语义不确定性和低级行动不确定性下性能下降。针对此问题，本研究提出了不确定性感知的策略引导（UPS）框架，该框架联合推理语义任务不确定性和低级行动可行性，并选择相应的解决方案（执行高置信度行动、通过自然语言查询澄清模糊任务或请求行动干预）。通过共形预测校准VLM和基础策略，UPS能在模拟和硬件实验中有效区分高置信、模糊和无能场景，并最大限度地减少昂贵的用户干预。"
+      },
+      {
+        "paper_id": "2602.22469",
+        "title": "Beyond Dominant Patches: Spatial Credit Redistribution For Grounded Vision-Language Models",
+        "abstract": "Vision-language models (VLMs) frequently hallucinate objects absent from the input image. We trace this failure to spatial credit collapse: activation credit concentrating on sparse visual patches in early transformer layers, which suppresses contextual evidence and increases reliance on language priors. We introduce Spatial Credit Redistribution (SCR), a training-free inference-time intervention that redistributes hidden-state activation from high-attention source patches to their context, guided by low-entropy inputs. We evaluate six model families (Chameleon, LLaVA, and Qwen, including both Qwen-VL and Qwen2-VL) at scales of 7B, 13B, and 30B, on POPE and CHAIR benchmarks. SCR reduces hallucination by ~4.7-6.0 percentage points on POPE-Adversarial, cuts CHAIR-s by 3.7-5.2 percentage points (42-51 percent relative), and CHAIR-i by 2.7-4.4 percentage points (44-58 percent relative), and preserves CIDEr within 0.8 percentage points. Gains are largest for low-entropy inputs, consistent with the theoretical framework. SCR incurs only 43-56 ms overhead (small models: +43-46 ms; large models: +54-56 ms), roughly 3-6 times lower than OPERA and VCD and 1.3-1.7 times lower than OVCD (+72 ms), while Pareto-dominating all three on both hallucination rate and CIDEr, making it practical for real-time settings. A controlled ablation confirms that attention-guided source selection is essential: replacing it with uniform random selection reduces hallucination rate gains from ~4.7-6.0 percentage points to only ~2.6-3.4 percentage points, pointing to credit-collapse as the key driver.",
+        "authors_display": "Md Ashikur Rahman Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22469",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.CV",
+        "chinese_summary": "视觉语言模型（VLMs）普遍存在目标幻觉问题，其根源在于“空间信用崩溃”：激活信用集中于早期Transformer层中的稀疏视觉补丁，抑制了上下文证据并过度依赖语言先验。为此，本研究提出空间信用再分配（SCR），一种无需训练的推理时干预方法，通过低熵输入引导，将隐藏状态激活从高注意力源补丁重新分配到其上下文。SCR在POPE和CHAIR基准测试中显著减少了六种模型家族（7B, 13B, 30B规模）的幻觉率（如POPE-Adversarial减少约4.7-6.0个百分点），同时保持了CIDEr，且开销极低（43-56毫秒），使其在实时场景中具有实用性。"
+      },
+      {
+        "paper_id": "2602.22462",
+        "title": "MammoWise: Multi-Model Local RAG Pipeline for Mammography Report Generation",
+        "abstract": "Screening mammography is high volume, time sensitive, and documentation heavy. Radiologists must translate subtle visual findings into consistent BI-RADS assessments, breast density categories, and structured narrative reports. While recent Vision Language Models (VLMs) enable image-to-text reporting, many rely on closed cloud systems or tightly coupled architectures that limit privacy, reproducibility, and adaptability. We present MammoWise, a local multi-model pipeline that transforms open source VLMs into mammogram report generators and multi-task classifiers. MammoWise supports any Ollama-hosted VLM and mammography dataset, and enables zero-shot, few-shot, and Chain-of-Thought prompting, with optional multimodal Retrieval Augmented Generation (RAG) using a vector database for case-specific context. We evaluate MedGemma, LLaVA-Med, and Qwen2.5-VL on VinDr-Mammo and DMID datasets, assessing report quality (BERTScore, ROUGE-L), BI-RADS classification, breast density, and key findings. Report generation is consistently strong and improves with few-shot prompting and RAG. Classification is feasible but sensitive to model and dataset choice. Parameter-efficient fine-tuning (QLoRA) of MedGemma improves reliability, achieving BI-RADS accuracy of 0.7545, density accuracy of 0.8840, and calcification accuracy of 0.9341 while preserving report quality. MammoWise provides a practical and extensible framework for deploying local VLMs for mammography reporting within a unified and reproducible workflow.",
+        "authors_display": "Vladimir Filkov Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22462",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.CV",
+        "chinese_summary": "乳腺钼靶筛查工作量大、时间紧迫且文档繁重，放射科医生需将细微视觉发现转化为BI-RADS评估和结构化报告。现有VLM方案多依赖封闭系统，限制了隐私和适应性。本研究提出了MammoWise，一个本地多模型管线，将开源VLM转化为乳腺钼靶报告生成器和多任务分类器，支持Ollama平台上的VLM和数据集，并实现零样本、少样本、思维链提示及多模态检索增强生成。实验评估了MedGemma等模型在VinDr-Mammo和DMID数据集上的表现，表明报告生成质量高且可通过少样本和RAG提升，通过QLoRA微调MedGemma能提高BI-RADS分类等任务的可靠性。MammoWise提供了一个实用且可扩展的乳腺钼靶报告本地VLM部署框架。"
+      },
+      {
+        "paper_id": "2602.22419",
+        "title": "CLIP Is Shortsighted: Paying Attention Beyond the First Sentence",
+        "abstract": "CLIP models learn transferable multi-modal features via image-text contrastive learning on internet-scale data. They are widely used in zero-shot classification, multi-modal retrieval, text-to-image diffusion, and as image encoders in large vision-language models. However, CLIP's pretraining is dominated by images paired with short captions, biasing the model toward encoding simple descriptions of salient objects and leading to coarse alignment on complex scenes and dense descriptions. While recent work mitigates this by fine-tuning on small-scale long-caption datasets, we identify an important common bias: both human- and LLM-generated long captions typically begin with a one-sentence summary followed by a detailed description. We show that this acts as a shortcut during training, concentrating attention on the opening sentence and early tokens and weakening alignment over the rest of the caption. To resolve this, we introduce DeBias-CLIP, which removes the summary sentence during training and applies sentence sub-sampling and text token padding to distribute supervision across all token positions. DeBias-CLIP achieves state-of-the-art long-text retrieval, improves short-text retrieval, and is less sensitive to sentence order permutations. It is a drop-in replacement for Long-CLIP with no additional trainable parameters.",
+        "authors_display": "Steven L. Waslander Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22419",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.CV",
+        "chinese_summary": "CLIP模型通过图像-文本对比学习获得多模态特征，但其在短标题数据上的预训练导致在复杂场景和密集描述上的对齐粗糙。尽管有工作通过长标题微调来缓解，但研究发现长标题通常以总结句开头，导致训练时注意力集中在开头部分，削弱了后续文本的对齐。为解决此问题，本研究引入DeBias-CLIP，通过在训练时移除总结句，并应用句子子采样和文本令牌填充，将监督信号分散到所有令牌位置。DeBias-CLIP在长文本检索方面达到最先进水平，同时提升了短文本检索，且对句子顺序不敏感，可作为Long-CLIP的直接替代。"
       },
       {
         "paper_id": "2602.21186",
@@ -4434,6 +4962,61 @@
     ],
     "VLA": [
       {
+        "paper_id": "2602.22988",
+        "title": "Residual Koopman Spectral Profiling for Predicting and Preventing Transformer Training Instability",
+        "abstract": "Training divergence in transformers wastes compute, yet practitioners discover instability only after expensive runs begin. They therefore need an expected probability of failure for a transformer before training starts. Our study of Residual Koopman Spectral Profiling (RKSP) provides such an estimate. From a single forward pass at initialization, RKSP extracts Koopman spectral features by applying whitened dynamic mode decomposition to layer-wise residual snapshots. Our central diagnostic, the near-unit spectral mass, quantifies the fraction of modes concentrated near the unit circle, which captures instability risk. For predicting divergence across extensive configurations, this estimator achieves an AUROC of 0.995, outperforming the best gradient baseline. We further make this diagnostic actionable through Koopman Spectral Shaping (KSS), which reshapes spectra during training. We empirically validate that our method works in practice: RKSP predicts divergence at initialization, and when RKSP flags high risk, turning on KSS successfully prevents divergence. In the challenging high learning rate regime without normalization layers, KSS reduces the divergence rate from 66.7% to 12.5% and enables learning rates that are 50% to 150% higher. These findings generalize to WikiText-103 language modeling, vision transformers on CIFAR-10, and pretrained language models, including GPT-2 and LLaMA-2 up to 7B, as well as emerging architectures such as MoE, Mamba-style SSMs, and KAN.",
+        "authors_display": "Yutaka Matsuo Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22988",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.LG",
+        "chinese_summary": "针对Transformer模型训练发散导致计算资源浪费且难以提前预测的问题，本研究提出了残差Koopman谱分析（RKSP）方法。RKSP通过在初始化时对单次前向传播中的层级残差快照进行白化动态模态分解，提取Koopman谱特征，并通过“近单位谱质量”量化不稳定性风险。实验表明，RKSP在预测发散方面取得了0.995的AUROC，并能结合Koopman谱塑形（KSS）有效防止发散，在高学习率下将发散率从66.7%降至12.5%，并支持更高的学习率，其有效性在多种模型和任务上得到验证。"
+      },
+      {
+        "paper_id": "2602.22896",
+        "title": "DySL-VLA: Efficient Vision-Language-Action Model Inference via Dynamic-Static Layer-Skipping for Robot Manipulation",
+        "abstract": "Vision-Language-Action (VLA) models have shown remarkable success in robotic tasks like manipulation by fusing a language model's reasoning with a vision model's 3D understanding. However, their high computational cost remains a major obstacle for real-world applications that require real-time performance. We observe that the actions within a task have varying levels of importance: critical steps demand high precision, while less important ones can tolerate more variance. Leveraging this insight, we propose DySL-VLA, a novel framework that addresses computational cost by dynamically skipping VLA layers based on each action's importance. DySL-VLA categorizes its layers into two types: informative layers, which are consistently executed, and incremental layers, which can be selectively skipped. To intelligently skip layers without sacrificing accuracy, we invent a prior-post skipping guidance mechanism to determine when to initiate layer-skipping. We also propose a skip-aware two-stage knowledge distillation algorithm to efficiently train a standard VLA into a DySL-VLA. Our experiments indicate that DySL-VLA achieves 2.1% improvement in success length over Deer-VLA on the Calvin dataset, while simultaneously reducing trainable parameters by a factor of 85.7 and providing a 3.75x speedup relative to the RoboFlamingo baseline at iso-accuracy. Our code is available on https://github.com/PKU-SEC-Lab/DYSL_VLA.",
+        "authors_display": "Meng Li Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22896",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "鉴于视觉-语言-动作（VLA）模型在机器人任务中计算成本高昂，阻碍了实时应用，本研究提出了DySL-VLA框架。该框架基于任务中动作重要性差异的洞察，通过动态跳过VLA层来降低计算成本，并引入先验-后验跳过引导机制和跳过感知两阶段知识蒸馏算法。实验结果表明，DySL-VLA在Calvin数据集上成功长度提高了2.1%，同时可训练参数减少85.7倍，相对于基线模型实现了3.75倍的加速。"
+      },
+      {
+        "paper_id": "2602.22663",
+        "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline",
+        "abstract": "Vision-Language-Action (VLA) models have emerged as a generalist robotic agent. However, existing VLAs are hindered by excessive parameter scales, prohibitive pre-training requirements, and limited applicability to diverse embodiments. To improve the practicality of VLAs, we propose a comprehensive benchmark and an improved baseline. First, we propose CEBench, a new benchmark spanning diverse embodiments in both simulation and the real world with consideration of domain randomization. We collect 14.4k simulated trajectories and 1.6k real-world expert-curated trajectories to support training on CEBench. Second, using CEBench as our testbed, we study three critical aspects of VLAs' practicality and offer several key findings. Informed by these findings, we introduce LLaVA-VLA, a lightweight yet powerful VLA designed for practical deployment on consumer-grade GPUs. Architecturally, it integrates a compact VLM backbone with multi-view perception, proprioceptive tokenization, and action chunking. To eliminate reliance on costly pre-training, LLaVA-VLA adopts a two-stage training paradigm including post-training and fine-tuning. Furthermore, LLaVA-VLA extends the action space to unify navigation and manipulation. Experiments across embodiments demonstrate the capabilities of generalization and versatility of LLaVA-VLA , while real-world mobile manipulation experiments establish it as the first end-to-end VLA model for mobile manipulation. We will open-source all datasets, codes, and checkpoints upon acceptance to foster reproducibility and future research.",
+        "authors_display": "Haoang Li Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22663",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对现有视觉-语言-动作（VLA）模型参数规模大、预训练要求高、对多样具身平台适用性有限的问题，本研究提出了CEBench基准和LLaVA-VLA模型。CEBench涵盖多种模拟和真实世界具身平台，并收集了大规模训练轨迹。LLaVA-VLA采用轻量级VLM骨干，结合多视角感知、本体感受分词和动作分块，通过两阶段训练范式消除对昂贵预训练的依赖，并统一了导航和操作动作空间。实验证明，LLaVA-VLA在不同具身平台展现了卓越的泛化性和多功能性，并成为首个端到端移动操作VLA模型。"
+      },
+      {
+        "paper_id": "2602.22579",
+        "title": "Metamorphic Testing of Vision-Language Action-Enabled Robots",
+        "abstract": "Vision-Language-Action (VLA) models are multimodal robotic task controllers that, given an instruction and visual inputs, produce a sequence of low-level control actions (or motor commands) enabling a robot to execute the requested task in the physical environment. These systems face the test oracle problem from multiple perspectives. On the one hand, a test oracle must be defined for each instruction prompt, which is a complex and non-generalizable approach. On the other hand, current state-of-the-art oracles typically capture symbolic representations of the world (e.g., robot and object states), enabling the correctness evaluation of a task, but fail to assess other critical aspects, such as the quality with which VLA-enabled robots perform a task. In this paper, we explore whether Metamorphic Testing (MT) can alleviate the test oracle problem in this context. To do so, we propose two metamorphic relation patterns and five metamorphic relations to assess whether changes to the test inputs impact the original trajectory of the VLA-enabled robots. An empirical study involving five VLA models, two simulated robots, and four robotic tasks shows that MT can effectively alleviate the test oracle problem by automatically detecting diverse types of failures, including, but not limited to, uncompleted tasks. More importantly, the proposed MRs are generalizable, making the proposed approach applicable across different VLA models, robots, and tasks, even in the absence of test oracles.",
+        "authors_display": "Aitor Arrieta Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22579",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "视觉-语言-动作（VLA）模型在机器人任务中面临“测试预言机问题”，即难以对任务执行质量进行通用评估。本研究探索了蜕变测试（MT）在此背景下的应用，提出了两种蜕变关系模式和五种蜕变关系，以评估输入变化对VLA机器人轨迹的影响。通过对五个VLA模型、两个模拟机器人和四个任务的实证研究表明，MT能有效缓解测试预言机问题，自动检测包括未完成任务在内的多种故障，且所提出的蜕变关系具有通用性，可应用于不同模型、机器人和任务，无需预言机即可进行测试。"
+      },
+      {
+        "paper_id": "2602.22514",
+        "title": "SignVLA: A Gloss-Free Vision-Language-Action Framework for Real-Time Sign Language-Guided Robotic Manipulation",
+        "abstract": "We present, to our knowledge, the first sign language-driven Vision-Language-Action (VLA) framework for intuitive and inclusive human-robot interaction. Unlike conventional approaches that rely on gloss annotations as intermediate supervision, the proposed system adopts a gloss-free paradigm and directly maps visual sign gestures to semantic instructions. This design reduces annotation cost and avoids the information loss introduced by gloss representations, enabling more natural and scalable multimodal interaction.   In this work, we focus on a real-time alphabet-level finger-spelling interface that provides a robust and low-latency communication channel for robotic control. Compared with large-scale continuous sign language recognition, alphabet-level interaction offers improved reliability, interpretability, and deployment feasibility in safety-critical embodied environments. The proposed pipeline transforms continuous gesture streams into coherent language commands through geometric normalization, temporal smoothing, and lexical refinement, ensuring stable and consistent interaction.   Furthermore, the framework is designed to support future integration of transformer-based gloss-free sign language models, enabling scalable word-level and sentence-level semantic understanding. Experimental results demonstrate the effectiveness of the proposed system in grounding sign-derived instructions into precise robotic actions under diverse interaction scenarios. These results highlight the potential of the framework to advance accessible, scalable, and multimodal embodied intelligence.",
+        "authors_display": "Zezhi Tang Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22514",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.RO",
+        "chinese_summary": "针对传统手语驱动机器人交互依赖语素注释导致标注成本高和信息损失的问题，本研究提出了首个无语素（gloss-free）的手语驱动视觉-语言-动作（VLA）框架。该系统直接将视觉手语手势映射为语义指令，并专注于实时字母级手指拼写界面，通过几何归一化、时间平滑和词汇细化实现稳定通信。实验结果表明，该系统能有效将手语指令转化为精确的机器人动作，在多样交互场景中展现出潜力，为可访问、可扩展的多模态具身智能奠定了基础。"
+      },
+      {
         "paper_id": "2602.20659",
         "title": "Recursive Belief Vision Language Action Models",
         "abstract": "Vision-language-action models must enable agents to execute long-horizon tasks under partial observability. However, most existing approaches remain observation-driven, relying on short context windows or repeated queries to vision-language models (VLMs). This leads to loss of task progress, action repetition under perceptual aliasing, and high inference latency. While semantic grounding is important, long-horizon manipulation fundamentally requires persistent, action-conditioned state representations. Current VLAs lack such representations and exhibit limited temporal and physical reasoning, making them ill-suited for multi-stage control. This paper introduces RB-VLA, a belief-centric architecture trained with self-supervised world-model objectives that maintains a compact latent state encoding task-relevant history, dynamics, and object interactions. Queried once per task, the VLM provides high-level intent, while the belief tracks task progress and enables phase-aware, causally grounded control under partial observability without storing raw observations or scaling memory with time. The belief and intent jointly condition a diffusion policy for robust closed-loop execution. RB-VLA outperforms prior VLAs on long-horizon benchmarks, achieving 52.5 percent and 37.5 percent higher success rates on multi-stage pick-and-place and stacking tasks, respectively, compared to pi_0. It also reduces inference latency by up to five times relative to baselines and eliminates memory growth across timesteps observed in existing VLAs. Ablations show the belief module is the primary driver of performance, increasing success rates from 32.5 percent without belief to 77.5 percent with belief.",
@@ -4453,7 +5036,7 @@
         "code_url": "https://selen-suyue.github.io/WoGNet/",
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对现有视觉语言动作（VLA）模型在利用未来观测生成动作时难以平衡未来表示的效率与细粒度信息的问题，本研究提出了WoG（World Guidance）框架。该框架通过将未来观测映射成紧凑条件并注入到动作推理流程中，使VLA模型同时预测这些条件和未来动作，从而在条件空间内实现有效的世界建模。实验结果表明，WoG不仅能促进细粒度动作生成，还具有优越的泛化能力，并在模拟和真实环境中均显著优于现有基于未来预测的方法。"
+        "chinese_summary": "为解决视觉-语言-动作（VLA）模型在利用未来观测建模以促进动作生成时，难以平衡高效未来表示与细粒度信息保留的挑战，本研究提出了WoG（World Guidance）框架。WoG通过将未来观测映射到紧凑条件并将其注入动作推理管道，训练VLA模型同时预测这些压缩条件和未来动作。实验证明，这种条件空间建模不仅促进了细粒度动作生成，还展现了卓越的泛化能力，并能有效从大量人类操作视频中学习，显著优于现有基于未来预测的方法。"
       },
       {
         "paper_id": "2602.21877",
@@ -4464,7 +5047,7 @@
         "code_url": "https://laitifranz.github.io/MemCoach/",
         "date": "2026-02-25",
         "primary_category": "cs.CV",
-        "chinese_summary": "传统的图像记忆度研究仅限于被动预测或生成性调整，无法在拍摄时提供提升记忆度的实用指导。为解决此问题，本研究引入了记忆度反馈（MemFeed）任务，并提出了MemCoach方法。MemCoach是一种基于多模态大语言模型（MLLMs）的无训练方法，通过教师-学生引导策略，提供可操作的自然语言建议以增强图像记忆度。配合新发布的MemBench基准进行评估，实验证明MemCoach在多个MLLMs上表现出色，表明记忆度可以被指导和教授，从而为创作者提供积极反馈。"
+        "chinese_summary": "传统图像记忆性研究主要关注预测或生成性修改，缺乏在图像捕捉时提供提高记忆性的指导。本研究引入了记忆性反馈（MemFeed）任务，旨在提供可操作、人类可理解的指导。为此，提出了MemCoach方法，其基于多模态大语言模型（MLLMs），通过教师-学生引导策略对齐模型内部激活，提供如“强调面部表情”等自然语言建议。为评估新任务，还引入了MemBench基准。实验结果表明MemCoach能有效提升记忆性，将研究焦点从预测转向为创作者提供可操作的反馈。"
       },
       {
         "paper_id": "2602.21736",
@@ -4475,7 +5058,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "鉴于VLA模型受限于机器人数据稀缺性以及人类操作视频标注的挑战，本研究提出了JALA（Jointly-Aligned Latent Actions）预训练框架。JALA避开完整的视觉动态重建，转而学习一种与逆动力学及真实动作对齐的预测性动作嵌入，从而构建了一个感知转换、行为中心的潜在空间，可从异构人类数据中学习。通过UniHand-Mix大规模视频语料库的扩展和验证，实验证明JALA能生成更真实的手部动作，显著提升模拟和真实世界机器人操作任务的性能。"
+        "chinese_summary": "鉴于大规模多样化机器人数据稀缺性限制了视觉-语言-动作（VLA）模型发展，且人类操作视频利用受限于标注质量，本研究提出了JALA（Jointly-Aligned Latent Actions）预训练框架。JALA通过学习与逆动力学和真实动作对齐的预测性动作嵌入，绕过完整的视觉动态重建，从而创建出以行为为中心的潜在空间，能从异构人类数据中有效学习。结合UniHand-Mix大规模视频语料库，实验证明JALA能生成更真实的手部动作，显著提升下游机器人操作性能，为VLA模型从人类数据进行可扩展预训练提供了途径。"
       },
       {
         "paper_id": "2602.21706",
@@ -4486,7 +5069,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.CV",
-        "chinese_summary": "针对微创手术中识别安全操作区域的挑战以及现有AI系统未能考虑术中推理的阶段依赖性，本研究引入了ResGo基准。该基准包含带“Go Zone”边界框及临床医生撰写理由的腹腔镜帧。在此基础上，提出了SurGo-R1模型，该模型通过RLHF优化，采用“先阶段后Go Zone”的多轮架构。实验结果显示，SurGo-R1在未见过手术中，其阶段准确率、mIoU和硬核准确率均显著优于主流通用VLM模型，展现了其处理阶段依赖性任务的卓越能力。"
+        "chinese_summary": "微创手术中识别安全操作区域极具挑战性，现有AI系统忽略了术中推理的阶段依赖性。本研究引入了ResGo基准，其包含带Go Zone标注和临床理由的腹腔镜图像，并设计了新评估指标以识别阶段判断错误。在此基础上，提出了SurGo-R1模型，该模型通过RLHF优化，采用多轮“先阶段后Go Zone”架构，首先识别手术阶段再生成推理和Go Zone坐标。实验表明，SurGo-R1在未见程序上实现76.6%的阶段准确率和54.8%的硬核准确率，相较主流通用VLM提升6.6倍。"
       },
       {
         "paper_id": "2602.21633",
@@ -4497,7 +5080,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对标准VLA模型缺乏物理动力学理解、强化学习奖励信号孤立以及世界动作模型缺乏自改进机制的问题，本研究提出了SC-VLA（Self-Correcting VLA）框架。SC-VLA通过稀疏世界想象实现自改进，整合辅助预测头来预测任务进展和未来轨迹，并引入在线动作细化模块，根据预测的稀疏未来状态调整轨迹方向并重塑密集奖励。在模拟和真实世界的机器人操作任务上，SC-VLA展现了最先进的性能，以更少步骤和更高成功率实现了更高的任务吞吐量。"
+        "chinese_summary": "当前视觉-语言-动作（VLA）模型在理解底层物理动态方面存在局限性，且世界动作模型缺乏明确的自改进机制。为此，研究者提出了自校正VLA（SC-VLA），通过稀疏想象引导动作细化，实现自我提升。该方法设计了稀疏世界想象，并引入在线动作细化模块，根据预测的稀疏未来状态调整轨迹。实验结果表明，SC-VLA在模拟和真实世界的机器人操作任务中均达到最先进性能，任务吞吐量更高，成功率比最佳基线提高9%至14%。"
       },
       {
         "paper_id": "2602.21531",
@@ -4508,18 +5091,29 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "通用机器人面临长程操作的挑战，而VLA模型难以处理技能组合复杂性并易受环境敏感性导致级联失败。为解决此问题，本研究提出了LiLo-VLA（Linked Local VLA）模块化框架，实现了零样本泛化。该框架将运输与交互解耦，通过“Reaching Module”处理全局运动和“Interaction Module”处理局部对象，确保了鲁棒性。其模块化设计还支持动态重规划和技能复用。在LIBERO-Long++和Ultra-Long等基准测试中，LiLo-VLA显著优于现有方法，并在真实世界任务中取得了高成功率。"
+        "chinese_summary": "通用机器人难以掌握长程操作任务，现有VLA模型在技能序列组合和环境敏感性方面面临挑战。研究者提出了LiLo-VLA（Linked Local VLA），一个模块化框架，通过解耦运输与交互，实现零样本泛化。其Reaching Module处理全局运动，Interaction Module使用以对象为中心的VLA处理关键对象，确保鲁棒性和空间不变性，并支持动态重规划以实现故障恢复。LiLo-VLA在模拟基准测试中取得了69%的平均成功率，显著优于现有方法，并在真实世界任务中达到85%的平均成功率。"
       },
       {
         "paper_id": "2602.21172",
         "title": "NoRD: A Data-Efficient Vision-Language-Action Model that Drives without Reasoning",
-        "abstract": "Vision-Language-Action (VLA) models are advancing autonomous driving by replacing modular pipelines with unified end-to-end architectures. However, current VLAs face two expensive requirements: (1) massive dataset collection, and (2) dense reasoning annotations. In this work, we address both challenges with \\modelname (\\textbf{No} \\textbf{R}easoning for \\textbf{D}riving). Compared to existing VLAs, \\modelname achieves competitive performance while being fine-tuned on $<$60\\% of the data and no reasoning annotations, resulting in 3$\\times$ fewer tokens. We identify that standard Group Relative Policy Optimization (GRPO) fails to yield significant improvements when applied to policies trained on such small, reasoning-free datasets. We show that this limitation stems from difficulty bias, which disproportionately penalizes reward signals from scenarios that produce high-variance rollouts within GRPO. \\modelname overcomes this by incorporating Dr.~GRPO, a recent algorithm designed to mitigate difficulty bias in LLMs. As a result, \\modelname achieves competitive performance on Waymo and NAVSIM with a fraction of the training data and no reasoning overhead, enabling more efficient autonomous systems.",
+        "abstract": "Vision-Language-Action (VLA) models are advancing autonomous driving by replacing modular pipelines with unified end-to-end architectures. However, current VLAs face two expensive requirements: (1) massive dataset collection, and (2) dense reasoning annotations. In this work, we address both challenges with NORD (No Reasoning for Driving). Compared to existing VLAs, NORD achieves competitive performance while being fine-tuned on <60% of the data and no reasoning annotations, resulting in 3x fewer tokens. We identify that standard Group Relative Policy Optimization (GRPO) fails to yield significant improvements when applied to policies trained on such small, reasoning-free datasets. We show that this limitation stems from difficulty bias, which disproportionately penalizes reward signals from scenarios that produce high-variance rollouts within GRPO. NORD overcomes this by incorporating Dr. GRPO, a recent algorithm designed to mitigate difficulty bias in LLMs. As a result, NORD achieves competitive performance on Waymo and NAVSIM with a fraction of the training data and no reasoning overhead, enabling more efficient autonomous systems. Website: https://nord-vla-ai.github.io/",
         "authors_display": "Wei Zhan Team",
         "pdf_url": "http://arxiv.org/abs/2602.21172",
         "code_url": null,
-        "date": "2026-02-24",
+        "date": "2026-02-25",
         "primary_category": "cs.AI",
-        "chinese_summary": "针对VLA模型在自动驾驶中面临的数据收集成本高昂和密集推理标注的挑战，本研究提出了NoRD（No Reasoning for Driving）模型。该模型旨在以更少的数据和无推理标注实现竞争力。研究发现标准GRPO在小型无推理数据集上改进不显著，源于难度偏差。NoRD通过集成Dr.~GRPO算法克服了这一问题。实验结果表明，NoRD在Waymo和NAVSIM数据集上，使用不足60%的数据且无需推理标注，便能达到与现有VLA模型相当的性能，并显著减少了token使用量，从而实现了更高效的自动驾驶系统。"
+        "chinese_summary": "视觉-语言-动作（VLA）模型在自动驾驶中需大量数据收集和密集推理标注，导致成本高昂。研究者提出了NORD（No Reasoning for Driving），通过在训练数据量减少60%以上且无需推理标注的情况下，实现与现有VLA模型相当的性能（token数量减少3倍）。NORD通过引入Dr. GRPO算法，解决了标准GRPO在小规模、无推理数据集上因难度偏差导致的性能限制。该方法在Waymo和NAVSIM上实现了有竞争力的性能，有效提升了自动驾驶系统的效率。"
+      },
+      {
+        "paper_id": "2602.22474",
+        "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+        "abstract": "Policy steering is an emerging way to adapt robot behaviors at deployment-time: a learned verifier analyzes low-level action samples proposed by a pre-trained policy (e.g., diffusion policy) and selects only those aligned with the task. While Vision-Language Models (VLMs) are promising general-purpose verifiers due to their reasoning capabilities, existing frameworks often assume these models are well-calibrated. In practice, the overconfident judgment from VLM can degrade the steering performance under both high-level semantic uncertainty in task specifications and low-level action uncertainty or incapability of the pre-trained policy. We propose uncertainty-aware policy steering (UPS), a framework that jointly reasons about semantic task uncertainty and low-level action feasibility, and selects an uncertainty resolution strategy: execute a high-confidence action, clarify task ambiguity via natural language queries, or ask for action interventions to correct the low-level policy when it is deemed incapable at the task. We leverage conformal prediction to calibrate the composition of the VLM and the pre-trained base policy, providing statistical assurances that the verifier selects the correct strategy. After collecting interventions during deployment, we employ residual learning to improve the capability of the pre-trained policy, enabling the system to learn continually but with minimal expensive human feedback. We demonstrate our framework through experiments in simulation and on hardware, showing that UPS can disentangle confident, ambiguous, and incapable scenarios and minimizes expensive user interventions compared to uncalibrated baselines and prior human- or robot-gated continual learning approaches. Videos can be found at https://jessie-yuan.github.io/ups/",
+        "authors_display": "Andrea Bajcsy Team",
+        "pdf_url": "http://arxiv.org/abs/2602.22474",
+        "code_url": null,
+        "date": "2026-02-25",
+        "primary_category": "cs.RO",
+        "chinese_summary": "策略引导是调整机器人行为的新方法，但Vision-Language Models (VLMs) 作为验证器易因过度自信而在语义和动作不确定性下降低性能。为此，本研究提出了不确定性感知策略引导（UPS）框架，该框架联合推理语义任务不确定性和低级动作可行性，并智能选择执行高置信动作、澄清任务歧义或请求动作干预。UPS利用共形预测校准VLM与预训练策略的组合，并通过残差学习持续改进策略。实验表明，UPS能有效区分置信、模糊和无能场景，并显著减少了昂贵的用户干预。"
       },
       {
         "paper_id": "2602.21161",
@@ -4530,7 +5124,7 @@
         "code_url": null,
         "date": "2026-02-24",
         "primary_category": "cs.RO",
-        "chinese_summary": "传统机器人系统在通用性方面受限，而数据驱动的VLA方法虽有潜力，但物理世界的连续动作空间与语言token的表示能力存在差距。为弥合这一鸿沟，本研究提出了ActionReasoning框架，一个由大语言模型（LLM）驱动的框架，通过执行显式动作推理，为机器人操作生成符合物理原理、受先验指导的决策。该框架将LLM中已编码的物理先验和真实世界知识构建于多智能体架构中，并在砖块堆叠案例中得到验证。实验表明，该框架能实现稳定砖块放置，将重心从低级编码转向高级工具调用和提示，展现了其广阔的泛化潜力，为连接机器人操作中的感知与执行提供了一种前景广阔的方法。"
+        "chinese_summary": "传统机器人系统在通用性和泛化能力上存在局限，而数据驱动的VLA方法在将物理世界连续动作空间映射到语言token方面存在挑战。为弥补这一差距，研究者提出了ActionReasoning，一个由大型语言模型（LLM）驱动的框架，通过显式动作推理为机器人操作生成符合物理原理并由先验知识引导的决策。该框架将LLM中编码的物理先验和真实世界知识构建在多智能体架构中，并在砖块堆叠案例中展示了其潜力。实验表明，该方法实现了稳定的砖块放置，并将开发重心从低级编码转向高级工具调用和提示，预示着更广泛的泛化能力。"
       },
       {
         "paper_id": "2602.21157",
@@ -4541,7 +5135,7 @@
         "code_url": null,
         "date": "2026-02-24",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对视觉-语言-动作（VLA）模型在长周期或分布外场景中因缺乏多模态推理和世界演变预测机制而表现不佳的问题，本文提出了HALO模型。HALO通过文本任务推理、视觉子目标预测和具身多模态思维链（EM-CoT）增强的动作预测，提供统一的人类式推理框架。该模型采用Transformer混合架构，解耦了语义推理、视觉预见和动作预测，并通过自动化流程合成EM-CoT训练数据。实验结果表明，HALO在模拟和真实世界环境中均表现优越，在RoboTwin基准上成功率比基线提高34.1%，且EM-CoT推理在未经见的随机环境下展现出强大的泛化能力。"
+        "chinese_summary": "VLA模型在长程或分布外场景中常因缺乏多模态推理和预测世界演变的机制而受挫。为解决此问题，研究者提出了HALO，一个统一的VLA模型，通过文本任务推理、视觉子目标预测和具身多模态思维链（EM-CoT）增强的动作预测，实现类似人类的推理。HALO采用Transformer混合架构，解耦了语义推理、视觉预见和动作预测，并引入自动化流水线合成训练数据。实验证明，HALO在模拟和真实世界环境中均表现出卓越性能，在RoboTwin基准上超越基线34.1%，并展现出在未见环境随机化下的强大泛化能力。"
       },
       {
         "paper_id": "2602.21015",
@@ -4552,7 +5146,7 @@
         "code_url": "https://social-ai-studio.github.io/CHAIN/",
         "date": "2026-02-24",
         "primary_category": "cs.CV",
-        "chinese_summary": "鉴于现有视觉-语言模型（VLM）评估未能充分衡量智能体对物理结构的理解和推理能力，本文引入了CHAIN基准。CHAIN是一个交互式3D物理驱动测试平台，旨在评估模型是否能理解、规划和执行基于几何、接触和支撑关系等物理约束的动作序列，任务涵盖联锁拼图和3D堆叠等。对当前VLM和扩散模型的评估结果显示，即使是顶级模型也难以内化物理结构和因果约束，在生成可靠长周期规划和将感知转化为有效动作方面仍面临挑战。"
+        "chinese_summary": "现有视觉-语言模型（VLM）的评估忽视了对物理结构和因果约束的理解，无法有效评估智能体在动态环境中规划和执行受物理限制的动作序列的能力。为解决这一评估空白，研究者引入了因果层次动作与交互（CHAIN）基准，这是一个交互式3D、物理驱动的测试平台。该基准将评估从被动感知转向主动解决问题，涵盖了连锁机械谜题和3D堆叠等任务。综合研究表明，即使是表现最佳的VLM和扩散模型，仍难以内化物理结构和因果约束，在生成可靠长程计划和将感知结构转化为有效动作方面存在不足。"
       },
       {
         "paper_id": "2602.21013",
@@ -4563,7 +5157,7 @@
         "code_url": null,
         "date": "2026-02-24",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对现有视觉-语言-动作（VLA）模型在处理非马尔可夫性、依赖记忆的长周期任务时表现出的“无状态”局限性，本文探索了一种通过整合语言暂存器（language scratchpad）来赋予VLA模型空间和时间记忆的方法。该暂存器能够记忆特定任务信息（如物体位置）并跟踪计划及子目标进展。实验结果表明，在ClevrSkills环境中的记忆依赖任务、MemoryBench以及真实的抓取放置任务上，引入语言暂存器显著提高了非循环和循环模型的泛化能力。"
+        "chinese_summary": "许多灵巧操作任务具有非马尔可夫性质，但现有视觉-语言-动作（VLA）模型通常是“无状态”的，难以处理依赖记忆的长程任务。研究者探索了一种通过引入语言便签本（language scratchpad）来为VLA模型赋予空间和时间记忆的方法。该便签本能够记忆任务特定信息（如物体位置），并跟踪计划和子目标的进展。实验在ClevrSkills记忆依赖任务、MemoryBench以及真实世界抓取放置任务上进行，结果表明，引入语言便签本显著提高了非循环和循环模型在这些任务上的泛化能力。"
       },
       {
         "paper_id": "2602.20979",
@@ -4574,7 +5168,7 @@
         "code_url": null,
         "date": "2026-02-24",
         "primary_category": "cs.SE",
-        "chinese_summary": "为充分发挥AI智能体在软件开发中的潜力，本文提出了构建一个Agentic Infused Software Ecosystem (AISE) 的愿景。AISE基于三大支柱：从简单代码补全迈向复杂独立开发任务的AI智能体本身；作为人机交互和协作基础的编程语言和API；以及为智能体提供与外部世界交互能力的运行时环境和生态系统。论文强调，为了实现AISE的愿景，这三大支柱必须以整体且协同的方式推进，以支持现有和未来的AI智能体以及与其合作的人类开发者。"
+        "chinese_summary": "为充分利用AI智能体在软件开发中的能力，需要重新思考软件生态系统本身。本文概述了创建智能体注入软件生态系统（AISE）的构想，该生态系统建立在三个核心支柱之上：AI智能体本身（其能力不断增强），编程语言和API（作为人与AI交互的通信基础），以及智能体运行的运行时环境和生态系统（提供与外部世界交互的能力）。该愿景强调所有支柱必须以整体协同的方式推进，以促进当前和未来AI智能体以及人类开发者之间的协同工作，从而充分发挥AI智能体的潜力。"
       },
       {
         "paper_id": "2602.20715",
@@ -4662,7 +5256,7 @@
         "code_url": "https://hatchetproject.github.io/autohorizon/",
         "date": "2026-02-24",
         "primary_category": "cs.RO",
-        "chinese_summary": "流式VLA模型中动作分块已成常规，但执行视界（即从每个预测块执行的动作数量）的选择和影响仍未被充分探索。本研究发现执行视界变化会导致显著性能波动，并通过分析VLA注意力权重，揭示了块内动作对视觉语言token关注的不变性以及初始和末端动作token的锚点作用。受此启发，提出了AutoHorizon，一种测试时动态估计执行视界的方法，将动作自注意力权重作为模型预测极限的代理。该方法在模拟和真实世界机器人操作任务中表现优异，计算开销可忽略，并具备良好泛化性。"
+        "chinese_summary": "基于流的视觉-语言-动作（VLA）模型中，动作分块的执行范围（即每次预测执行的动作数量）的选择对性能有显著影响，但其机制尚未明确。本研究通过分析VLA的注意力权重，发现块内动作对视觉-语言token的关注不变性限制了适应性，而初始和终端动作token作为稳定锚点组织中间动作。受此启发，研究者提出AutoHorizon，一种测试时动态估计执行范围的方法，以适应不断变化的感知条件。AutoHorizon在模拟和真实世界机器人操作任务中表现出色，计算开销可忽略不计，并能广泛泛化。"
       },
       {
         "paper_id": "2602.21406",
@@ -4673,7 +5267,7 @@
         "code_url": null,
         "date": "2026-02-24",
         "primary_category": "cs.CV",
-        "chinese_summary": "针对时间动作分割（TAS）方法受限于封闭词汇和固定标签集的问题，本研究探索了开放词汇零样本时间动作分割（OVTAS）。该方法利用视觉语言模型（VLMs）的零样本能力，提出了一个无训练的流水线，通过“先分割后分类”设计：Frame-Action Embedding Similarity (FAES) 匹配帧与动作标签，Similarity-Matrix Temporal Segmentation (SMTS) 确保时间一致性。实验结果表明，OVTAS在无任务特定监督下取得了良好表现，凸显了VLM在结构化时间理解方面的潜力，并首次对14个VLM在OVTAS中的适用性进行了系统分析。"
+        "chinese_summary": "现有时间动作分割（TAS）方法受限于封闭词汇和固定标签集，难以处理开放词汇的复杂性。为解决这一问题，研究者探索了开放词汇零样本时间动作分割（OVTAS），并利用视觉-语言模型（VLMs）的零样本能力。他们提出了一种免训练的流水线，通过帧-动作嵌入相似性匹配视频帧到动作标签，并使用相似性矩阵时间分割确保时间一致性。对14种不同VLM的系统研究表明，OVTAS在标准基准上无需特定任务监督即可取得良好结果，展示了VLM在结构化时间理解方面的巨大潜力。"
       },
       {
         "paper_id": "2602.20119",
@@ -5558,6 +6152,17 @@
     ],
     "Humanoid": [
       {
+        "paper_id": "2602.23205",
+        "title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
+        "abstract": "Human behaviors in the real world naturally encode rich, long-term contextual information that can be leveraged to train embodied agents for perception, understanding, and acting. However, existing capture systems typically rely on costly studio setups and wearable devices, limiting the large-scale collection of scene-conditioned human motion data in the wild. To address this, we propose EmbodMocap, a portable and affordable data collection pipeline using two moving iPhones. Our key idea is to jointly calibrate dual RGB-D sequences to reconstruct both humans and scenes within a unified metric world coordinate frame. The proposed method allows metric-scale and scene-consistent capture in everyday environments without static cameras or markers, bridging human motion and scene geometry seamlessly. Compared with optical capture ground truth, we demonstrate that the dual-view setting exhibits a remarkable ability to mitigate depth ambiguity, achieving superior alignment and reconstruction performance over single iphone or monocular models. Based on the collected data, we empower three embodied AI tasks: monocular human-scene-reconstruction, where we fine-tune on feedforward models that output metric-scale, world-space aligned humans and scenes; physics-based character animation, where we prove our data could be used to scale human-object interaction skills and scene-aware motion tracking; and robot motion control, where we train a humanoid robot via sim-to-real RL to replicate human motions depicted in videos. Experimental results validate the effectiveness of our pipeline and its contributions towards advancing embodied AI research.",
+        "authors_display": "Taku Komura Team",
+        "pdf_url": "http://arxiv.org/abs/2602.23205",
+        "code_url": null,
+        "date": "2026-02-26",
+        "primary_category": "cs.CV",
+        "chinese_summary": "针对现有动作捕捉系统成本高昂且难以大规模收集真实场景人-场景交互数据的挑战，本研究提出EmbodiMocap，一个便携且经济的数据采集流程，通过联合校准两部移动iPhone的RGB-D序列，在统一的世界坐标系中重建人与场景。该方法无需静态相机或标记点，实现了度量尺度和场景一致性捕捉，有效缓解了深度模糊。实验证明，其双视角设置在人-场景重建、物理基角色动画和机器人运动控制等具身AI任务中表现优异，验证了该流程的有效性。"
+      },
+      {
         "paper_id": "2602.21983",
         "title": "Humanizing Robot Gaze Shifts: A Framework for Natural Gaze Shifts in Humanoid Robots",
         "abstract": "Leveraging auditory and visual feedback for attention reorientation is essential for natural gaze shifts in social interaction. However, enabling humanoid robots to perform natural and context-appropriate gaze shifts in unconstrained human--robot interaction (HRI) remains challenging, as it requires the coupling of cognitive attention mechanisms and biomimetic motion generation. In this work, we propose the Robot Gaze-Shift (RGS) framework, which integrates these two components into a unified pipeline. First, RGS employs a vision--language model (VLM)-based gaze reasoning pipeline to infer context-appropriate gaze targets from multimodal interaction cues, ensuring consistency with human gaze-orienting regularities. Second, RGS introduces a conditional Vector Quantized-Variational Autoencoder (VQ-VAE) model for eye--head coordinated gaze-shift motion generation, producing diverse and human-like gaze-shift behaviors. Experiments validate that RGS effectively replicates human-like target selection and generates realistic, diverse gaze-shift motions.",
@@ -5566,7 +6171,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "人形机器人在非受限人机交互中实现自然、情境适宜的凝视转移仍面临挑战，这需要整合认知注意机制和仿生运动生成。为此，研究提出机器人凝视转移（RGS）框架，它首先利用基于视觉-语言模型（VLM）的凝视推理管线，从多模态交互线索推断合适的凝视目标。接着，RGS引入条件向量量化-变分自编码器（VQ-VAE）模型来生成眼-头协调的凝视转移运动。实验结果验证，RGS能够有效复现人类般的凝视目标选择，并生成逼真、多样化的凝视转移行为。"
+        "chinese_summary": "在非受限人机交互中，人形机器人实现自然、上下文适宜的凝视转移仍具挑战，需要结合认知注意机制和仿生运动生成。为此，本研究提出了机器人凝视转移（RGS）框架，整合了基于视觉-语言模型（VLM）的凝视推理管道来推断适宜的凝视目标，并引入条件向量量化-变分自编码器（VQ-VAE）模型来生成眼-头协调的凝视转移运动。实验结果验证了RGS能有效复制人类目标选择行为，并生成逼真且多样化的凝视转移运动。"
       },
       {
         "paper_id": "2602.21723",
@@ -5577,7 +6182,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "现有具身智能方法在使人形机器人进行长期自主物理交互时，常因依赖参考动作或特定任务奖励而缺乏多技能泛化能力。本研究提出LessMimic框架，利用距离场（DF）作为统一的交互表示，通过DF衍生的几何线索来条件化单一全身策略，从而无需动作参考。该框架通过变分自编码器（VAE）编码交互潜变量，并在强化学习（RL）下采用对抗交互先验（AIP）进行后训练，最终通过DAgger蒸馏实现无缝的纯视觉部署。实验证明，LessMimic单一策略在不同物体尺度下成功率高达80-100%，并在长达40个任务的顺序组合中保持有效性，显著超越现有基线。"
+        "chinese_summary": "实现人形机器人与物理环境长期自主交互是具身智能的关键，但现有方法因依赖参考动作或任务特定奖励而限制了多技能泛化。本研究提出使用距离场（DF）作为统一的交互表示，开发LessMimic策略，通过DF导出的几何线索条件化全身策略，无需动作参考；并结合VAE和RL训练交互潜在变量。该策略通过DAgger式蒸馏可无缝转移至纯视觉部署。实验证明，单一LessMimic策略在多种任务和物体尺度上成功率达80-100%，并能组合多达40个任务，展现出强大的泛化、技能组合和故障恢复能力。"
       },
       {
         "paper_id": "2602.21666",
@@ -5588,7 +6193,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "由于生物与机械结构间的差异，腿式机器人实现类人步态面临挑战，而简单模仿关节角度无法捕捉人类运动原理。本研究提出步态发散分析框架（GDAF），一个统一的生物力学评估工具，用于系统量化人类和双足机器人在运动学和动力学上的差异。研究将GDAF应用于28种步行速度下的人机步态对比，并发布了相关数据集和开源工具。尽管现代人形机器人控制器能生成视觉上类人运动，但结果显示在步态对称性、能量分布和关节协调性方面仍存在显著的生物力学偏差，表明在提高生物力学保真度和能效方面仍有巨大改进空间。"
+        "chinese_summary": "由于生物与机械结构的基本差异，腿足机器人实现类人步态面临挑战，简单的模仿学习难以捕捉人类运动的深层原理。本研究提出了步态差异分析框架（GDAF），一个统一的生物力学评估框架，用于系统量化人类与双足机器人在28种步行速度下的运动学和动力学差异。为实现可复现分析，研究收集并发布了速度连续的人形机器人步态数据集，并提供了GDAF的开源实现。结果显示，尽管现代人形机器人运动视觉类人，但生物力学差异依然显著，存在步态对称性、能量分布和关节协调性等系统性偏差，为提升人形机器人步态的生物力学保真度和能效提供了改进方向。"
       },
       {
         "paper_id": "2602.21599",
@@ -5599,7 +6204,7 @@
         "code_url": null,
         "date": "2026-02-25",
         "primary_category": "cs.RO",
-        "chinese_summary": "物理仿真人形机器人控制依赖于多样化的运动数据集，但数据集固定难度和高昂的数据采集成本限制了策略性能和可扩展性。为解决此问题，本研究提出一个闭环自动化运动数据生成与迭代框架，能够生成包含武术、舞蹈等多种语义的高质量运动数据。该框架通过物理指标和客观评估实现策略和数据的难度迭代，从而使训练出的追踪器突破原有难度限制。实验结果表明，在PHC单原语追踪器上，该框架仅用约1/10 AMASS数据集规模的数据，便将测试集平均失败率相比基线降低了45%。"
+        "chinese_summary": "基于物理的人形机器人控制受限于运动数据集固定的难度分布和高昂的数据采集成本。为解决这些问题，本研究提出了一个闭环自动化运动数据生成与迭代框架。该框架能够生成包含武术、舞蹈、搏击、运动、体操等多种动作语义的高质量运动数据，并通过物理指标和客观评估实现策略和数据的难度迭代，使训练出的追踪器能突破原有难度限制。实验结果显示，在PHC单原语追踪器上，使用约1/10 AMASS数据集大小即可使测试集失败率降低45%，验证了该框架的合理性和优势。"
       },
       {
         "paper_id": "2602.16705",
@@ -5610,7 +6215,7 @@
         "code_url": "https://hero-humanoid.github.io/",
         "date": "2026-02-24",
         "primary_category": "cs.RO",
-        "chinese_summary": "人形机器人在复杂环境中对任意物体进行视觉运动操纵，需要精确的末端执行器（EE）控制和对场景的通用理解，而现有模仿学习方法因数据限制泛化能力不足。本研究提出HERO新范式，结合大型视觉模型的强泛化能力与模拟训练的控制性能。通过设计一种精确的残差感知EE追踪策略实现，该策略融合了逆运动学、学习到的神经前向模型、目标调整和重新规划。这些创新将EE追踪误差降低了3.2倍。HERO在此基础上构建模块化运动操纵系统，利用开放词汇大型视觉模型实现视觉泛化，使其能在办公室、咖啡馆等多样真实环境中可靠操纵各种日常物体，验证了该设计的有效性。"
+        "chinese_summary": "现有野外人形机器人定位操作方法因依赖真实模仿学习而泛化能力有限。为此，本文提出了HERO范式，该范式结合了大型视觉模型的强大泛化能力与模拟训练的精确控制性能。通过设计一个结合经典机器人学和机器学习的残差感知末端执行器跟踪策略，实现了末端执行器跟踪误差降低3.2倍。实验结果表明，该模块化系统能在办公室、咖啡馆等多样真实环境中可靠操作各种日常物体，有效验证了其在模拟和真实世界中的设计效果。"
       },
       {
         "paper_id": "2602.12656",
@@ -5632,7 +6237,7 @@
         "code_url": null,
         "date": "2026-02-24",
         "primary_category": "cs.RO",
-        "chinese_summary": "人形机器人面向任务的抓取问题仍具挑战，需同时考虑人类社会规范和任务特定目标，而现有方法缺乏端到端的解决方案。本研究提出一种结合强化学习的面向任务抓取方法，重点在于优先考虑代理抓取后的意图。通过从ContactPose数据集中提取人类抓取偏好，训练基于变分自编码器（VAE）的手部协同模型以模仿人类抓取动作。在此基础上，训练一个能够抓取多个物体并考虑不同任务特定抓取后意图的代理。该方法通过结合人类抓取行为数据与强化学习的探索能力，开发出具备情境感知操纵能力的人形机器人。"
+        "chinese_summary": "当前人形机器人面向任务的抓取方法，缺乏一个能同时考虑下游任务约束并对多个物体进行抓取的端到端解决方案。本研究提出了一种结合强化学习的抓取方法，优先考虑智能体抓取后的意图。具体而言，通过从ContactPose数据集中提取人类抓取偏好，训练基于变分自编码器（VAE）的手部协同模型，以模仿人类抓取动作，并在此基础上训练智能体。该方法使得机器人能够抓取多个物体并考虑任务特定的抓取后意图，从而在以人为中心的环境中实现上下文感知的操作和协作。"
       },
       {
         "paper_id": "2602.13850",
@@ -5643,7 +6248,7 @@
         "code_url": "https://osudrl.github.io/Humanoid_Hanoi/",
         "date": "2026-02-23",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对人形机器人长时程箱子重排任务中，重用技能可能导致鲁棒性下降的问题，本文提出了一个技能基框架。该框架的核心是所有技能通过一个共享的、任务无关的全身控制器（WBC）执行，以提供统一的技能组合接口。为提升长时程鲁棒性，作者引入了数据聚合程序，通过域随机化下的闭环技能执行来增强共享WBC的训练。在Humanoid Hanoi基准任务上，仿真和Digit V3人形机器人实验验证了该方法在长时程自主重排方面的有效性，并展示了共享WBC相比非共享方法的优势。"
+        "chinese_summary": "人形机器人通过技能序列执行长时程箱子重排任务时，现有非共享控制器设计可能导致鲁棒性下降。本文提出了一个基于技能的框架，所有技能通过共享、任务无关的全身控制器（WBC）执行，并引入数据聚合程序，通过域随机化下的闭环技能执行轨迹增强共享WBC训练。研究引入了Humanoid Hanoi基准测试。在模拟和Digit V3人形机器人上的实验验证了该方法在扩展长时程下完全自主重排的有效性，并量化了共享WBC方法的优势。"
       },
       {
         "paper_id": "2602.20375",
@@ -5654,7 +6259,7 @@
         "code_url": null,
         "date": "2026-02-23",
         "primary_category": "cs.RO",
-        "chinese_summary": "从人类运动中学习敏捷的人形行为有助于实现自然协调控制，但现有方法常面临泛化性与动作质量的权衡。本研究提出一个统一的多任务强化学习（RL）框架，将参考运动视为行为塑造的先验而非严格约束，从而弥合了这一差距。该框架在两个共享观察和动作空间但奖励结构不同的任务上联合训练单一目标条件策略，使其既能从密集参考监督中学习类人运动技能，又能适应新目标和初始条件。实验证明，该控制器在保持动作自然度的同时能泛化到参考分布之外，并能通过组合多个学习技能生成长时行为，展现了其在复杂场景中的灵活性。"
+        "chinese_summary": "从人类运动中学习敏捷的人形行为，往往面临参考追踪策略脆弱与任务驱动强化学习运动质量受损的权衡。本研究提出了一个统一的多任务强化学习框架，将参考运动视为行为塑造的先验而非约束。该框架联合训练一个目标条件的策略，通过结合参考引导的模仿任务和目标条件的泛化任务，使其在共享观察和动作空间的同时，在初始化、命令和奖励结构上各有侧重。实验结果表明，该方法学习的控制器在复杂跑酷场景中能超越参考分布，保持运动自然性，并灵活组合多个技能，生成长时行为，有效弥合了适应性与运动质量之间的差距。"
       },
       {
         "paper_id": "2602.20362",
@@ -5665,7 +6270,7 @@
         "code_url": null,
         "date": "2026-02-23",
         "primary_category": "cs.RO",
-        "chinese_summary": "尽管机器人避碰策略不断发展，但在受限环境中接触仍不可避免，减轻伤害风险是关键。现有能量限制控制方法多依赖基于钝性冲击的安全阈值，但缺乏针对锋利或尖锐碰撞的、临床验证的数据集。本研究通过纳入非受限剪切接触场景扩展了相关数据集，并重新评估了所有之前的猪替代物碰撞数据。结果显示，碰撞角度显著影响伤害结果，非受限剪切接触造成的伤害少于垂直接触。研究基于此建立了跨几何形状和接触类型的能量阈值，形成了首个基于能量的伤害保护数据库，为开发能在各种现实碰撞事件中确保安全的能量限制控制器提供了基础。"
+        "chinese_summary": "考虑到未来人形系统碰撞的必然性，现有机器人碰撞避免策略和能量限制控制方法依赖的钝性冲击数据，无法涵盖锐边或尖锐碰撞场景。本研究通过纳入非受限碰撞中的剪切接触场景，扩展了现有的速度和质量限制数据集，发现碰撞角度显著影响损伤结果，且非受限剪切接触造成的损伤少于垂直接触。研究重新评估了所有猪替代物数据，建立了首个基于能量的损伤保护数据库，包含跨几何形状和接触类型的能量阈值，为开发确保多种现实碰撞事件安全的能量限制控制器提供了基础。"
       },
       {
         "paper_id": "2602.13762",
@@ -5676,7 +6281,7 @@
         "code_url": null,
         "date": "2026-02-22",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对力矩控制机器人（特别是人形机器人）在撞击过程中状态和输入命令出现剧烈尖峰，影响鲁棒性的问题，本文提出了一种优化冗余机器人姿态以增强撞击鲁棒性的新方法。该方法基于刚体撞击模型，通过最小化撞击前后速度变化的配置相关度量，显著减少了撞击尖峰。为了实现实时优化，作者将其重构为基于梯度的运动任务，并集成到任务空间逆动力学全身控制器中。仿真实验表明，该方法使机器人撞击后的状态尖峰减少高达51%，并避免了执行器饱和，同时强调了运动学冗余对撞击鲁棒性的重要性。"
+        "chinese_summary": "扭矩控制机器人在冲击中保持鲁棒性是一个挑战，冲击可能导致机器人状态和命令出现尖峰。本文提出了一种优化运动学冗余机器人姿态的新方法，以提高冲击鲁棒性。该方法利用刚性冲击模型定义配置相关度量，并将其嵌入到任务空间逆动力学（TSID）全身控制器中，通过梯度优化任务引导机器人找到最小化该度量的姿态。模拟结果显示，该方法显著减少了冲击后的状态尖峰（最高达51%），避免了执行器饱和，并证明了运动学冗余对冲击鲁棒性的重要性。"
       },
       {
         "paper_id": "2602.18813",
@@ -5687,7 +6292,7 @@
         "code_url": null,
         "date": "2026-02-21",
         "primary_category": "cs.RO",
-        "chinese_summary": "当前视觉-语言-动作（VLA）模型评估多限于单次成功率，无法体现实际运行所需的高速和长时稳定性。为此，本研究引入“生产力-可靠性平面”（PRP）指标，通过每小时任务数（TPH）和平均干预间隔时间（MTBI）评估模型在连续运行下的表现。提出Habilis-β模型，通过大规模无语言“玩耍”数据预训练获得鲁棒交互先验，并利用循环任务演示进行后训练以捕捉状态漂移。该系统集成ESPADA加速自由空间运动、整流流蒸馏实现高频边缘控制以及无分类器引导动态平衡指令。在1小时连续运行评估中，Habilis-β在模拟和真实世界物流任务中均显著超越基线，并在RoboTwin 2.0排行榜上取得最高性能。"
+        "chinese_summary": "当前视觉-语言-动作（VLA）模型评估未能捕捉实际操作所需的高速运动和持久能力。为此，本研究引入生产力-可靠性平面（PRP）指标，通过每小时任务数（TPH）和平均干预间隔时间（MTBI）评估连续运行下的性能，并提出了Habilis-β模型。Habilis-β通过大规模游戏数据无语言预训练、循环任务演示后训练、ESPADA相位自适应运动塑形、整流流蒸馏以及无分类器指导等技术集成实现高性能。实验证明，Habilis-β在仿真和真实世界物流工作流中均表现出色，TPH和MTBI显著优于基线模型，并在RoboTwin 2.0排行榜上取得最高性能。"
       },
       {
         "paper_id": "2602.18742",
@@ -5698,7 +6303,7 @@
         "code_url": "https://seungkukim.github.io/robocurate/",
         "date": "2026-02-21",
         "primary_category": "cs.RO",
-        "chinese_summary": "视频生成模型产生的合成数据在机器人学习中潜力巨大，但由于视频不完善，常导致动作质量不一致，且现有视觉-语言模型难以区分物理精确性或直接评估动作。为解决此问题，本研究提出RoboCurate框架，通过在模拟器中回放预测动作并衡量模拟结果与生成视频之间的运动一致性，来评估和过滤标注动作的质量。此外，通过图像到图像编辑和动作保留的视频到视频传输来增强观测多样性和外观。实验表明，RoboCurate生成的数据在GR-1桌面、DexMimicGen预训练和ALLEX人形灵巧操作等任务中，相比仅使用真实数据，成功率分别提升了70.1%、16.1%和179.9%。"
+        "chinese_summary": "视频生成模型产生的合成数据在机器人学习中具有可扩展性，但其动作质量因视频生成不完善而不一致。现有VLM在评估物理准确性和动作本身方面存在局限。为解决此问题，本研究提出RoboCurate框架，通过将预测动作在模拟器中回放，并测量模拟器执行与生成视频之间的运动一致性来评估并过滤带注释动作的质量。此外，通过图像到图像编辑和动作保留的视频到视频传输增强观测多样性。实验结果表明，RoboCurate生成的合成数据显著提升了机器人学习的成功率，在多个任务上均有显著改进。"
       },
       {
         "paper_id": "2602.15060",
@@ -5720,7 +6325,7 @@
         "code_url": null,
         "date": "2026-02-18",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对人形机器人在复杂环境中跌倒恢复的挑战，现有方法存在碎片化和泛化性不足的问题。本文提出一种统一的跌倒安全方法，通过利用人类跌倒恢复姿态的高度受限性及其在复杂地形上的可迁移性，并结合整合的感知-运动表示，训练了一个特权教师模型并蒸馏成一个学生策略。该学生策略仅依赖深度感知和本体感受，通过匹配教师的目标情境潜在表示来学习反应。仿真和真实Unitree G1机器人实验结果验证了该方法在多样化非平坦环境中实现了鲁棒、零样本的跌倒安全。"
+        "chinese_summary": "人形机器人在复杂环境中跌倒恢复是关键挑战，现有方法零散且泛化能力不足。本文提出了统一的跌倒安全方法，基于人类跌倒姿态的可迁移性及整合感知运动表征的洞察。研究通过在不同地形上使用稀疏人类演示训练特权教师模型，并将其提炼为仅依赖自我中心深度和本体感受的学生模型。实验证明，该方法在模拟和真实Unitree G1人形机器人上实现了多样非平坦环境下的零样本、鲁棒性跌倒安全，无需真实世界微调。"
       },
       {
         "paper_id": "2602.15827",
@@ -5731,7 +6336,7 @@
         "code_url": null,
         "date": "2026-02-17",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对人形机器人在复杂环境中实现敏捷、适应性强的跑酷行为的挑战，现有技术难以捕捉高动态人类动作。本文提出了感知型人形跑酷（PHP）模块化框架，首先通过运动匹配将人类原子技能组合成长时程运动轨迹，实现了复杂技能链的灵活组合和流畅过渡。随后，训练专家强化学习策略并蒸馏成一个基于深度感知、多技能的学生策略，从而使机器人能基于感知自主决策。在Unitree G1人形机器人上的真实世界实验表明，该框架成功实现了包括攀爬高障碍物在内的高动态跑酷技能，并能适应实时障碍物扰动。"
+        "chinese_summary": "人形机器人尽管在行走方面有进步，但在复杂环境中实现敏捷跑酷仍面临挑战。本文提出了Perceptive Humanoid Parkour (PHP) 模块化框架，通过在特征空间进行动作匹配组合人类原子技能，生成长时程运动轨迹，并训练RL专家策略提炼为基于深度的多技能学生策略。该方法结合感知与技能组合，使机器人能自主决策跨越障碍。在Unitree G1人形机器人上的真实实验验证了其在攀爬高障碍物和长时程多障碍物穿越方面的动态跑酷能力。"
       },
       {
         "paper_id": "2602.15733",
@@ -5742,7 +6347,7 @@
         "code_url": null,
         "date": "2026-02-17",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对人形机器人运动控制中依赖昂贵运动捕捉数据且运动与场景解耦导致物理不一致的问题，本文提出了MeshMimic框架。该框架通过整合3D场景重建与具身智能，使机器人能够直接从视频中学习“运动-地形”耦合交互。具体方法是利用3D视觉模型重建人类轨迹和环境几何，并通过运动学优化提取高质量运动数据，再通过接触不变重定向将交互特征迁移至机器人。实验结果表明，MeshMimic在复杂地形上展现了鲁棒的高动态性能，证实了仅使用消费级单目传感器也能有效训练复杂物理交互。"
+        "chinese_summary": "人形机器人运动控制高度依赖昂贵的运动捕捉数据，且常缺乏环境几何信息，导致在地形感知任务中出现物理不一致。本文提出了MeshMimic框架，将3D场景重建与具身智能结合，使机器人能直接从视频中学习耦合的“运动-地形”交互。通过先进3D视觉模型重建人类轨迹及环境几何，并引入优化算法提取高质量运动数据。实验结果表明，该方法在多样复杂地形上实现了鲁棒、高动态性能，证明了仅使用消费级单目传感器训练复杂物理交互的可行性。"
       },
       {
         "paper_id": "2602.14551",
@@ -5753,7 +6358,7 @@
         "code_url": null,
         "date": "2026-02-16",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对人机协作中人类指令的模糊性及现有视觉-语言模型（VLM）在推理中存在的幻觉和对物理执行失败预测不足的问题，本文提出了一种增强VLM推理能力的双重校正HRC框架。该框架包含一个在动作执行前验证逻辑和可行性的内部校正模型，以及一个通过执行后反馈纠正物理失败的外部校正模型。仿真实验验证了其成功率提升，真实世界中上半身人形机器人进行的协作装配任务也证实了该框架在响应人类指令进行交互式重规划方面的有效性和实用性。"
+        "chinese_summary": "人机协作中，人类指令的模糊性及现有视觉语言模型（VLM）存在的幻觉推理和物理执行失败预测不足，限制了机器人行为的生成。本文提出了一个增强VLM推理的HRC框架，引入双重校正机制：内部校正模型在执行前验证逻辑一致性，外部校正模型通过执行后反馈纠正物理失败。仿真和真实世界协作装配任务实验均表明，该方法有效提高了成功率，并能支持机器人根据人类指令进行交互式重规划。"
       },
       {
         "paper_id": "2602.14363",
@@ -5764,7 +6369,7 @@
         "code_url": "https://morganbyrd03.github.io/adaptmanip/",
         "date": "2026-02-16",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对人形机器人集成导航、物体举升和递送（loco-manipulation）任务中，现有模仿学习方法对干扰敏感的问题，本文提出了AdaptManip框架。该框架通过强化学习训练自主且鲁棒的全身运动操作策略，无需人类演示。其核心包括实时对象状态估计器、结合残余操作控制的全身基础运动策略以及基于LiDAR的抗漂移全局定位器。所有组件均在仿真中训练并零样本部署到真实机器人。实验结果表明，AdaptManip在适应性和成功率上优于基线方法，并成功在真实世界中实现了人形机器人的自主导航、物体举升与递送。"
+        "chinese_summary": "现有模仿学习方法在人形机器人导航、物体抓取和交付任务中对干扰敏感且依赖人类演示。本文提出了AdaptManip框架，通过强化学习训练鲁棒的定位操作策略，无需人类演示。该框架包含循环对象状态估计器、全身基础策略（用于行走和操作控制）以及基于LiDAR的全局定位器。所有组件均在模拟中训练并零样本部署。实验证明，AdaptManip在适应性和成功率上显著优于基线，并在真实人形机器人上实现了完全自主的导航、抓取和交付。"
       },
       {
         "paper_id": "2602.14351",
@@ -5775,7 +6380,7 @@
         "code_url": "https://openreview.net/forum?id=mzLOnTb3WH",
         "date": "2026-02-15",
         "primary_category": "cs.LG",
-        "chinese_summary": "针对模型基强化学习（MBRL）在实践中因模型误差、单模态世界模型和过度自信预测而表现不佳的问题，本文提出了WIMLE方法。WIMLE将隐式最大似然估计（IMLE）引入MBRL，使其能够学习随机、多模态的世界模型，并通过集成和潜在采样估计预测不确定性，从而在训练中根据置信度加权合成转换以稳定学习。在DeepMind Control、MyoSuite和HumanoidBench的40个连续控制任务上，WIMLE展现出卓越的样本效率和优于或媲美现有基线的渐近性能，特别是在Humanoid-run等挑战性任务上实现了显著提升。"
+        "chinese_summary": "基于模型的强化学习因模型误差累积和预测偏差等问题在实践中表现受限。本文提出了WIMLE方法，将隐式最大似然估计（IMLE）扩展到基于模型的强化学习框架，以学习随机、多模态的世界模型，并利用集成和潜在采样估计预测不确定性。WIMLE在训练中根据预测置信度加权合成转换，减少了不确定预测的偏差。实验证明，WIMLE在多项连续控制任务中实现了卓越的样本效率和优于或持平的渐进性能，尤其在挑战性任务上显著提升了样本效率。"
       },
       {
         "paper_id": "2602.14048",
@@ -5786,7 +6391,7 @@
         "code_url": "https://proactrobot.github.io/",
         "date": "2026-02-15",
         "primary_category": "cs.RO",
-        "chinese_summary": "针对具身社交智能体在生成主动社交行为时，因实时交互的严格延迟与长时程上下文推理需求冲突的问题，本文提出了ProAct双系统框架。该框架通过解耦低延迟的行为系统和执行长时程推理的认知系统来协调时间尺度。为实现意图到连续非语言行为的流畅转换，引入了一个通过ControlNet条件化的流式流匹配模型，支持异步意图注入以实现反应式和主动式手势的无缝切换。在物理人形机器人上的真实世界用户研究表明，ProAct在主动性、社交存在感和整体参与度方面均优于传统反应式系统。"
+        "chinese_summary": "具身社交代理在实时交互中常限于反应式行为，难以实现主动式社交。本文提出了ProAct双系统框架，通过解耦低延迟的“行为系统”和较慢的“认知系统”来协调时间尺度冲突，实现长时程社交推理并生成高层主动意图。引入流匹配模型通过ControlNet将意图转化为连续非语言行为，支持异步意图注入。在物理人形机器人上的用户研究表明，ProAct在感知到的主动性、社交存在感和整体参与度方面显著优于反应式系统。"
       },
       {
         "paper_id": "2602.13656",
